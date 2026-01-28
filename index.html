@@ -1,94 +1,338 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - นายภานุวัฒน์ มะธิโต</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Portfolio Website</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <div class="container">
-        <aside class="sidebar">
-            <div class="profile">
-                <img src="/image/IMAGE.jpg" alt="Profile Picture" class="profile-img" >
-                <h1>นายภานุวัฒน์ มะธิโต</h1>
-                <p class="position">Full Stack Developer</p>
-                <p class="bio">ชาย อายุ 21 ปี</p>
+    <!-- ==================== -->
+    <!-- Navigation Bar -->
+    <!-- ==================== -->
+    <nav>
+        <ul>
+            <li><a href="#hero">หน้าแรก</a></li>
+            <li><a href="#about">เกี่ยวกับ</a></li>
+            <li><a href="#skills">ทักษะ</a></li>
+            <li><a href="#projects">โปรเจกต์</a></li>
+            <li><a href="#github">GitHub</a></li>
+            <li><a href="#contact">ติดต่อ</a></li>
+        </ul>
+    </nav>
+
+    <!-- ==================== -->
+    <!-- Hero Section -->
+    <!-- ==================== -->
+    <section id="hero">
+        <div class="profile-container">
+            <div class="profile-image">
+                <img src="https://scontent-bkk1-2.xx.fbcdn.net/v/t39.30808-6/320164670_504678855025377_4069788429315401976_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=x44D5qkr2fMQ7kNvwF2XBj0&_nc_oc=AdmNDzPJ80-bbywCnpflf-6zVxRv7eQmrYLU6MiRnMCzCzSa1aQnVr0JBwXqkNyG6B8&_nc_pt=1&_nc_zt=23&_nc_ht=scontent-bkk1-2.xx&_nc_gid=cl1H3KeORneUU5reG6pUOA&oh=00_Afqyxdw-enEJ1mdSy20IcNiSUZH5Dd3iUrDpnjxIG0k4FA&oe=697F9E5C"
+                    alt="Profile Photo">
             </div>
-            <div class="contact">
-                <a href="#" class="contact-link"><i class="fab fa-github"></i> GitHub</a>
-                <a href="#" class="contact-link"><i class="fas fa-envelope"></i> Email</a>
-                <a href="#" class="contact-link"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                <a href="#" class="contact-link"><i class="fas fa-map-marker-alt"></i> Location</a>
-            </div>
-        </aside>
-        <main class="main-content">
-            <section class="resume">
-                <h2>สวัสดี! ผมชื่อ นายภานุวัฒน์ มะธิโต 👋</h2>
-                <p id="typing-text"></p>
-                <ul class="tech-stack">
-                    <li>💻 Full Stack Development</li>
-                    <li>🌐 Web Technologies</li>
-                    <li>📱 Mobile Apps</li>
-                    <li>🤖 AI & Machine Learning</li>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">นายภานุวัฒน์ มะธิโต</h1>
+            <p class="hero-subtitle">นักศึกษาสาขาเทคโนโลยีสารสนเทศ</p>
+            <p class="hero-subtitle">มหาวิทยาลัยราชภัฏอุดรธานี | รหัสนักศึกษา 68040233114</p>
+            <p class="hero-role">Full-Stack Developer</p>
+            <p class="hero-description">
+                มุ่งมั่นพัฒนาทักษะด้านการพัฒนาเว็บแอปพลิเคชันแบบ Full-Stack
+                ผ่านการเรียนรู้และสร้างโปรเจกต์จริง พร้อมสำหรับการแก้ปัญหาและสร้างสรรค์ระบบที่มีประสิทธิภาพ
+            </p>
+            <p class="code-decoration">
+                <span class="typing-cursor">_</span> console.log("Let's build something amazing!");
+            </p>
+        </div>
+    </section>
+
+    <!-- ==================== -->
+    <!-- About Section -->
+    <!-- ==================== -->
+    <section id="about">
+        <h2>
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                style="vertical-align: middle; margin-right: 10px;">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            เกี่ยวกับฉัน
+        </h2>
+        <div class="about-content">
+            <p>
+                ผมเป็นนักศึกษาสาขาเทคโนโลยีสารสนเทศที่มีความสนใจในการพัฒนาซอฟต์แวร์แบบ Full-Stack
+                โดยมุ่งเน้นการเรียนรู้ผ่านการทำโปรเจกต์จริงและการแก้ปัญหาต่าง ๆ
+            </p>
+            <p>
+                แนวทางการเรียนรู้ของผมคือการสร้างแอปพลิเคชันที่ใช้งานได้จริง ตั้งแต่การออกแบบ UI/UX
+                การพัฒนา Backend API การจัดการฐานข้อมูล ไปจนถึงการ Deploy และดูแลระบบ
+            </p>
+            <p>
+                ผมให้ความสำคัญกับการเขียนโค้ดที่สะอาด มีโครงสร้างที่ดี และสามารถบำรุงรักษาได้ง่าย
+                พร้อมทั้งเรียนรู้เทคโนโลยีใหม่ ๆ อยู่เสมอเพื่อพัฒนาทักษะให้ทันสมัย
+            </p>
+        </div>
+    </section>
+
+    <!-- ==================== -->
+    <!-- Skills Section -->
+    <!-- ==================== -->
+    <section id="skills">
+        <h2>
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                style="vertical-align: middle; margin-right: 10px;">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="3" y1="9" x2="21" y2="9"></line>
+                <line x1="9" y1="21" x2="9" y2="9"></line>
+            </svg>
+            ทักษะและเทคโนโลยี
+        </h2>
+        <div class="skills-grid">
+            <!-- Frontend -->
+            <div class="skill-category">
+                <h3>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="16 18 22 12 16 6"></polyline>
+                        <polyline points="8 6 2 12 8 18"></polyline>
+                    </svg>
+                    Frontend Development
+                </h3>
+                <ul class="skill-list">
+                    <li><span class="skill-icon">📄</span>HTML - โครงสร้างเว็บเพจ</li>
+                    <li><span class="skill-icon">🎨</span>CSS - การจัดรูปแบบและ Responsive Design</li>
+                    <li><span class="skill-icon">⚡</span>JavaScript - การพัฒนาเว็บเชิงโต้ตอบ</li>
+                    <li><span class="skill-icon">📘</span>TypeScript - JavaScript แบบ Type-Safe</li>
                 </ul>
-            </section>
-            <section class="projects">
-                <h2>Showcase Projects</h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <h3>Portfolio Website</h3>
-                        <p>A personal portfolio website showcasing my skills and projects.</p>
-                        <div class="tags">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                        </div>
-                        <a href="#" class="btn">View Project</a>
-                    </div>
-                    <div class="project-card">
-                        <h3>E-commerce App</h3>
-                        <p>Full stack e-commerce application with payment integration.</p>
-                        <div class="tags">
-                            <span>JavaScript</span>
-                            <span>Node.js</span>
-                            <span>MongoDB</span>
-                        </div>
-                        <a href="#" class="btn">View Project</a>
-                    </div>
-                    <div class="project-card">
-                        <h3>Mobile App</h3>
-                        <p>Cross-platform mobile application for task management.</p>
-                        <div class="tags">
-                            <span>React Native</span>
-                            <span>JavaScript</span>
-                        </div>
-                        <a href="#" class="btn">View Project</a>
-                    </div>
-                    <div class="project-card">
-                        <h3>AI Chatbot</h3>
-                        <p>Intelligent chatbot using machine learning for customer support.</p>
-                        <div class="tags">
-                            <span>Python</span>
-                            <span>AI</span>
-                            <span>Machine Learning</span>
-                        </div>
-                        <a href="#" class="btn">View Project</a>
-                    </div>
+            </div>
+
+            <!-- Backend -->
+            <div class="skill-category">
+                <h3>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                        <line x1="8" y1="21" x2="16" y2="21"></line>
+                        <line x1="12" y1="17" x2="12" y2="21"></line>
+                    </svg>
+                    Backend Development
+                </h3>
+                <ul class="skill-list">
+                    <li><span class="skill-icon">☕</span>Java - การพัฒนาระบบ Backend</li>
+                    <li><span class="skill-icon">🟢</span>Node.js - JavaScript Runtime สำหรับ Backend</li>
+                    <li><span class="skill-icon">🔌</span>REST API - การออกแบบและพัฒนา API</li>
+                </ul>
+            </div>
+
+            <!-- Database -->
+            <div class="skill-category">
+                <h3>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                        <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                        <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                    </svg>
+                    Database Management
+                </h3>
+                <ul class="skill-list">
+                    <li><span class="skill-icon">🐬</span>MySQL - ฐานข้อมูลเชิงสัมพันธ์</li>
+                    <li><span class="skill-icon">🍃</span>MongoDB - ฐานข้อมูล NoSQL</li>
+                    <li><span class="skill-icon">⚙️</span>Prisma ORM - การจัดการฐานข้อมูลแบบ Type-Safe</li>
+                </ul>
+            </div>
+
+            <!-- DevOps & Tools -->
+            <div class="skill-category">
+                <h3>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path
+                            d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+                        </path>
+                    </svg>
+                    DevOps & Tools
+                </h3>
+                <ul class="skill-list">
+                    <li><span class="skill-icon">🔀</span>Git - Version Control System</li>
+                    <li><span class="skill-icon">🐙</span>GitHub - การจัดการโค้ดและ Collaboration</li>
+                    <li><span class="skill-icon">🐳</span>Docker - Container และ Deployment</li>
+                </ul>
+            </div>
+
+            <!-- Concepts -->
+            <div class="skill-category">
+                <h3>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="2" y1="12" x2="22" y2="12"></line>
+                        <path
+                            d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                        </path>
+                    </svg>
+                    Concepts & Practices
+                </h3>
+                <ul class="skill-list">
+                    <li><span class="skill-icon">🔄</span>Full-Stack Development</li>
+                    <li><span class="skill-icon">🔐</span>Authentication & Authorization</li>
+                    <li><span class="skill-icon">🌐</span>RESTful API Design</li>
+                    <li><span class="skill-icon">📊</span>Database Design</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== -->
+    <!-- Projects Section -->
+    <!-- ==================== -->
+    <section id="projects">
+        <h2>
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                style="vertical-align: middle; margin-right: 10px;">
+                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+            </svg>
+            โปรเจกต์ที่ผ่านมา
+        </h2>
+        <div class="projects-grid">
+            <!-- Project 0 -->
+            <div class="project-card">
+                <h3 class="project-title">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                    NewSnooker.github.io
+                </h3>
+                <p class="project-description">
+                    (Portfolio)
+                </p>
+                <div class="tech-stack">
+                    <span class="tech-tag">HTML</span>
+                    <span class="tech-tag">CSS</span>
+                    <span class="tech-tag">JavaScript</span>
+
                 </div>
-            </section>
-            <section class="contribution-graph">
-                <h2>Contribution Graph</h2>
-                <div class="graph">
-                    <!-- Graph will be generated by JS -->
+                <a href="https://github.com/NewSnooker/NewSnooker.github.io" target="_blank" class="project-link">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                    </svg>
+                    ดูโค้ดบน GitHub
+                </a>
+            </div>
+            <!-- Project 1 -->
+            <div class="project-card">
+                <h3 class="project-title">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                    git-workshop-101-1
+                </h3>
+                <p class="project-description">
+                    (ทดลองการใช้ GitHub)
+                </p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Python </span>
+
                 </div>
-            </section>
-        </main>
-    </div>
+                <a href="https://github.com/NewSnooker/git-workshop-101-1" target="_blank" class="project-link">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                    </svg>
+                    ดูโค้ดบน GitHub
+                </a>
+            </div>
+            <!-- Project 2 -->
+            <div class="project-card">
+                <h3 class="project-title">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                    git-workshop-101
+                </h3>
+                <p class="project-description">
+                    (ทดลองการใช้ GitHub)
+                </p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Lua </span>
+
+
+                </div>
+                <a href="https://github.com/NewSnooker/git-workshop-101" target="_blank" class="project-link">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                    </svg>
+                    ดูโค้ดบน GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== -->
+    <!-- GitHub Section -->
+    <!-- ==================== -->
+    <section id="github">
+        <h2>
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"
+                style="vertical-align: middle; margin-right: 10px;">
+                <path
+                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+            </svg>
+            GitHub Profile
+        </h2>
+        <p>
+            โค้ดทุกโปรเจกต์ของผมมีให้ดูบน GitHub
+            ผมมุ่งเน้นการเขียนโค้ดที่มีคุณภาพ มี Documentation ที่ชัดเจน
+            และเปิดกว้างสำหรับการเรียนรู้และแบ่งปัน
+        </p>
+        <a href="https://github.com/NewSnooker" class="github-link" target="_blank">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+            เยี่ยมชม GitHub Profile
+        </a>
+    </section>
+
+    <!-- ==================== -->
+    <!-- Contact Section -->
+    <!-- ==================== -->
+    <section id="contact">
+        <h2>
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                style="vertical-align: middle; margin-right: 10px;">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            ติดต่อผม
+        </h2>
+        <div class="contact-info">
+            <div class="contact-item">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <div>
+                    <strong>Email</strong>
+                    <a href="mailto:68040233114@udru.ac.th">68040233114@udru.ac.th"></a>
+                </div>
+            </div>
+            <div class="contact-item">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                </svg>
+                <div>
+                    <strong>GitHub</strong>
+                    <a href="https://github.com/NewSnooker" target="_blank">https://github.com/NewSnooker</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== -->
+    <!-- JavaScript -->
+    <!-- ==================== -->
     <script src="script.js"></script>
 </body>
+
 </html>

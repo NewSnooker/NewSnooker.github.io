@@ -1,32 +1,65 @@
-const typingText = "ผมชอบเขียนโค้ดและเรียนรู้เทคโนโลยีใหม่ๆ...";
-const typingElement = document.getElementById("typing-text");
-let index = 0;
+// ====================
+// Smooth Scrolling for Navigation Links
+// ====================
+document.querySelectorAll("nav a").forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    const targetId = this.getAttribute("href");
+    const targetSection = document.querySelector(targetId);
 
-function typeWriter() {
-  if (index < typingText.length) {
-    typingElement.innerHTML += typingText.charAt(index);
-    index++;
-    setTimeout(typeWriter, 100);
+    if (targetSection) {
+      targetSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  });
+});
+
+// ====================
+// Active Navigation State Based on Scroll Position
+// ====================
+window.addEventListener("scroll", () => {
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll("nav a");
+
+  let current = "";
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+    if (scrollY >= sectionTop - 100) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach((link) => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === `#${current}`) {
+      link.classList.add("active");
+    }
+  });
+});
+
+// ====================
+// Code Typing Effect
+// ====================
+const codeText = 'console.log("Let\'s build something amazing!");';
+const codeElement = document.querySelector(".code-decoration");
+
+if (codeElement) {
+  let index = 0;
+  const cursor = '<span class="typing-cursor">_</span>';
+
+  function typeCode() {
+    if (index < codeText.length) {
+      codeElement.innerHTML = codeText.substring(0, index + 1) + cursor;
+      index++;
+      setTimeout(typeCode, 50);
+    } else {
+      codeElement.innerHTML = codeText + cursor;
+    }
   }
-}
 
-typeWriter();
-
-// Generate Contribution Graph
-const graph = document.querySelector(".graph");
-for (let i = 0; i < 364; i++) {
-  const day = document.createElement("div");
-  day.classList.add("day");
-  // Random intensity for mockup
-  const intensity = Math.random();
-  if (intensity > 0.8) {
-    day.style.background = "#28a745"; // High
-  } else if (intensity > 0.6) {
-    day.style.background = "#6cc04a"; // Medium
-  } else if (intensity > 0.3) {
-    day.style.background = "#c6e48b"; // Low
-  } else {
-    day.style.background = "#333"; // None
-  }
-  graph.appendChild(day);
+  // Start typing after page loads
+  setTimeout(typeCode, 1000);
 }
