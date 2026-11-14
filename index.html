@@ -1,305 +1,339 @@
 <!DOCTYPE html>
-<html lang="th" data-theme="dark">
+<html lang="th">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NewSnooker · Portfolio</title>
-    <meta name="description" content="Portfolio ของภานุวัฒน์ มะธิโต — Full-Stack Developer, นักศึกษาเทคโนโลยีสารสนเทศ มหาวิทยาลัยราชภัฏอุดรธานี">
-    <link rel="icon" type="image/x-icon" href="image/favicon.ico">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>NewSnooker | Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <script>
-        try {
-            var t = localStorage.getItem("theme");
-            if (t === "light" || t === "dark") document.documentElement.dataset.theme = t;
-            else if (window.matchMedia("(prefers-color-scheme: light)").matches) document.documentElement.dataset.theme = "light";
-        } catch (e) { }
-    </script>
+    <link rel="icon" type="image/x-icon" href="image/favicon.ico">
 </head>
 
 <body>
-    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-        <defs>
-            <symbol id="i-github" viewBox="0 0 16 16"><path fill="currentColor" d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"/></symbol>
-            <symbol id="i-repo" viewBox="0 0 16 16"><path fill="currentColor" d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"/></symbol>
-            <symbol id="i-book" viewBox="0 0 16 16"><path fill="currentColor" d="M0 1.75A.75.75 0 0 1 .75 1h4.253c1.227 0 2.317.59 3 1.501A3.743 3.743 0 0 1 11.006 1h4.245a.75.75 0 0 1 .75.75v10.5a.75.75 0 0 1-.75.75h-4.507a2.25 2.25 0 0 0-1.591.659l-.622.621a.75.75 0 0 1-1.06 0l-.622-.621A2.25 2.25 0 0 0 5.258 13H.75a.75.75 0 0 1-.75-.75Zm7.251 10.324.004-5.073-.002-2.253A2.25 2.25 0 0 0 5.003 2.5H1.5v9h3.757a3.75 3.75 0 0 1 1.994.574ZM8.755 4.75l-.004 7.322a3.752 3.752 0 0 1 1.992-.572H14.5v-9h-3.495a2.25 2.25 0 0 0-2.25 2.25Z"/></symbol>
-            <symbol id="i-pin" viewBox="0 0 16 16"><path fill="currentColor" d="m11.294.984 3.722 3.722a1.75 1.75 0 0 1-.504 2.826l-1.327.613a3.089 3.089 0 0 0-1.533 1.533l-2.448 5.305a1.5 1.5 0 0 1-2.427.436L4.9 13.538l-3.12 3.12a.75.75 0 0 1-1.06-1.061l3.12-3.12-1.881-1.882a1.5 1.5 0 0 1 .436-2.427l5.305-2.448a3.089 3.089 0 0 0 1.533-1.533l.613-1.327a1.75 1.75 0 0 1 2.826-.504ZM10.06 2.17l-.612 1.327a4.587 4.587 0 0 1-2.276 2.277L1.866 8.222l5.912 5.912 2.448-5.306a4.587 4.587 0 0 1 2.276-2.276l1.327-.613a.25.25 0 0 0 .072-.404l-3.722-3.722a.25.25 0 0 0-.404.072Z"/></symbol>
-            <symbol id="i-link" viewBox="0 0 16 16"><path fill="currentColor" d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"/></symbol>
-            <symbol id="i-mail" viewBox="0 0 16 16"><path fill="currentColor" d="M1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25v-8.5C0 2.784.784 2 1.75 2ZM1.5 12.251c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V5.809L8.38 9.397a.75.75 0 0 1-.76 0L1.5 5.809v6.442Zm13-8.181v-.32a.25.25 0 0 0-.25-.25H1.75a.25.25 0 0 0-.25.25v.32L8 7.88Z"/></symbol>
-            <symbol id="i-org" viewBox="0 0 16 16"><path fill="currentColor" d="M1.75 16A1.75 1.75 0 0 1 0 14.25V1.75C0 .784.784 0 1.75 0h8.5C11.216 0 12 .784 12 1.75v12.5c0 .085-.006.168-.018.25h2.268a.25.25 0 0 0 .25-.25V8.285a.25.25 0 0 0-.111-.208l-1.055-.703a.749.749 0 1 1 .832-1.248l1.055.703c.487.325.779.871.779 1.456v5.965A1.75 1.75 0 0 1 14.25 16h-3.5a.766.766 0 0 1-.197-.026c-.099.017-.2.026-.303.026h-3a.75.75 0 0 1-.75-.75V14h-1v1.25a.75.75 0 0 1-.75.75Zm-.25-1.75c0 .138.112.25.25.25H4v-1.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 .75.75v1.25h2.25a.25.25 0 0 0 .25-.25V1.75a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25ZM3.75 6h.5a.75.75 0 0 1 0 1.5h-.5a.75.75 0 0 1 0-1.5ZM3 3.75A.75.75 0 0 1 3.75 3h.5a.75.75 0 0 1 0 1.5h-.5A.75.75 0 0 1 3 3.75Zm4 3A.75.75 0 0 1 7.75 6h.5a.75.75 0 0 1 0 1.5h-.5A.75.75 0 0 1 7 6.75ZM7.75 3h.5a.75.75 0 0 1 0 1.5h-.5a.75.75 0 0 1 0-1.5ZM3 9.75A.75.75 0 0 1 3.75 9h.5a.75.75 0 0 1 0 1.5h-.5A.75.75 0 0 1 3 9.75ZM7.75 9h.5a.75.75 0 0 1 0 1.5h-.5a.75.75 0 0 1 0-1.5Z"/></symbol>
-            <symbol id="i-id" viewBox="0 0 16 16"><path fill="currentColor" d="M2.75 1h10.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 13.25 15H2.75A1.75 1.75 0 0 1 1 13.25V2.75C1 1.784 1.784 1 2.75 1Zm10.5 1.5H2.75a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h10.5a.25.25 0 0 0 .25-.25V2.75a.25.25 0 0 0-.25-.25ZM8 9a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5Zm0-1.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm-3 4c0-1.105 1.343-2 3-2s3 .895 3 2Z"/></symbol>
-            <symbol id="i-location" viewBox="0 0 16 16"><path fill="currentColor" d="m12.596 11.596-3.535 3.536a1.5 1.5 0 0 1-2.122 0l-3.535-3.536a6.5 6.5 0 1 1 9.192-9.193 6.5 6.5 0 0 1 0 9.193Zm-1.06-8.132v-.001a5 5 0 1 0-7.072 7.072L8 14.07l3.536-3.534a5 5 0 0 0 0-7.072ZM8 9a2 2 0 1 1-.001-3.999A2 2 0 0 1 8 9Z"/></symbol>
-            <symbol id="i-external" viewBox="0 0 16 16"><path fill="currentColor" d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2Zm6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1Z"/></symbol>
-            <symbol id="i-play" viewBox="0 0 16 16"><path fill="currentColor" d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Zm4.879-2.773 4.264 2.559a.25.25 0 0 1 0 .428l-4.264 2.559A.25.25 0 0 1 6 10.559V5.442a.25.25 0 0 1 .379-.215Z"/></symbol>
-            <symbol id="i-check" viewBox="0 0 16 16"><path fill="currentColor" d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/></symbol>
-            <symbol id="i-sun" viewBox="0 0 16 16"><path fill="currentColor" d="M8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm0-1.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Zm5.657-8.157a.75.75 0 0 1 0 1.061l-1.061 1.06a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734l1.06-1.06a.75.75 0 0 1 1.06 0Zm-9.193 9.193a.75.75 0 0 1 0 1.06l-1.06 1.061a.75.75 0 1 1-1.061-1.06l1.06-1.061a.75.75 0 0 1 1.061 0ZM8 0a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0V.75A.75.75 0 0 1 8 0ZM3 8a.75.75 0 0 1-.75.75H.75a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 3 8Zm13 0a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 16 8Zm-8 5a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 8 13Zm3.536-1.464a.75.75 0 0 1 1.06 0l1.061 1.06a.75.75 0 0 1-1.06 1.061l-1.061-1.06a.75.75 0 0 1 0-1.061ZM2.343 2.343a.75.75 0 0 1 1.061 0l1.06 1.061a.751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018l-1.06-1.06a.75.75 0 0 1 0-1.06Z"/></symbol>
-            <symbol id="i-moon" viewBox="0 0 16 16"><path fill="currentColor" d="M9.598 1.591a.749.749 0 0 1 .785-.175 7.001 7.001 0 1 1-8.967 8.967.75.75 0 0 1 .961-.96 5.5 5.5 0 0 0 7.046-7.046.75.75 0 0 1 .175-.786Zm1.616 1.945a7 7 0 0 1-7.678 7.678 5.499 5.499 0 1 0 7.678-7.678Z"/></symbol>
-            <symbol id="i-code" viewBox="0 0 16 16"><path fill="currentColor" d="m11.28 3.22 4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L13.94 8l-3.72-3.72a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215Zm-6.56 0a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042L2.06 8l3.72 3.72a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L.47 8.53a.75.75 0 0 1 0-1.06Z"/></symbol>
-            <symbol id="i-server" viewBox="0 0 16 16"><path fill="currentColor" d="M1.75 1h12.5c.966 0 1.75.784 1.75 1.75v4c0 .372-.116.717-.314 1 .198.283.314.628.314 1v4a1.75 1.75 0 0 1-1.75 1.75H1.75A1.75 1.75 0 0 1 0 12.75v-4c0-.358.109-.707.314-1a1.739 1.739 0 0 1-.314-1v-4C0 1.784.784 1 1.75 1ZM1.5 2.75v4c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-4a.25.25 0 0 0-.25-.25H1.75a.25.25 0 0 0-.25.25Zm.25 5.75a.25.25 0 0 0-.25.25v4c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-4a.25.25 0 0 0-.25-.25ZM7 4.75A.75.75 0 0 1 7.75 4h4.5a.75.75 0 0 1 0 1.5h-4.5A.75.75 0 0 1 7 4.75ZM7.75 10h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM3 4.75A.75.75 0 0 1 3.75 4h.5a.75.75 0 0 1 0 1.5h-.5A.75.75 0 0 1 3 4.75ZM3.75 10h.5a.75.75 0 0 1 0 1.5h-.5a.75.75 0 0 1 0-1.5Z"/></symbol>
-            <symbol id="i-db" viewBox="0 0 16 16"><path fill="currentColor" d="M1 3.5c0-.626.292-1.165.7-1.59.406-.422.956-.767 1.579-1.041C4.525.32 6.195 0 8 0c1.805 0 3.475.32 4.722.869.622.274 1.172.62 1.578 1.04.408.426.7.965.7 1.591v9c0 .626-.292 1.165-.7 1.59-.406.422-.956.767-1.579 1.041C11.476 15.68 9.806 16 8 16c-1.805 0-3.475-.32-4.721-.869-.623-.274-1.173-.62-1.579-1.04-.408-.426-.7-.965-.7-1.591Zm1.5 0c0 .133.058.318.282.551.227.237.591.483 1.101.707C4.898 5.205 6.353 5.5 8 5.5c1.646 0 3.101-.295 4.118-.742.508-.224.873-.471 1.1-.708.224-.232.282-.417.282-.55 0-.133-.058-.318-.282-.551-.227-.237-.591-.483-1.101-.707C11.102 1.795 9.647 1.5 8 1.5c-1.646 0-3.101.295-4.118.742-.508.224-.873.471-1.1.708-.224.232-.282.417-.282.55Zm0 4.5c0 .133.058.318.282.551.227.237.591.483 1.101.707C4.898 9.705 6.353 10 8 10c1.646 0 3.101-.295 4.118-.742.508-.224.873-.471 1.1-.708.224-.232.282-.417.282-.55V5.724c-.241.15-.503.286-.778.407C11.475 6.68 9.805 7 8 7c-1.805 0-3.475-.32-4.721-.869a6.15 6.15 0 0 1-.779-.407Zm0 2.225V12.5c0 .133.058.318.282.55.227.237.592.484 1.1.708 1.016.447 2.471.742 4.118.742 1.647 0 3.102-.295 4.117-.742.51-.224.874-.47 1.101-.707.224-.233.282-.418.282-.551v-2.275c-.241.15-.503.285-.778.406-1.247.549-2.917.869-4.722.869-1.805 0-3.475-.32-4.721-.869a6.327 6.327 0 0 1-.779-.406Z"/></symbol>
-            <symbol id="i-tools" viewBox="0 0 16 16"><path fill="currentColor" d="M5.433 2.304A4.494 4.494 0 0 0 3.5 6c0 1.598.832 3.002 2.09 3.802.518.328.929.923.902 1.64v.008l-.164 3.337a.75.75 0 1 1-1.498-.073l.163-3.33c.002-.085-.05-.216-.207-.316A5.996 5.996 0 0 1 2 6a5.994 5.994 0 0 1 2.567-4.92 1.482 1.482 0 0 1 1.673-.04c.462.296.76.827.76 1.423v2.82c0 .082.041.16.11.206l.75.51a.25.25 0 0 0 .28 0l.75-.51A.249.249 0 0 0 9 5.282V2.463c0-.596.298-1.127.76-1.423a1.482 1.482 0 0 1 1.673.04A5.994 5.994 0 0 1 14 6a5.996 5.996 0 0 1-2.786 5.068c-.157.1-.209.23-.207.315l.163 3.33a.752.752 0 0 1-1.094.714.75.75 0 0 1-.404-.64l-.164-3.345c-.027-.717.384-1.312.902-1.64A4.495 4.495 0 0 0 12.5 6a4.494 4.494 0 0 0-1.933-3.696c-.024.017-.067.067-.067.16v2.818a1.75 1.75 0 0 1-.767 1.448l-.75.51a1.75 1.75 0 0 1-1.966 0l-.75-.51A1.75 1.75 0 0 1 5.5 5.282V2.463c0-.092-.043-.142-.067-.159Z"/></symbol>
-            <symbol id="i-light" viewBox="0 0 16 16"><path fill="currentColor" d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z"/></symbol>
-        </defs>
-    </svg>
+    <!-- ==================== -->
+    <!-- Navigation Bar -->
+    <!-- ==================== -->
+    <nav>
+        <ul>
+            <li><a href="#hero">หน้าแรก</a></li>
+            <li><a href="#about">เกี่ยวกับ</a></li>
+            <li><a href="#skills">ทักษะ</a></li>
+            <li><a href="#projects">โปรเจกต์</a></li>
+            <li><a href="#github">GitHub</a></li>
+            <li><a href="#contact">ติดต่อ</a></li>
+        </ul>
+    </nav>
 
-    <!-- ===== Header ===== -->
-    <header class="app-header">
-        <div class="app-header__inner">
-            <a href="#overview" class="app-header__brand" aria-label="หน้าแรก">
-                <svg width="32" height="32"><use href="#i-github"/></svg>
-            </a>
-            <span class="app-header__context">NewSnooker</span>
-            <div class="app-header__actions">
-                <a class="btn btn--sm btn--ghost hide-sm" href="https://github.com/NewSnooker" target="_blank" rel="noopener">
-                    <svg width="16" height="16"><use href="#i-github"/></svg> GitHub
-                </a>
-                <button class="icon-btn" id="theme-toggle" type="button" aria-label="สลับธีมสว่าง/มืด" title="สลับธีม">
-                    <svg class="icon-sun" width="16" height="16"><use href="#i-sun"/></svg>
-                    <svg class="icon-moon" width="16" height="16"><use href="#i-moon"/></svg>
-                </button>
+    <!-- ==================== -->
+    <!-- Hero Section -->
+    <!-- ==================== -->
+    <section id="hero">
+        <div class="profile-container">
+            <div class="profile-image">
+
+                <img src="image/profile.jpg"
+                    alt="Profile Photo">
             </div>
         </div>
-        <nav class="tabnav" aria-label="ส่วนต่าง ๆ ของหน้า">
-            <div class="tabnav__inner">
-                <a href="#overview" class="tabnav__item is-active"><svg width="16" height="16"><use href="#i-book"/></svg>ภาพรวม</a>
-                <a href="#projects" class="tabnav__item"><svg width="16" height="16"><use href="#i-repo"/></svg>โปรเจกต์ <span class="counter">4</span></a>
-                <a href="#skills" class="tabnav__item"><svg width="16" height="16"><use href="#i-tools"/></svg>ทักษะ</a>
-                <a href="#contact" class="tabnav__item"><svg width="16" height="16"><use href="#i-mail"/></svg>ติดต่อ</a>
-            </div>
-        </nav>
-    </header>
+        <div class="hero-content">
+            <h1 class="hero-title">นายภานุวัฒน์ มะธิโต</h1>
+            <p class="hero-subtitle">นักศึกษาสาขาเทคโนโลยีสารสนเทศ</p>
+            <p class="hero-subtitle">มหาวิทยาลัยราชภัฏอุดรธานี | รหัสนักศึกษา 68040233114</p>
+            <p class="hero-role">Full-Stack Developer</p>
+            <p class="hero-description">
+                มุ่งมั่นพัฒนาทักษะด้านการพัฒนาเว็บแอปพลิเคชันแบบ Full-Stack
+                ผ่านการเรียนรู้และสร้างโปรเจกต์จริง พร้อมสำหรับการแก้ปัญหาและสร้างสรรค์ระบบที่มีประสิทธิภาพ
+            </p>
+            <p class="code-decoration">
+                <span class="typing-cursor">_</span> console.log("Let's build something amazing!");
+            </p>
+        </div>
+    </section>
 
-    <div class="layout">
-        <!-- ===== Sidebar / profile ===== -->
-        <aside class="profile">
-            <div class="profile__head">
-                <img class="profile__avatar" src="image/profile.jpg" alt="รูปโปรไฟล์ ภานุวัฒน์ มะธิโต" width="296" height="296">
-                <div class="profile__names">
-                    <h1 class="profile__name">ภานุวัฒน์ มะธิโต</h1>
-                    <p class="profile__login">NewSnooker</p>
-                </div>
-            </div>
-            <p class="profile__bio">Full-Stack Developer · นักศึกษาสาขาเทคโนโลยีสารสนเทศ ชอบสร้างเว็บแอปที่ใช้งานได้จริง ตั้งแต่ UI ไปจนถึง Deploy</p>
-            <a class="btn btn--block" href="https://github.com/NewSnooker" target="_blank" rel="noopener">ดูโปรไฟล์บน GitHub</a>
-            <ul class="profile__details">
-                <li><svg width="16" height="16"><use href="#i-org"/></svg>มหาวิทยาลัยราชภัฏอุดรธานี</li>
-                <li><svg width="16" height="16"><use href="#i-id"/></svg>รหัสนักศึกษา <span class="mono">68040233114</span></li>
-                <li><svg width="16" height="16"><use href="#i-location"/></svg>อุดรธานี, ประเทศไทย</li>
-                <li><svg width="16" height="16"><use href="#i-mail"/></svg><a href="mailto:68040233114@udru.ac.th">68040233114@udru.ac.th</a></li>
-                <li><svg width="16" height="16"><use href="#i-link"/></svg><a href="https://github.com/NewSnooker" target="_blank" rel="noopener">github.com/NewSnooker</a></li>
-            </ul>
-            <div class="profile__section">
-                <h2 class="profile__section-title">Highlights</h2>
-                <ul class="profile__details">
-                    <li><svg width="16" height="16"><use href="#i-light"/></svg>AI · Object Detection (YOLO)</li>
-                    <li><svg width="16" height="16"><use href="#i-code"/></svg>Next.js · TypeScript · Node.js</li>
+    <!-- ==================== -->
+    <!-- About Section -->
+    <!-- ==================== -->
+    <section id="about">
+        <h2>
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                style="vertical-align: middle; margin-right: 10px;">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            เกี่ยวกับฉัน
+        </h2>
+        <div class="about-content">
+            <p>
+                ผมเป็นนักศึกษาสาขาเทคโนโลยีสารสนเทศที่มีความสนใจในการพัฒนาซอฟต์แวร์แบบ Full-Stack
+                โดยมุ่งเน้นการเรียนรู้ผ่านการทำโปรเจกต์จริงและการแก้ปัญหาต่าง ๆ
+            </p>
+            <p>
+                แนวทางการเรียนรู้ของผมคือการสร้างแอปพลิเคชันที่ใช้งานได้จริง ตั้งแต่การออกแบบ UI/UX
+                การพัฒนา Backend API การจัดการฐานข้อมูล ไปจนถึงการ Deploy และดูแลระบบ
+            </p>
+            <p>
+                ผมให้ความสำคัญกับการเขียนโค้ดที่สะอาด มีโครงสร้างที่ดี และสามารถบำรุงรักษาได้ง่าย
+                พร้อมทั้งเรียนรู้เทคโนโลยีใหม่ ๆ อยู่เสมอเพื่อพัฒนาทักษะให้ทันสมัย
+            </p>
+        </div>
+    </section>
+
+    <!-- ==================== -->
+    <!-- Skills Section -->
+    <!-- ==================== -->
+    <section id="skills">
+        <h2>
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                style="vertical-align: middle; margin-right: 10px;">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="3" y1="9" x2="21" y2="9"></line>
+                <line x1="9" y1="21" x2="9" y2="9"></line>
+            </svg>
+            ทักษะและเทคโนโลยี
+        </h2>
+        <div class="skills-grid">
+            <!-- Frontend -->
+            <div class="skill-category">
+                <h3>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="16 18 22 12 16 6"></polyline>
+                        <polyline points="8 6 2 12 8 18"></polyline>
+                    </svg>
+                    Frontend Development
+                </h3>
+                <ul class="skill-list">
+                    <li><span class="skill-icon">📄</span>HTML - โครงสร้างเว็บเพจ</li>
+                    <li><span class="skill-icon">🎨</span>CSS - การจัดรูปแบบและ Responsive Design</li>
+                    <li><span class="skill-icon">⚡</span>JavaScript - การพัฒนาเว็บเชิงโต้ตอบ</li>
+                    <li><span class="skill-icon">📘</span>TypeScript - JavaScript แบบ Type-Safe</li>
                 </ul>
             </div>
-        </aside>
 
-        <main class="content">
-            <!-- ===== README ===== -->
-            <section id="overview" class="box readme">
-                <div class="box__header">
-                    <span class="mono">NewSnooker</span><span class="muted"> / </span><span class="mono">README</span><span class="muted">.md</span>
-                </div>
-                <div class="box__body markdown">
-                    <h2>สวัสดีครับ 👋 ผมภานุวัฒน์</h2>
-                    <p>
-                        นักศึกษาสาขาเทคโนโลยีสารสนเทศที่สนใจการพัฒนาซอฟต์แวร์แบบ <strong>Full-Stack</strong>
-                        เรียนรู้ผ่านการสร้างโปรเจกต์จริง ตั้งแต่ออกแบบ UI/UX, พัฒนา Backend API, จัดการฐานข้อมูล
-                        ไปจนถึง Deploy และดูแลระบบ
-                    </p>
-                    <ul>
-                        <li>🔭 กำลังทำ <a href="#acne-detection"><strong>AcneAI</strong></a> — ระบบตรวจจับและจำแนกสิว 6 ชนิดจากภาพถ่ายด้วย AI</li>
-                        <li>🌱 กำลังเรียน AI / Computer Vision และการ Deploy บน Cloud</li>
-                        <li>🧹 ให้ความสำคัญกับโค้ดที่สะอาด มีโครงสร้างดี และดูแลต่อได้ง่าย</li>
-                    </ul>
-                    <pre class="codeblock" aria-label="ตัวอย่างโค้ด"><code><span class="tok-c">// main.ts</span>
-<span class="tok-k">const</span> <span class="tok-v">me</span> = { <span class="tok-p">role</span>: <span class="tok-s">"Full-Stack Developer"</span>, <span class="tok-p">learning</span>: [<span class="tok-s">"AI"</span>, <span class="tok-s">"Cloud"</span>] };
-<span class="tok-f">console</span>.<span class="tok-f">log</span>(<span id="typed" class="tok-s"></span><span class="caret" aria-hidden="true"></span>);</code></pre>
-                </div>
-            </section>
+            <!-- Backend -->
+            <div class="skill-category">
+                <h3>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                        <line x1="8" y1="21" x2="16" y2="21"></line>
+                        <line x1="12" y1="17" x2="12" y2="21"></line>
+                    </svg>
+                    Backend Development
+                </h3>
+                <ul class="skill-list">
+                    <li><span class="skill-icon">☕</span>Java - การพัฒนาระบบ Backend</li>
+                    <li><span class="skill-icon">🟢</span>Node.js - JavaScript Runtime สำหรับ Backend</li>
+                    <li><span class="skill-icon">🔌</span>REST API - การออกแบบและพัฒนา API</li>
+                </ul>
+            </div>
 
-            <!-- ===== Featured project ===== -->
-            <section id="projects" class="section">
-                <h2 class="section__title"><svg width="16" height="16"><use href="#i-pin"/></svg>โปรเจกต์เด่น</h2>
+            <!-- Database -->
+            <div class="skill-category">
+                <h3>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                        <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                        <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                    </svg>
+                    Database Management
+                </h3>
+                <ul class="skill-list">
+                    <li><span class="skill-icon">🐬</span>MySQL - ฐานข้อมูลเชิงสัมพันธ์</li>
+                    <li><span class="skill-icon">🍃</span>MongoDB - ฐานข้อมูล NoSQL</li>
+                    <li><span class="skill-icon">⚙️</span>Prisma ORM - การจัดการฐานข้อมูลแบบ Type-Safe</li>
+                </ul>
+            </div>
 
-                <article id="acne-detection" class="box featured">
-                    <a class="featured__shot" href="https://acne-web.calmsand-e76a4fc0.japaneast.azurecontainerapps.io" target="_blank" rel="noopener" aria-label="เปิดเว็บ AcneAI">
-                        <img src="image/acne-ai.jpg" alt="หน้าแรกของเว็บ AcneAI แสดงผลการวิเคราะห์สิวพร้อมกรอบตรวจจับ" width="1280" height="720" loading="lazy">
-                        <span class="featured__live"><span class="dot-live"></span>Live</span>
-                    </a>
-                    <div class="featured__body">
-                        <div class="repo-head">
-                            <svg width="16" height="16" class="muted"><use href="#i-repo"/></svg>
-                            <a class="repo-name" href="https://github.com/NewSnooker/acne-detection" target="_blank" rel="noopener">acne-detection</a>
-                            <span class="label">Public</span>
-                        </div>
-                        <h3 class="featured__title">AcneAI — ตรวจจับและจำแนกชนิดสิวจากภาพถ่ายใบหน้า</h3>
-                        <p class="featured__desc">
-                            เว็บแอปที่ให้ผู้ใช้อัปโหลดรูปใบหน้า แล้วใช้ AI (Object Detection) ตรวจหาสิว 6 ชนิด
-                            ประเมินระดับความรุนแรง พร้อมคำแนะนำการดูแลผิวเบื้องต้น และเก็บประวัติไว้ติดตามผล
-                        </p>
-                        <ul class="checklist">
-                            <li><svg width="16" height="16"><use href="#i-check"/></svg>จำแนกสิว 6 ชนิด: หัวดำ, หัวขาว, ตุ่มแดง, หัวหนอง, ก้อนแข็ง, ซีสต์</li>
-                            <li><svg width="16" height="16"><use href="#i-check"/></svg>เข้าสู่ระบบด้วยอีเมลหรือ Google, ดูประวัติและสถิติของตัวเอง</li>
-                            <li><svg width="16" height="16"><use href="#i-check"/></svg>หลังบ้านแอดมิน: จัดการผู้ใช้ สลับโมเดล AI ดูภาพรวมระบบ</li>
-                            <li><svg width="16" height="16"><use href="#i-check"/></svg>รันทั้งระบบด้วย Docker Compose คำสั่งเดียว, Deploy บน Azure Container Apps</li>
-                        </ul>
-                        <div class="topics">
-                            <span class="topic">nextjs</span><span class="topic">react</span><span class="topic">typescript</span>
-                            <span class="topic">tailwindcss</span><span class="topic">fastapi</span><span class="topic">yolo</span>
-                            <span class="topic">pytorch</span><span class="topic">mongodb</span><span class="topic">prisma</span>
-                            <span class="topic">docker</span><span class="topic">azure</span>
-                        </div>
-                        <div class="featured__actions">
-                            <a class="btn btn--primary" href="https://acne-web.calmsand-e76a4fc0.japaneast.azurecontainerapps.io" target="_blank" rel="noopener">
-                                <svg width="16" height="16"><use href="#i-play"/></svg>เปิด Live Demo
-                            </a>
-                            <a class="btn" href="https://github.com/NewSnooker/acne-detection" target="_blank" rel="noopener">
-                                <svg width="16" height="16"><use href="#i-github"/></svg>ดูโค้ด
-                            </a>
-                        </div>
-                        <div class="repo-meta">
-                            <span><span class="lang-dot" style="--c:#3178c6"></span>TypeScript</span>
-                            <span><span class="lang-dot" style="--c:#3572A5"></span>Python</span>
-                        </div>
-                    </div>
-                </article>
+            <!-- DevOps & Tools -->
+            <div class="skill-category">
+                <h3>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path
+                            d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+                        </path>
+                    </svg>
+                    DevOps & Tools
+                </h3>
+                <ul class="skill-list">
+                    <li><span class="skill-icon">🔀</span>Git - Version Control System</li>
+                    <li><span class="skill-icon">🐙</span>GitHub - การจัดการโค้ดและ Collaboration</li>
+                    <li><span class="skill-icon">🐳</span>Docker - Container และ Deployment</li>
+                </ul>
+            </div>
 
-                <h2 class="section__title section__title--spaced"><svg width="16" height="16"><use href="#i-repo"/></svg>Repositories อื่น ๆ</h2>
-                <div class="pinned">
-                    <article class="box repo-card">
-                        <div class="repo-head">
-                            <svg width="16" height="16" class="muted"><use href="#i-repo"/></svg>
-                            <a class="repo-name" href="https://github.com/NewSnooker/NewSnooker.github.io" target="_blank" rel="noopener">NewSnooker.github.io</a>
-                            <span class="label">Public</span>
-                        </div>
-                        <p class="repo-desc">เว็บ Portfolio ส่วนตัว (หน้านี้) ออกแบบธีมคล้าย GitHub รองรับโหมดสว่าง/มืด และมือถือ</p>
-                        <div class="repo-meta">
-                            <span><span class="lang-dot" style="--c:#e34c26"></span>HTML</span>
-                            <span><span class="lang-dot" style="--c:#563d7c"></span>CSS</span>
-                            <span><span class="lang-dot" style="--c:#f1e05a"></span>JavaScript</span>
-                        </div>
-                    </article>
-                    <article class="box repo-card">
-                        <div class="repo-head">
-                            <svg width="16" height="16" class="muted"><use href="#i-repo"/></svg>
-                            <a class="repo-name" href="https://github.com/NewSnooker/git-workshop-101-1" target="_blank" rel="noopener">git-workshop-101-1</a>
-                            <span class="label">Public</span>
-                        </div>
-                        <p class="repo-desc">Workshop ฝึกใช้ Git และ GitHub: commit, branch, pull request</p>
-                        <div class="repo-meta">
-                            <span><span class="lang-dot" style="--c:#3572A5"></span>Python</span>
-                        </div>
-                    </article>
-                    <article class="box repo-card">
-                        <div class="repo-head">
-                            <svg width="16" height="16" class="muted"><use href="#i-repo"/></svg>
-                            <a class="repo-name" href="https://github.com/NewSnooker/git-workshop-101" target="_blank" rel="noopener">git-workshop-101</a>
-                            <span class="label">Public</span>
-                        </div>
-                        <p class="repo-desc">Workshop ฝึกใช้ Git และ GitHub ครั้งแรก</p>
-                        <div class="repo-meta">
-                            <span><span class="lang-dot" style="--c:#000080"></span>Lua</span>
-                        </div>
-                    </article>
-                    <a class="box repo-card repo-card--more" href="https://github.com/NewSnooker?tab=repositories" target="_blank" rel="noopener">
-                        <svg width="24" height="24"><use href="#i-github"/></svg>
-                        <span>ดู repositories ทั้งหมดบน GitHub</span>
-                        <svg width="16" height="16"><use href="#i-external"/></svg>
-                    </a>
-                </div>
-
-                <div class="box contrib">
-                    <div class="box__header">กิจกรรมบน GitHub ในปีที่ผ่านมา</div>
-                    <div class="box__body contrib__body">
-                        <img id="contrib-chart" src="https://ghchart.rshah.org/2ea043/NewSnooker" alt="กราฟ contribution บน GitHub ของ NewSnooker" loading="lazy">
-                    </div>
-                </div>
-            </section>
-
-            <!-- ===== Skills ===== -->
-            <section id="skills" class="section">
-                <h2 class="section__title"><svg width="16" height="16"><use href="#i-tools"/></svg>ทักษะและเทคโนโลยี</h2>
-                <div class="skills">
-                    <div class="box skill">
-                        <h3 class="skill__title"><svg width="16" height="16"><use href="#i-code"/></svg>Frontend</h3>
-                        <div class="topics">
-                            <span class="chip"><span class="lang-dot" style="--c:#e34c26"></span>HTML</span>
-                            <span class="chip"><span class="lang-dot" style="--c:#563d7c"></span>CSS</span>
-                            <span class="chip"><span class="lang-dot" style="--c:#f1e05a"></span>JavaScript</span>
-                            <span class="chip"><span class="lang-dot" style="--c:#3178c6"></span>TypeScript</span>
-                            <span class="chip">React</span><span class="chip">Next.js</span><span class="chip">Tailwind CSS</span>
-                        </div>
-                    </div>
-                    <div class="box skill">
-                        <h3 class="skill__title"><svg width="16" height="16"><use href="#i-server"/></svg>Backend</h3>
-                        <div class="topics">
-                            <span class="chip"><span class="lang-dot" style="--c:#b07219"></span>Java</span>
-                            <span class="chip"><span class="lang-dot" style="--c:#3c873a"></span>Node.js</span>
-                            <span class="chip"><span class="lang-dot" style="--c:#3572A5"></span>Python</span>
-                            <span class="chip">FastAPI</span><span class="chip">REST API</span><span class="chip">Auth.js</span>
-                        </div>
-                    </div>
-                    <div class="box skill">
-                        <h3 class="skill__title"><svg width="16" height="16"><use href="#i-db"/></svg>Database</h3>
-                        <div class="topics">
-                            <span class="chip">MySQL</span><span class="chip">MongoDB</span><span class="chip">Prisma ORM</span>
-                        </div>
-                    </div>
-                    <div class="box skill">
-                        <h3 class="skill__title"><svg width="16" height="16"><use href="#i-light"/></svg>AI</h3>
-                        <div class="topics">
-                            <span class="chip">YOLO (Ultralytics)</span><span class="chip">PyTorch</span><span class="chip">Object Detection</span>
-                        </div>
-                    </div>
-                    <div class="box skill">
-                        <h3 class="skill__title"><svg width="16" height="16"><use href="#i-tools"/></svg>DevOps &amp; Tools</h3>
-                        <div class="topics">
-                            <span class="chip">Git</span><span class="chip">GitHub</span><span class="chip">Docker</span>
-                            <span class="chip">Docker Compose</span><span class="chip">Azure Container Apps</span>
-                        </div>
-                    </div>
-                    <div class="box skill">
-                        <h3 class="skill__title"><svg width="16" height="16"><use href="#i-book"/></svg>Concepts</h3>
-                        <div class="topics">
-                            <span class="chip">Full-Stack</span><span class="chip">Authentication</span>
-                            <span class="chip">RESTful Design</span><span class="chip">Database Design</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- ===== Contact ===== -->
-            <section id="contact" class="section">
-                <h2 class="section__title"><svg width="16" height="16"><use href="#i-mail"/></svg>ติดต่อ</h2>
-                <div class="box contact">
-                    <div class="contact__text">
-                        <h3>อยากคุยเรื่องงานหรือโปรเจกต์?</h3>
-                        <p class="muted">ส่งอีเมลมาได้เลย หรือดูโค้ดทั้งหมดบน GitHub</p>
-                    </div>
-                    <div class="contact__actions">
-                        <a class="btn btn--primary" href="mailto:68040233114@udru.ac.th"><svg width="16" height="16"><use href="#i-mail"/></svg>ส่งอีเมล</a>
-                        <a class="btn" href="https://github.com/NewSnooker" target="_blank" rel="noopener"><svg width="16" height="16"><use href="#i-github"/></svg>GitHub</a>
-                    </div>
-                </div>
-            </section>
-        </main>
-    </div>
-
-    <footer class="footer">
-        <div class="footer__inner">
-            <svg width="24" height="24" class="muted"><use href="#i-github"/></svg>
-            <span>© <span id="year">2026</span> ภานุวัฒน์ มะธิโต · NewSnooker</span>
-            <a href="#overview">กลับขึ้นด้านบน ↑</a>
+            <!-- Concepts -->
+            <div class="skill-category">
+                <h3>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="2" y1="12" x2="22" y2="12"></line>
+                        <path
+                            d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                        </path>
+                    </svg>
+                    Concepts & Practices
+                </h3>
+                <ul class="skill-list">
+                    <li><span class="skill-icon">🔄</span>Full-Stack Development</li>
+                    <li><span class="skill-icon">🔐</span>Authentication & Authorization</li>
+                    <li><span class="skill-icon">🌐</span>RESTful API Design</li>
+                    <li><span class="skill-icon">📊</span>Database Design</li>
+                </ul>
+            </div>
         </div>
-    </footer>
+    </section>
 
+    <!-- ==================== -->
+    <!-- Projects Section -->
+    <!-- ==================== -->
+    <section id="projects">
+        <h2>
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                style="vertical-align: middle; margin-right: 10px;">
+                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+            </svg>
+            โปรเจกต์ที่ผ่านมา
+        </h2>
+        <div class="projects-grid">
+            <!-- Project 0 -->
+            <div class="project-card">
+                <h3 class="project-title">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                    NewSnooker.github.io
+                </h3>
+                <p class="project-description">
+                    (Portfolio)
+                </p>
+                <div class="tech-stack">
+                    <span class="tech-tag">HTML</span>
+                    <span class="tech-tag">CSS</span>
+                    <span class="tech-tag">JavaScript</span>
+
+                </div>
+                <a href="https://github.com/NewSnooker/NewSnooker.github.io" target="_blank" class="project-link">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                    </svg>
+                    ดูโค้ดบน GitHub
+                </a>
+            </div>
+            <!-- Project 1 -->
+            <div class="project-card">
+                <h3 class="project-title">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                    git-workshop-101-1
+                </h3>
+                <p class="project-description">
+                    (ทดลองการใช้ GitHub)
+                </p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Python </span>
+
+                </div>
+                <a href="https://github.com/NewSnooker/git-workshop-101-1" target="_blank" class="project-link">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                    </svg>
+                    ดูโค้ดบน GitHub
+                </a>
+            </div>
+            <!-- Project 2 -->
+            <div class="project-card">
+                <h3 class="project-title">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                    git-workshop-101
+                </h3>
+                <p class="project-description">
+                    (ทดลองการใช้ GitHub)
+                </p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Lua </span>
+
+
+                </div>
+                <a href="https://github.com/NewSnooker/git-workshop-101" target="_blank" class="project-link">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                    </svg>
+                    ดูโค้ดบน GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== -->
+    <!-- GitHub Section -->
+    <!-- ==================== -->
+    <section id="github">
+        <h2>
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"
+                style="vertical-align: middle; margin-right: 10px;">
+                <path
+                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+            </svg>
+            GitHub Profile
+        </h2>
+        <p>
+            โค้ดทุกโปรเจกต์ของผมมีให้ดูบน GitHub
+            ผมมุ่งเน้นการเขียนโค้ดที่มีคุณภาพ มี Documentation ที่ชัดเจน
+            และเปิดกว้างสำหรับการเรียนรู้และแบ่งปัน
+        </p>
+        <a href="https://github.com/NewSnooker" class="github-link" target="_blank">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+            เยี่ยมชม GitHub Profile
+        </a>
+    </section>
+
+    <!-- ==================== -->
+    <!-- Contact Section -->
+    <!-- ==================== -->
+    <section id="contact">
+        <h2>
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                style="vertical-align: middle; margin-right: 10px;">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            ติดต่อ
+        </h2>
+        <div class="contact-info">
+            <div class="contact-item">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <div>
+                    <strong>Email</strong>
+                    <a href="mailto:68040233114@udru.ac.th">68040233114@udru.ac.th"></a>
+                </div>
+            </div>
+            <div class="contact-item">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                </svg>
+                <div>
+                    <strong>GitHub</strong>
+                    <a href="https://github.com/NewSnooker" target="_blank">https://github.com/NewSnooker</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== -->
+    <!-- JavaScript -->
+    <!-- ==================== -->
     <script src="script.js"></script>
 </body>
 
