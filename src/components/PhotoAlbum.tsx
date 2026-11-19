@@ -65,6 +65,26 @@ export function PhotoAlbum({ photos, title }: { photos: Photo[]; title: string }
                 height={1067}
                 className="max-h-[75vh] w-full object-contain"
               />
+              {photos.length > 1 ? (
+                <>
+                  <button
+                    type="button"
+                    onClick={() => step(-1)}
+                    aria-label="ภาพก่อนหน้า"
+                    className="absolute left-3 top-1/2 grid size-10 -translate-y-1/2 place-items-center rounded-full border border-border bg-popup/90 text-foreground transition-colors hover:border-faint hover:bg-popup"
+                  >
+                    <ChevronLeft className="size-5" aria-hidden />
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => step(1)}
+                    aria-label="ภาพถัดไป"
+                    className="absolute right-3 top-1/2 grid size-10 -translate-y-1/2 place-items-center rounded-full border border-border bg-popup/90 text-foreground transition-colors hover:border-faint hover:bg-popup"
+                  >
+                    <ChevronRight className="size-5" aria-hidden />
+                  </button>
+                </>
+              ) : null}
               <button
                 type="button"
                 onClick={() => setIndex(null)}
@@ -77,26 +97,8 @@ export function PhotoAlbum({ photos, title }: { photos: Photo[]; title: string }
             <figcaption className="flex items-center justify-between gap-4 px-5 py-3 text-[14px] text-muted">
               <span>{current.caption}</span>
               {photos.length > 1 ? (
-                <span className="flex shrink-0 items-center gap-2">
-                  <button
-                    type="button"
-                    onClick={() => step(-1)}
-                    aria-label="ภาพก่อนหน้า"
-                    className="grid size-8 place-items-center rounded-full border border-border hover:border-faint"
-                  >
-                    <ChevronLeft className="size-4" aria-hidden />
-                  </button>
-                  <span className="tabular-nums">
-                    {(index ?? 0) + 1} / {photos.length}
-                  </span>
-                  <button
-                    type="button"
-                    onClick={() => step(1)}
-                    aria-label="ภาพถัดไป"
-                    className="grid size-8 place-items-center rounded-full border border-border hover:border-faint"
-                  >
-                    <ChevronRight className="size-4" aria-hidden />
-                  </button>
+                <span className="shrink-0 tabular-nums">
+                  {(index ?? 0) + 1} / {photos.length}
                 </span>
               ) : null}
             </figcaption>
