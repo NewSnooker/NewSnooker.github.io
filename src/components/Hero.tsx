@@ -58,7 +58,7 @@ export function Hero() {
         </div>
       </div>
 
-      <a href="#work" className="group mt-8 inline-flex items-center gap-3 text-[14px] font-semibold underline-offset-4 hover:underline">
+      <a href="#work" className="group mx-auto mt-8 flex w-fit items-center gap-3 text-[14px] font-semibold underline-offset-4 hover:underline">
         ดูผลงาน
         <ArrowDown className="size-4 transition-transform group-hover:translate-y-0.5" aria-hidden />
       </a>
