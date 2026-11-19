@@ -8,10 +8,13 @@ export const profile = {
   intro:
     "นักศึกษาชั้นปีที่ 4 สาขาวิชาเทคโนโลยีสารสนเทศ มหาวิทยาลัยราชภัฏอุดรธานี สนใจด้าน Software Development และการพัฒนาแอปพลิเคชันที่ใช้ AI ชอบลงมือพัฒนาระบบตั้งแต่ออกแบบโครงสร้าง ฐานข้อมูล Frontend และ Backend ไปจนถึง deploy ให้ใช้งานได้จริง",
   internshipPeriod: "1 เมษายน – 11 มิถุนายน 2570",
-  email: "68040233114@udru.ac.th",
+  email: "nu0075533@gmail.com",
+  phone: "065-576-7707",
   github: "https://github.com/NewSnooker",
-  // Set to "/resume.pdf" after putting the file in public/ to show the resume button.
-  resumeUrl: undefined as string | undefined,
+  // Your own LINE link, e.g. "https://line.me/ti/p/xxxxxxxx". The LINE button shows once this is set.
+  line: undefined as string | undefined,
+  // PDF under public/. Remove (set to undefined) to hide the download buttons.
+  resumeUrl: "/resume/Resume_Panuwat_Mathito.pdf" as string | undefined,
   photo: "/images/profile.jpg",
 };
 

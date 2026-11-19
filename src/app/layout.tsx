@@ -8,7 +8,7 @@ const manrope = Manrope({ variable: "--font-manrope", subsets: ["latin"], weight
 const anuphan = Anuphan({ variable: "--font-anuphan", subsets: ["thai"], weight: ["400", "500", "600", "700"] });
 
 export const metadata: Metadata = {
-  title: `${profile.name} | พอร์ตโฟลิโอ`,
+  title: `${profile.nameEn} | Portfolio`,
   description: `${profile.role} · ${profile.location}`,
   icons: { icon: "/favicon.ico" },
 };
