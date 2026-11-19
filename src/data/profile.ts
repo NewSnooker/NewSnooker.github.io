@@ -54,15 +54,15 @@ export const experience: {
   {
     company: "บริษัท แกรนด์ เอทีเอส จำกัด",
     location: "จ.ปทุมธานี",
-    position: "นักศึกษาฝึกงาน ฝ่ายไอทีซัพพอร์ต",
+    position: "นักศึกษาฝึกงาน ฝ่ายซัพพอร์ตและฝ่ายขาย",
     period: "26 กุมภาพันธ์ – 3 พฤษภาคม 2567",
     about: "บริษัทพัฒนาซอฟต์แวร์บริหารสถานศึกษาอาชีวะ และระบบเครือข่ายสำหรับสถานศึกษา",
     tasks: [
       "ติดตั้งระบบปฏิบัติการ Windows ให้คอมพิวเตอร์ และแพ็คเครื่องเตรียมส่งมอบให้สถานศึกษา",
       "ทำแลปเชื่อมต่อเครือข่าย LAN → Firewall (Zyxel USG60) → Switch → Access Point และตั้งค่าอุปกรณ์ผ่านหน้า GUI",
-      "ลงพื้นที่ดูหน้างานที่สถานศึกษาร่วมกับพี่เลี้ยง และเรียนรู้โครงสร้างระบบเครือข่ายของบริษัท",
+      "ลงพื้นที่ดูหน้างานที่สถานศึกษาร่วมกับผู้ดูแลการฝึกงาน และเรียนรู้โครงสร้างระบบเครือข่ายของบริษัท",
       "เข้าร่วมอบรมพนักงานเรื่อง พ.ร.บ.คอมพิวเตอร์และแนวปฏิบัติในการทำงาน",
-      "เรียนพื้นฐาน Docker และ Java Spring Boot จากทีมนักพัฒนา",
+      "ช่วงที่ไม่มีงานในแผนก ไปประจำห้องนักพัฒนา ฝึกเขียนโปรแกรม และเรียนพื้นฐาน Docker และ Java Spring Boot จากทีมนักพัฒนา",
     ],
     // Album: put photos in public/images/experience/grand-ats/ and list them here.
     photos: [
@@ -70,14 +70,14 @@ export const experience: {
       { src: "/images/experience/grand-ats/firewall-switch.jpg", caption: "ต่อ Firewall Zyxel USG60 เข้ากับ Switch" },
       { src: "/images/experience/grand-ats/access-points.jpg", caption: "ต่อ Access Point 4 ตัวผ่าน Switch ที่เชื่อมกับ Firewall" },
       { src: "/images/experience/grand-ats/nebula-dashboard.jpg", caption: "ดูสถานะ Access Point และอุปกรณ์ที่เชื่อมต่อผ่าน Zyxel Nebula (ระบบบริหารจัดการบนคลาวด์)" },
-      { src: "/images/experience/grand-ats/server-room.jpg", caption: "รับฟังคำอธิบายจากพี่เลี้ยงเกี่ยวกับโครงสร้างระบบเครือข่ายและเส้นทางการรับส่งข้อมูลอินเทอร์เน็ตของบริษัทโดยสังเขป" },
+      { src: "/images/experience/grand-ats/server-room.jpg", caption: "รับฟังคำอธิบายจากผู้ดูแลการฝึกงานเกี่ยวกับโครงสร้างระบบเครือข่ายและเส้นทางการรับส่งข้อมูลอินเทอร์เน็ตของบริษัทโดยสังเขป" },
       { src: "/images/experience/grand-ats/training.jpg", caption: "เข้าร่วมอบรมพนักงานเรื่องกฎหมายในที่ทำงาน (พ.ร.บ.คอมพิวเตอร์)" },
       { src: "/images/experience/grand-ats/windows-install.jpg", caption: "ติดตั้ง Windows ให้คอมพิวเตอร์ที่จะส่งมอบให้สถานศึกษา" },
       { src: "/images/experience/grand-ats/acronis-backup.jpg", caption: "ติดตั้ง Windows ให้เครื่องด้วยการกู้ระบบจากไฟล์ต้นแบบ (image)" },
       { src: "/images/experience/grand-ats/packing.jpg", caption: "แพ็คคอมพิวเตอร์และจอที่ติดตั้งเสร็จ เตรียมส่งมอบ" },
       { src: "/images/experience/grand-ats/truck.jpg", caption: "ขนส่งอุปกรณ์ไปยังสถานศึกษา" },
-      { src: "/images/experience/grand-ats/site-classroom.jpg", caption: "ลงพื้นที่ตรวจหน้างานที่สถานศึกษาร่วมกับพี่เลี้ยง ระหว่างที่บริษัทเข้าหารือเรื่องงานขายและงานบำรุงรักษาตามสัญญา" },
-      { src: "/images/experience/grand-ats/site-workshop.jpg", caption: "ลงพื้นที่ดูโรงฝึกงานช่างยนต์ของสถานศึกษาเดียวกัน เนื่องจากบริษัทรับผิดชอบหลายโครงการในสถานศึกษาแห่งนี้" },
+      { src: "/images/experience/grand-ats/site-classroom.jpg", caption: "ร่วมลงพื้นที่สถานศึกษากับผู้ดูแลการฝึกงาน เพื่อดูหน้างานประกอบการหารือเรื่องงานขายและงานบำรุงรักษาตามสัญญา" },
+      { src: "/images/experience/grand-ats/site-workshop.jpg", caption: "ดูโรงฝึกงานช่างยนต์ของสถานศึกษาเดียวกัน เนื่องจากบริษัทรับผิดชอบหลายโครงการในสถานศึกษาแห่งนี้" },
     ],
   },
 ];
