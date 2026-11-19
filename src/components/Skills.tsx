@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { skillGroups } from "@/data/skills";
 import { SectionHeading } from "./SectionHeading";
 import { skillIcons } from "./skillIcons";
@@ -17,14 +18,15 @@ export function Skills() {
             <ul className="flex flex-wrap gap-2">
               {group.items.map((item) => {
                 const entry = skillIcons[item];
-                const Icon = entry?.icon;
                 return (
                   <li
                     key={item}
                     className="flex items-center gap-2 rounded-lg border border-border bg-surface-2 px-3 py-1.5 text-[12px]"
                   >
-                    {Icon ? (
-                      <Icon aria-hidden className="size-4 shrink-0" style={entry.color ? { color: entry.color } : undefined} />
+                    {entry && "image" in entry ? (
+                      <Image src={entry.image} alt="" width={16} height={16} className="size-4 shrink-0 rounded-full" />
+                    ) : entry ? (
+                      <entry.icon aria-hidden className="size-4 shrink-0" style={entry.color ? { color: entry.color } : undefined} />
                     ) : null}
                     {item}
                   </li>

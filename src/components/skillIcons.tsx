@@ -18,7 +18,6 @@ import {
   SiMysql,
   SiNextdotjs,
   SiNodedotjs,
-  SiOpenjdk,
   SiPrisma,
   SiReact,
   SiRender,
@@ -29,12 +28,16 @@ import {
   SiUltralytics,
   SiVercel,
 } from "react-icons/si";
-import { TbApi, TbServerBolt, TbSql } from "react-icons/tb";
+import { FaJava } from "react-icons/fa";
+import { TbApi, TbSql } from "react-icons/tb";
 import { VscAzure } from "react-icons/vsc";
 
 // `color` is the brand colour. Brands whose colour is black use the text colour
 // instead (leave `color` out) so they stay visible in dark mode.
-export const skillIcons: Record<string, { icon: IconType; color?: string }> = {
+// `image` is for logos that are not in react-icons (file under public/).
+export type SkillIcon = { icon: IconType; color?: string } | { image: string };
+
+export const skillIcons: Record<string, SkillIcon> = {
   HTML: { icon: SiHtml5, color: "#E34F26" },
   CSS: { icon: SiCss, color: "#663399" },
   JavaScript: { icon: SiJavascript, color: "#F7DF1E" },
@@ -44,7 +47,7 @@ export const skillIcons: Record<string, { icon: IconType; color?: string }> = {
   "Tailwind CSS": { icon: SiTailwindcss, color: "#06B6D4" },
   "Node.js": { icon: SiNodedotjs, color: "#5FA04E" },
   Express: { icon: SiExpress },
-  Elysia: { icon: TbServerBolt, color: "#C084FC" },
+  Elysia: { image: "/icons/elysia.png" },
   FastAPI: { icon: SiFastapi, color: "#009688" },
   "REST API": { icon: TbApi },
   Flutter: { icon: SiFlutter, color: "#02569B" },
@@ -64,7 +67,7 @@ export const skillIcons: Record<string, { icon: IconType; color?: string }> = {
   YOLO: { icon: SiUltralytics, color: "#0B23A9" },
   "Google Colab": { icon: SiGooglecolab, color: "#F9AB00" },
   Kaggle: { icon: SiKaggle, color: "#20BEFF" },
-  Java: { icon: SiOpenjdk },
+  Java: { icon: FaJava, color: "#E76F00" },
   "Spring Boot": { icon: SiSpringboot, color: "#6DB33F" },
   Angular: { icon: SiAngular, color: "#DD0031" },
 };
