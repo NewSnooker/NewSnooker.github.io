@@ -60,15 +60,15 @@ export const experience: {
     tasks: [
       "ติดตั้งระบบปฏิบัติการ Windows ให้คอมพิวเตอร์ และแพ็คเครื่องเตรียมส่งมอบให้สถานศึกษา",
       "ทำแลปเชื่อมต่อเครือข่าย LAN → Firewall (Zyxel USG60) → Switch → Access Point และตั้งค่าอุปกรณ์ผ่านหน้า GUI",
-      "ลงพื้นที่ดูหน้างานที่สถานศึกษาร่วมกับผู้ดูแลการฝึกงาน และเรียนรู้โครงสร้างระบบเครือข่ายของบริษัท",
+      "ติดตามผู้ดูแลการฝึกงานลงพื้นที่สถานศึกษา และเรียนรู้โครงสร้างระบบเครือข่ายของบริษัท",
       "เข้าร่วมอบรมพนักงานเรื่อง พ.ร.บ.คอมพิวเตอร์และแนวปฏิบัติในการทำงาน",
       "ใช้เวลาว่างจากงานในแผนกซัพพอร์ตและฝ่ายขาย ไปประจำห้องนักพัฒนาเพื่อฝึกเขียนโปรแกรมด้วยตนเอง พร้อมเรียนรู้พื้นฐาน Docker และ Java Spring Boot จากทีมนักพัฒนา",
     ],
     // Album: put photos in public/images/experience/grand-ats/ and list them here.
     photos: [
-      { src: "/images/experience/grand-ats/lab-desk.jpg", caption: "ทำแลป IoT ตามใบงานของบริษัท ตั้งค่า Switch ผ่านหน้าเว็บ เอกสารสอนไม่ตรงกับโจทย์จริง จึงต้องค้นคว้าและทดลองเพิ่มเอง" },
-      { src: "/images/experience/grand-ats/firewall-switch.jpg", caption: "ต่อ Firewall Zyxel USG60 เข้ากับ Switch" },
-      { src: "/images/experience/grand-ats/access-points.jpg", caption: "ต่อ Access Point 4 ตัวผ่าน Switch ที่เชื่อมกับ Firewall" },
+      { src: "/images/experience/grand-ats/lab-desk.jpg", caption: "ทำแลป IoT ตามใบงานของบริษัท ตั้งค่า Switch ผ่านหน้าเว็บไซต์ และค้นคว้าเพิ่มเมื่อเอกสารสอนไม่ตรงกับโจทย์" },
+      { src: "/images/experience/grand-ats/firewall-switch.jpg", caption: "เชื่อมต่อ Firewall Zyxel USG60 เข้ากับ Switch" },
+      { src: "/images/experience/grand-ats/access-points.jpg", caption: "เชื่อมต่อ Access Point 4 ตัวกับ Firewall ผ่าน Switch" },
       { src: "/images/experience/grand-ats/nebula-dashboard.jpg", caption: "ดูสถานะ Access Point และอุปกรณ์ที่เชื่อมต่อผ่าน Zyxel Nebula (ระบบบริหารจัดการบนคลาวด์)" },
       { src: "/images/experience/grand-ats/server-room.jpg", caption: "รับฟังคำอธิบายจากผู้ดูแลการฝึกงานเกี่ยวกับโครงสร้างระบบเครือข่ายและเส้นทางการรับส่งข้อมูลอินเทอร์เน็ตของบริษัทโดยสังเขป" },
       { src: "/images/experience/grand-ats/training.jpg", caption: "เข้าร่วมอบรมพนักงานเรื่องกฎหมายในที่ทำงาน (พ.ร.บ.คอมพิวเตอร์)" },
@@ -76,8 +76,8 @@ export const experience: {
       { src: "/images/experience/grand-ats/acronis-backup.jpg", caption: "ติดตั้ง Windows ให้เครื่องด้วยการกู้ระบบจากไฟล์ต้นแบบ (image)" },
       { src: "/images/experience/grand-ats/packing.jpg", caption: "แพ็คคอมพิวเตอร์และจอที่ติดตั้งเสร็จ เตรียมส่งมอบ" },
       { src: "/images/experience/grand-ats/truck.jpg", caption: "ขนส่งอุปกรณ์ไปยังสถานศึกษา" },
-      { src: "/images/experience/grand-ats/site-classroom.jpg", caption: "ร่วมลงพื้นที่สถานศึกษากับผู้ดูแลการฝึกงาน เพื่อดูหน้างานประกอบการหารือเรื่องงานขายและงานบำรุงรักษาตามสัญญา" },
-      { src: "/images/experience/grand-ats/site-workshop.jpg", caption: "ดูโรงฝึกงานช่างยนต์ของสถานศึกษาเดียวกัน เนื่องจากบริษัทรับผิดชอบหลายโครงการในสถานศึกษาแห่งนี้" },
+      { src: "/images/experience/grand-ats/site-classroom.jpg", caption: "ติดตามผู้ดูแลการฝึกงานลงพื้นที่สถานศึกษา เพื่อดูห้องปฏิบัติการและรับฟังการหารือเรื่องงานบำรุงรักษาตามสัญญา" },
+      { src: "/images/experience/grand-ats/site-workshop.jpg", caption: "ดูห้องปฏิบัติการช่างยนต์ของสถานศึกษาเดียวกัน ซึ่งเป็นอีกหนึ่งโครงการที่บริษัทรับผิดชอบ" },
     ],
   },
 ];
