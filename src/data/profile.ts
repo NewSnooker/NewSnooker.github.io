@@ -60,6 +60,7 @@ export const experience: {
     tasks: [
       "ติดตั้งระบบปฏิบัติการ Windows ให้คอมพิวเตอร์ และแพ็คเครื่องเตรียมส่งมอบให้สถานศึกษา",
       "ทำแลปเชื่อมต่อเครือข่าย LAN → Firewall (Zyxel USG60) → Switch → Access Point และตั้งค่าอุปกรณ์ผ่านหน้า GUI",
+      "ลงพื้นที่ดูหน้างานที่สถานศึกษาร่วมกับผู้ดูแลการฝึกงาน และเรียนรู้โครงสร้างระบบเครือข่ายของบริษัท",
       "เข้าร่วมอบรมพนักงานเรื่อง พ.ร.บ.คอมพิวเตอร์และแนวปฏิบัติในการทำงาน",
       "ใช้เวลาว่างจากงานในแผนกซัพพอร์ตและฝ่ายขาย ไปประจำห้องนักพัฒนาเพื่อฝึกเขียนโปรแกรมด้วยตนเอง พร้อมเรียนรู้พื้นฐาน Docker และ Java Spring Boot จากทีมนักพัฒนา",
     ],
@@ -71,7 +72,7 @@ export const experience: {
       { src: "/images/experience/grand-ats/lab-notes.jpg", caption: "บันทึกขั้นตอนที่ทำในแลปและผังการทำงานของระบบ ซึ่งเป็นใบคำตอบของแลป" },
       { src: "/images/experience/grand-ats/nebula-dashboard.jpg", caption: "ดูสถานะ Access Point และอุปกรณ์ที่เชื่อมต่อผ่าน Zyxel Nebula (ระบบบริหารจัดการบนคลาวด์)" },
       { src: "/images/experience/grand-ats/server-room.jpg", caption: "รับฟังคำอธิบายจากผู้ดูแลการฝึกงานเกี่ยวกับโครงสร้างระบบเครือข่ายและเส้นทางการรับส่งข้อมูลอินเทอร์เน็ตของบริษัทโดยสังเขป" },
-      { src: "/images/experience/grand-ats/acronis-backup.jpg", caption: "ติดตั้ง Windows ให้คอมพิวเตอร์ที่จะส่งมอบให้สถานศึกษา โดยกู้ระบบจากไฟล์ต้นแบบ (image)" },
+      { src: "/images/experience/grand-ats/acronis-backup.jpg", caption: "ติดตั้ง Windows ให้คอมพิวเตอร์ที่จะส่งมอบให้สถานศึกษา ด้วยการติดตั้งจากไฟล์ต้นแบบ (image)" },
       { src: "/images/experience/grand-ats/packing.jpg", caption: "แพ็คคอมพิวเตอร์และจอที่ติดตั้งเสร็จ เตรียมส่งมอบ" },
       { src: "/images/experience/grand-ats/truck.jpg", caption: "ขนส่งอุปกรณ์ไปยังสถานศึกษา" },
       { src: "/images/experience/grand-ats/training.jpg", caption: "เข้าร่วมอบรมพนักงานเรื่องกฎหมายในที่ทำงาน (พ.ร.บ.คอมพิวเตอร์)" },
