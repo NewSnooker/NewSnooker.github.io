@@ -1,7 +1,11 @@
 import { ArrowUpRight, Download, MapPin, Phone } from "lucide-react";
-import { SiGmail, SiLine } from "react-icons/si";
+import { SiLine } from "react-icons/si";
 import { profile } from "@/data/profile";
+import { CopyEmail } from "./CopyEmail";
 import { GithubIcon } from "./icons";
+
+// Opens Gmail's compose window in the browser, so it works without a mail app.
+const composeUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(profile.email)}`;
 
 type Channel = {
   label: string;
@@ -12,12 +16,6 @@ type Channel = {
 };
 
 const channels: Channel[] = [
-  {
-    label: "อีเมล",
-    value: profile.email,
-    href: `mailto:${profile.email}`,
-    icon: <SiGmail className="size-4" style={{ color: "#EA4335" }} aria-hidden />,
-  },
   {
     label: "โทรศัพท์",
     value: profile.phone,
@@ -60,7 +58,9 @@ export function Contact() {
           </div>
           <div className="flex shrink-0 flex-col items-start gap-3 md:items-center">
             <a
-              href={`mailto:${profile.email}`}
+              href={composeUrl}
+              target="_blank"
+              rel="noreferrer"
               className="group flex items-center gap-6 rounded-md bg-accent px-5 py-3 text-[13px] font-medium text-accent-ink transition-opacity hover:opacity-90"
             >
               ส่งอีเมล
@@ -77,6 +77,9 @@ export function Contact() {
         </div>
 
         <ul className="mt-8 grid gap-2 border-t border-border pt-8 sm:grid-cols-2">
+          <li>
+            <CopyEmail email={profile.email} />
+          </li>
           {channels.map((channel) => (
             <li key={channel.label}>
               <a
