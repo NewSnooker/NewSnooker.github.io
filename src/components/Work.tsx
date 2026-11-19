@@ -158,7 +158,7 @@ export function Work() {
                   </a>
                 ))}
                 {project.repos.length === 0 ? (
-                  <span className="text-muted">โค้ดเป็น repository ส่วนตัว</span>
+                  <span className="text-muted">Private repository</span>
                 ) : null}
                 {project.demo ? (
                   <a

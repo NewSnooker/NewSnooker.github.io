@@ -98,7 +98,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                     <ExternalLink className="size-3.5" aria-hidden />
                   </a>
                 ) : null}
-                {project.repos.length === 0 ? <span className="text-[12px] text-muted">โค้ดเป็น repository ส่วนตัว</span> : null}
+                {project.repos.length === 0 ? <span className="text-[12px] text-muted">Private repository</span> : null}
               </div>
             </div>
 
