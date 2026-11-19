@@ -64,7 +64,13 @@ export const experience: {
     ],
     // Album: put photos in public/images/experience/grand-ats/ and list them here.
     photos: [
-      { src: "/images/experience/grand-ats/firewall-lab.jpg", caption: "แลปเชื่อมต่อ Firewall Zyxel USG60 กับ Switch" },
+      { src: "/images/experience/grand-ats/lab-desk.jpg", caption: "โต๊ะแลปเครือข่าย พร้อมผัง VLAN บนไวท์บอร์ด" },
+      { src: "/images/experience/grand-ats/firewall-switch.jpg", caption: "เชื่อมต่อ Firewall Zyxel USG60 กับ Switch" },
+      { src: "/images/experience/grand-ats/access-points.jpg", caption: "ต่อ Access Point เข้ากับ Firewall" },
+      { src: "/images/experience/grand-ats/nebula-dashboard.jpg", caption: "ดูแล Access Point ผ่าน Zyxel Nebula (คลาวด์)" },
+      { src: "/images/experience/grand-ats/acronis-backup.jpg", caption: "สำรองข้อมูลเครื่องด้วย Acronis True Image" },
+      { src: "/images/experience/grand-ats/delivery.jpg", caption: "ส่งมอบคอมพิวเตอร์ให้สถานศึกษา" },
+      { src: "/images/experience/grand-ats/server-room.jpg", caption: "เข้าห้อง Server กับทีมช่าง" },
     ],
   },
 ];
