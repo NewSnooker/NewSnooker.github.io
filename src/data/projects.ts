@@ -36,7 +36,7 @@ export const projects: Project[] = [
   {
     slug: "acne-ai",
     cover: "/images/projects/acne-ai/cover.jpg",
-    gallery: ["/images/projects/acne-ai/01.jpg", "/images/projects/acne-ai/02.jpg", "/images/projects/acne-ai/03.jpg", "/images/projects/acne-ai/04.jpg"],
+    gallery: ["/images/projects/acne-ai/01.jpg", "/images/projects/acne-ai/02.jpg", "/images/projects/acne-ai/03.jpg", "/images/projects/acne-ai/04.jpg", "/images/projects/acne-ai/05.jpg", "/images/projects/acne-ai/06.jpg", "/images/projects/acne-ai/07.jpg", "/images/projects/acne-ai/08.jpg"],
     title: "AcneAI",
     subtitle: "ระบบตรวจจับและจำแนกชนิดสิวจากภาพถ่ายใบหน้า",
     category: "web",
@@ -49,6 +49,7 @@ export const projects: Project[] = [
     highlights: [
       "แยกระบบเป็นเว็บแอป (Next.js) กับ AI Service (FastAPI) ที่ทำหน้าที่ตรวจภาพอย่างเดียว คุยกันผ่าน REST API และยืนยันกันด้วย API key",
       "ใช้โมเดล YOLO ตรวจจับสิว 6 ชนิด แล้วคำนวณระดับความรุนแรงตามเกณฑ์ที่กำหนดไว้ในเล่มโครงงาน",
+      "เปรียบเทียบโมเดลด้วยค่า mAP@0.5, Precision, Recall และ F1-score โมเดลที่ใช้งานจริงได้ mAP@0.5 60.36% (โมเดลเริ่มต้น 36.98%)",
       "เก็บไฟล์โมเดลไว้ในฐานข้อมูล ให้ AI Service โหลดผ่าน API แล้วเก็บ cache ลงดิสก์ ผู้ดูแลจึงอัปโหลดและสลับโมเดลได้จากหน้าเว็บ",
       "ทดลองเทคนิค Test-Time Augmentation (TTA) และวัดผลเทียบกับการตรวจแบบปกติ",
       "แบ่งสิทธิ์ผู้ใช้กับผู้ดูแลด้วย Auth.js และตรวจสิทธิ์ทั้งที่ middleware และในทุก API",
