@@ -21,9 +21,9 @@ export function Hero() {
         Hello, world. I&apos;m Phanuwat.
       </p>
       <h1 className="mt-4 font-display text-[40px] font-semibold leading-[1.18] tracking-[-0.03em] sm:text-[54px]">
-        นักพัฒนาซอฟต์แวร์
+        นักศึกษาไอที
         <br />
-        <span className="text-faint">สาย Full-Stack.</span>
+        <span className="text-faint">พร้อมเรียนรู้งานพัฒนาซอฟต์แวร์.</span>
       </h1>
 
       <div className="mt-10 flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between">
