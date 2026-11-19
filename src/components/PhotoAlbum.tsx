@@ -57,7 +57,7 @@ export function PhotoAlbum({ photos, title }: { photos: Photo[]; title: string }
       >
         {current ? (
           <figure>
-            <div className="relative bg-black">
+            <div className="group/carousel relative bg-surface-2">
               <Image
                 src={current.src}
                 alt={current.caption}
@@ -71,18 +71,35 @@ export function PhotoAlbum({ photos, title }: { photos: Photo[]; title: string }
                     type="button"
                     onClick={() => step(-1)}
                     aria-label="ภาพก่อนหน้า"
-                    className="absolute left-3 top-1/2 grid size-10 -translate-y-1/2 place-items-center rounded-full border border-border bg-popup/90 text-foreground transition-colors hover:border-faint hover:bg-popup"
+                    className="absolute left-3 top-1/2 grid size-9 -translate-y-1/2 place-items-center rounded-full border border-border bg-background/85 text-foreground opacity-100 transition-opacity sm:opacity-0 sm:group-hover/carousel:opacity-100 sm:focus-visible:opacity-100"
                   >
-                    <ChevronLeft className="size-5" aria-hidden />
+                    <ChevronLeft className="size-4" aria-hidden />
                   </button>
                   <button
                     type="button"
                     onClick={() => step(1)}
                     aria-label="ภาพถัดไป"
-                    className="absolute right-3 top-1/2 grid size-10 -translate-y-1/2 place-items-center rounded-full border border-border bg-popup/90 text-foreground transition-colors hover:border-faint hover:bg-popup"
+                    className="absolute right-3 top-1/2 grid size-9 -translate-y-1/2 place-items-center rounded-full border border-border bg-background/85 text-foreground opacity-100 transition-opacity sm:opacity-0 sm:group-hover/carousel:opacity-100 sm:focus-visible:opacity-100"
                   >
-                    <ChevronRight className="size-5" aria-hidden />
+                    <ChevronRight className="size-4" aria-hidden />
                   </button>
+                  <div className="absolute bottom-3 left-1/2 flex -translate-x-1/2 items-center gap-1.5 rounded-full bg-black/45 px-2.5 py-1.5">
+                    {photos.map((photo, i) => (
+                      <button
+                        key={photo.src}
+                        type="button"
+                        onClick={() => setIndex(i)}
+                        aria-label={`ไปภาพที่ ${i + 1}`}
+                        aria-current={i === index ? "true" : undefined}
+                        className={`h-1.5 rounded-full transition-all ${
+                          i === index ? "w-5 bg-white" : "w-1.5 bg-white/50 hover:bg-white/80"
+                        }`}
+                      />
+                    ))}
+                  </div>
+                  <span className="absolute left-3 top-3 rounded-full bg-black/55 px-2 py-0.5 text-[13px] tabular-nums text-white">
+                    {(index ?? 0) + 1} / {photos.length}
+                  </span>
                 </>
               ) : null}
               <button
@@ -94,14 +111,7 @@ export function PhotoAlbum({ photos, title }: { photos: Photo[]; title: string }
                 <X className="size-4" aria-hidden />
               </button>
             </div>
-            <figcaption className="flex items-center justify-between gap-4 px-5 py-3 text-[14px] text-muted">
-              <span>{current.caption}</span>
-              {photos.length > 1 ? (
-                <span className="shrink-0 tabular-nums">
-                  {(index ?? 0) + 1} / {photos.length}
-                </span>
-              ) : null}
-            </figcaption>
+            <figcaption className="px-5 py-3 text-[14px] text-muted">{current.caption}</figcaption>
           </figure>
         ) : null}
       </dialog>
