@@ -27,7 +27,7 @@ export function SiteHeader() {
       >
         ข้ามไปที่เนื้อหา
       </a>
-      <div className="mx-auto flex h-[88px] max-w-[1120px] items-center justify-between gap-4 border-b border-border px-4 sm:px-6 xl:px-0">
+      <div className="mx-auto flex h-[72px] max-w-[1120px] items-center justify-between gap-4 border-b border-border px-4 sm:px-6 xl:px-0">
         <a href="#top" className="group flex items-center gap-2.5 text-[16px]">
           <CodeXml className="size-5 text-accent transition-transform group-hover:-rotate-6" aria-hidden />
           <span className="font-semibold">newsnooker</span>
