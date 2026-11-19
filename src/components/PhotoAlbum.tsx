@@ -96,7 +96,7 @@ export function PhotoAlbum({ photos, title }: { photos: Photo[]; title: string }
               onPointerMove={onPointerMove}
               onPointerUp={endDrag}
               onPointerCancel={endDrag}
-              className="group/carousel relative touch-pan-y select-none overflow-hidden bg-surface-2 sm:cursor-grab sm:active:cursor-grabbing"
+              className="group/carousel relative touch-pan-y select-none overflow-hidden bg-black sm:cursor-grab sm:active:cursor-grabbing"
             >
               <Image
                 src={current.src}
@@ -125,7 +125,7 @@ export function PhotoAlbum({ photos, title }: { photos: Photo[]; title: string }
                   >
                     <ChevronRight className="size-4" aria-hidden />
                   </button>
-                  <div className="absolute bottom-3 left-1/2 flex -translate-x-1/2 items-center gap-1.5 rounded-full bg-black/45 px-2.5 py-1.5">
+                  <div className="absolute bottom-3 left-1/2 flex -translate-x-1/2 items-center gap-1.5 rounded-full bg-white/20 px-2.5 py-1.5">
                     {photos.map((photo, i) => (
                       <button
                         key={photo.src}
@@ -139,7 +139,7 @@ export function PhotoAlbum({ photos, title }: { photos: Photo[]; title: string }
                       />
                     ))}
                   </div>
-                  <span className="absolute left-3 top-3 rounded-full bg-black/55 px-2 py-0.5 text-[13px] tabular-nums text-white">
+                  <span className="absolute left-3 top-3 rounded-full bg-white/20 px-2 py-0.5 text-[13px] tabular-nums text-white">
                     {(index ?? 0) + 1} / {photos.length}
                   </span>
                 </>
