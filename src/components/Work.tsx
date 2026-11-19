@@ -17,6 +17,9 @@ const PAGE_SIZE = 4;
 
 const filterLabel = (filter: Filter) => (filter === "all" ? "ทั้งหมด" : categoryLabels[filter]);
 
+const filterCount = (filter: Filter) =>
+  filter === "all" ? projects.length : projects.filter((project) => project.category === filter).length;
+
 const matches = (project: Project, query: string) => {
   const text = [project.title, project.subtitle, project.summary, ...project.stack].join(" ").toLowerCase();
   return text.includes(query.trim().toLowerCase());
@@ -65,6 +68,7 @@ export function Work() {
                 }`}
               >
                 {filterLabel(item)}
+                <sup className="ml-1 text-[9px] tabular-nums text-faint">{filterCount(item)}</sup>
               </button>
             );
           })}
