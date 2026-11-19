@@ -94,7 +94,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                     rel="noreferrer"
                     className="flex items-center gap-2 rounded-md border border-accent bg-accent px-3.5 py-2.5 text-[12px] font-medium text-accent-ink transition-opacity hover:opacity-85"
                   >
-                    เปิดเว็บจริง
+                    Live site
                     <ExternalLink className="size-3.5" aria-hidden />
                   </a>
                 ) : null}

@@ -167,7 +167,7 @@ export function Work() {
                     rel="noreferrer"
                     className="group/link flex items-center gap-2 underline-offset-4 hover:underline"
                   >
-                    เปิดเว็บจริง
+                    Live site
                     <ExternalLink
                       className="size-3.5 transition-transform group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5"
                       aria-hidden
