@@ -69,7 +69,7 @@ export const experience: {
       { src: "/images/experience/grand-ats/lab-desk.jpg", caption: "ทำแลป IoT ตามใบงานของบริษัท ตั้งค่า Switch ผ่านหน้าเว็บไซต์ และค้นคว้าเพิ่มเมื่อเอกสารสอนไม่ตรงกับโจทย์" },
       { src: "/images/experience/grand-ats/firewall-switch.jpg", caption: "เชื่อมต่อ Firewall Zyxel USG60 เข้ากับ Switch" },
       { src: "/images/experience/grand-ats/access-points.jpg", caption: "เชื่อมต่อ Access Point 4 ตัวกับ Firewall ผ่าน Switch" },
-      { src: "/images/experience/grand-ats/lab-notes.jpg", caption: "บันทึกขั้นตอนที่ทำในแลปและผังการทำงานของระบบ ซึ่งเป็นใบคำตอบของแลป" },
+      { src: "/images/experience/grand-ats/lab-notes.jpg", caption: "บันทึกขั้นตอนที่ทำในแลปและผังการทำงานของระบบ" },
       { src: "/images/experience/grand-ats/nebula-dashboard.jpg", caption: "ดูสถานะ Access Point และอุปกรณ์ที่เชื่อมต่อผ่าน Zyxel Nebula (ระบบบริหารจัดการบนคลาวด์)" },
       { src: "/images/experience/grand-ats/server-room.jpg", caption: "รับฟังคำอธิบายจากผู้ดูแลการฝึกงานเกี่ยวกับโครงสร้างระบบเครือข่ายและเส้นทางการรับส่งข้อมูลอินเทอร์เน็ตของบริษัทโดยสังเขป" },
       { src: "/images/experience/grand-ats/acronis-backup.jpg", caption: "ติดตั้ง Windows ให้คอมพิวเตอร์ที่จะส่งมอบให้สถานศึกษา ด้วยการติดตั้งจากไฟล์ต้นแบบ (image)" },
