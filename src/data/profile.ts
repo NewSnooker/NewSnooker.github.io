@@ -77,7 +77,7 @@ export const experience: {
       { src: "/images/experience/grand-ats/truck.jpg", caption: "ขนส่งอุปกรณ์ไปยังสถานศึกษา" },
       { src: "/images/experience/grand-ats/training.jpg", caption: "เข้าร่วมอบรมพนักงานเรื่องกฎหมายในที่ทำงาน (พ.ร.บ.คอมพิวเตอร์)" },
       { src: "/images/experience/grand-ats/site-classroom.jpg", caption: "ติดตามผู้ดูแลการฝึกงานลงพื้นที่สถานศึกษา เพื่อดูห้องปฏิบัติการและรับฟังการหารือเรื่องงานบำรุงรักษาตามสัญญา" },
-      { src: "/images/experience/grand-ats/site-workshop.jpg", caption: "ดูห้องปฏิบัติการช่างยนต์ของสถานศึกษาเดียวกัน ซึ่งเป็นอีกหนึ่งโครงการที่บริษัทรับผิดชอบ" },
+      { src: "/images/experience/grand-ats/site-workshop.jpg", caption: "ลงพื้นที่ห้องปฏิบัติการช่างยนต์ของสถานศึกษาเดียวกัน ซึ่งเป็นอีกหนึ่งโครงการที่บริษัทรับผิดชอบ" },
     ],
   },
 ];
