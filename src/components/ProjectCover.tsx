@@ -11,16 +11,16 @@ export function ProjectCover({ project, priority = false }: { project: Project; 
         width={1600}
         height={900}
         priority={priority}
-        className="aspect-video w-full object-cover"
+        className="aspect-[16/9] w-full object-cover"
       />
     );
   }
 
   return (
-    <div className="grid aspect-video w-full place-items-center bg-gradient-to-br from-surface-2 to-background">
+    <div className="grid aspect-[16/9] w-full place-items-center bg-gradient-to-br from-surface-2 via-surface to-surface-2">
       <div className="text-center">
-        <p className="text-2xl font-bold tracking-tight text-foreground/80">{project.title}</p>
-        <p className="mt-1 text-xs text-muted">รอใส่ภาพหน้าจอ</p>
+        <p className="font-display text-[22px] font-semibold tracking-tight text-foreground/70">{project.title}</p>
+        <p className="mt-1 text-[11px] text-faint">รอใส่ภาพหน้าจอ</p>
       </div>
     </div>
   );

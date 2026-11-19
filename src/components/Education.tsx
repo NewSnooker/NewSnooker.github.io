@@ -3,25 +3,28 @@ import { SectionHeading } from "./SectionHeading";
 
 export function Education() {
   return (
-    <section id="education" className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
-      <SectionHeading index="04" title="การศึกษา" />
-      <div className="grid gap-6 md:grid-cols-2">
+    <section id="education" className="py-14">
+      <SectionHeading index="04" eyebrow="การศึกษา" title="การศึกษา" />
+      <ol className="space-y-10">
         {education.map((item) => (
-          <article key={item.school} className="rounded-2xl border border-border bg-surface p-6">
-            <p className="text-sm tabular-nums text-accent">
+          <li key={item.school} className="grid gap-4 md:grid-cols-[230px_1fr]">
+            <p className="flex items-center gap-3 self-start text-[12px] text-muted">
+              <span aria-hidden className="grid size-4 place-items-center rounded-full bg-accent-soft">
+                <span className="size-2 rounded-full bg-accent" />
+              </span>
               {item.period}
-              {item.note ? ` · ${item.note}` : ""}
             </p>
-            <h3 className="mt-2 text-lg font-semibold">{item.school}</h3>
-            <p className="mt-1 font-medium text-foreground/90">{item.degree}</p>
-            <ul className="mt-3 space-y-1 text-sm text-muted">
-              {item.details.map((detail) => (
-                <li key={detail}>{detail}</li>
-              ))}
-            </ul>
-          </article>
+            <div>
+              <h3 className="font-display text-[17px] font-semibold tracking-[-0.01em]">{item.degree}</h3>
+              <p className="mt-1 text-[12px] text-muted">
+                {item.school}
+                {item.note ? ` · ${item.note}` : ""}
+              </p>
+              <p className="mt-3 text-[13px] leading-[1.8] text-muted">{item.details.join(" · ")}</p>
+            </div>
+          </li>
         ))}
-      </div>
+      </ol>
     </section>
   );
 }

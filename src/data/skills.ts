@@ -1,5 +1,7 @@
+export type SkillGroupId = "frontend" | "backend" | "mobile" | "database" | "tools" | "design" | "ai" | "learning";
+
 export type SkillGroup = {
-  id: string;
+  id: SkillGroupId;
   label: string;
   items: string[];
 };
@@ -8,7 +10,7 @@ export const skillGroups: SkillGroup[] = [
   {
     id: "frontend",
     label: "Frontend",
-    items: ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Next.js", "Tailwind CSS"],
+    items: ["HTML & CSS", "JavaScript", "TypeScript", "React", "Next.js", "Tailwind CSS"],
   },
   {
     id: "backend",
@@ -27,7 +29,7 @@ export const skillGroups: SkillGroup[] = [
   },
   {
     id: "tools",
-    label: "Deploy / Tools",
+    label: "Deploy & Tools",
     items: ["Docker", "Git", "GitHub", "Vercel", "Render", "Supabase", "Azure"],
   },
   {

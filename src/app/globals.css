@@ -1,14 +1,33 @@
 @import "tailwindcss";
 
-:root {
-  --background: #0a0b0d;
-  --surface: #121418;
-  --surface-2: #181b21;
-  --border: #23272f;
-  --foreground: #e6e8eb;
-  --muted: #9aa3ad;
-  --accent: #3b82f6;
-  --accent-soft: #3b82f61f;
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+/* Zinc greys with a blue accent. Dark is the default (set on <html>). */
+:root,
+[data-theme="light"] {
+  --background: #fafafa;
+  --surface: #ffffff;
+  --surface-2: #f4f4f5;
+  --border: #e4e4e7;
+  --foreground: #27272a;
+  --muted: #71717a;
+  --faint: #a1a1aa;
+  --accent: #2563eb;
+  --accent-soft: #2563eb14;
+  --accent-ink: #ffffff;
+}
+
+[data-theme="dark"] {
+  --background: #1c1c1f;
+  --surface: #232327;
+  --surface-2: #2a2a2f;
+  --border: #36363c;
+  --foreground: #ececee;
+  --muted: #a1a1aa;
+  --faint: #71717a;
+  --accent: #60a5fa;
+  --accent-soft: #60a5fa1f;
+  --accent-ink: #0b1220;
 }
 
 @theme inline {
@@ -18,30 +37,52 @@
   --color-border: var(--border);
   --color-foreground: var(--foreground);
   --color-muted: var(--muted);
+  --color-faint: var(--faint);
   --color-accent: var(--accent);
   --color-accent-soft: var(--accent-soft);
-  --font-sans: var(--font-anuphan);
+  --color-accent-ink: var(--accent-ink);
+  /* Latin glyphs from DM Sans / Manrope, Thai glyphs fall back to Anuphan. */
+  --font-sans: var(--font-dm-sans), var(--font-anuphan), sans-serif;
+  --font-display: var(--font-manrope), var(--font-anuphan), sans-serif;
 }
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 5rem;
+  scroll-padding-top: 5.5rem;
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-anuphan), sans-serif;
+  font-family: var(--font-sans);
+  font-size: 14px;
   -webkit-font-smoothing: antialiased;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 ::selection {
   background: var(--accent);
-  color: #fff;
+  color: var(--accent-ink);
+}
+
+dialog::backdrop {
+  background: rgb(9 9 11 / 0.6);
+  backdrop-filter: blur(4px);
 }
 
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
   }
 }

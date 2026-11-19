@@ -4,42 +4,44 @@ import { SectionHeading } from "./SectionHeading";
 
 export function Experience() {
   return (
-    <section id="experience" className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
-      <SectionHeading index="03" title="ประสบการณ์ฝึกงาน" />
-      <div className="space-y-6">
+    <section id="experience" className="py-14">
+      <SectionHeading index="03" eyebrow="ประสบการณ์" title="ประสบการณ์ฝึกงาน" />
+      <ol className="space-y-10">
         {experience.map((job) => (
-          <article key={job.company} className="grid gap-6 rounded-2xl border border-border bg-surface p-6 md:grid-cols-[1fr_auto]">
+          <li key={job.company} className="grid gap-4 md:grid-cols-[230px_1fr]">
+            <p className="flex items-center gap-3 self-start text-[12px] text-muted">
+              <span aria-hidden className="grid size-4 place-items-center rounded-full bg-accent-soft">
+                <span className="size-2 rounded-full bg-accent" />
+              </span>
+              {job.period}
+            </p>
             <div>
-              <div className="flex flex-wrap items-baseline justify-between gap-2">
-                <h3 className="text-lg font-semibold">
-                  {job.company}
-                  <span className="font-normal text-muted">, {job.location}</span>
-                </h3>
-                <p className="text-sm tabular-nums text-muted">{job.period}</p>
-              </div>
-              <p className="mt-1 text-accent">{job.position}</p>
-              <p className="mt-1 text-sm text-muted">{job.about}</p>
-              <ul className="mt-4 space-y-2">
+              <h3 className="font-display text-[17px] font-semibold tracking-[-0.01em]">{job.position}</h3>
+              <p className="mt-1 text-[12px] text-muted">
+                {job.company}, {job.location}
+              </p>
+              <p className="mt-3 text-[13px] leading-[1.8] text-muted">{job.about}</p>
+              <ul className="mt-3 space-y-1.5">
                 {job.tasks.map((task) => (
-                  <li key={task} className="flex gap-3 text-sm leading-relaxed">
-                    <span aria-hidden className="mt-2 size-1.5 shrink-0 rounded-full bg-accent" />
+                  <li key={task} className="flex gap-3 text-[13px] leading-[1.8] text-muted">
+                    <span aria-hidden className="mt-[9px] size-1 shrink-0 rounded-full bg-faint" />
                     {task}
                   </li>
                 ))}
               </ul>
+              {job.image ? (
+                <Image
+                  src={job.image}
+                  alt={`ภาพจากการฝึกงานที่${job.company}`}
+                  width={720}
+                  height={405}
+                  className="mt-5 w-full max-w-md rounded-md border border-border object-cover"
+                />
+              ) : null}
             </div>
-            {job.image ? (
-              <Image
-                src={job.image}
-                alt={`ภาพจากการฝึกงานที่${job.company}`}
-                width={480}
-                height={320}
-                className="w-full rounded-xl border border-border object-cover md:w-72"
-              />
-            ) : null}
-          </article>
+          </li>
         ))}
-      </div>
+      </ol>
     </section>
   );
 }

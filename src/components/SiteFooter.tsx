@@ -1,15 +1,35 @@
 import { profile } from "@/data/profile";
 
+const links = [
+  { href: "#about", label: "เกี่ยวกับ" },
+  { href: "#work", label: "ผลงาน" },
+  { href: "#stack", label: "ทักษะ" },
+  { href: "#experience", label: "ประสบการณ์" },
+];
+
 export function SiteFooter() {
   return (
-    <footer className="border-t border-border">
-      <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-8 text-sm text-muted sm:px-6">
+    <footer className="mx-auto max-w-[1120px] px-4 sm:px-6 xl:px-0">
+      <div className="flex flex-col gap-4 border-t border-border py-8 text-[11px] text-muted sm:flex-row sm:items-center sm:justify-between">
         <p>
           © {new Date().getFullYear()} {profile.nameEn}
         </p>
-        <a href="#top" className="hover:text-foreground">
-          กลับขึ้นด้านบน ↑
-        </a>
+        <nav aria-label="ลิงก์ท้ายเว็บ">
+          <ul className="flex flex-wrap gap-5">
+            {links.map((link) => (
+              <li key={link.href}>
+                <a href={link.href} className="hover:text-foreground">
+                  {link.label}
+                </a>
+              </li>
+            ))}
+            <li>
+              <a href="#top" className="hover:text-foreground">
+                กลับขึ้นด้านบน ↑
+              </a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </footer>
   );

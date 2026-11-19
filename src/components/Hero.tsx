@@ -1,53 +1,70 @@
-import Link from "next/link";
 import Image from "next/image";
+import { ArrowDown, ArrowUpRight, FileText, MapPin } from "lucide-react";
 import { profile } from "@/data/profile";
+import { GithubIcon } from "./icons";
+
+const outlineButton =
+  "flex min-w-32 items-center justify-between gap-6 rounded-md border border-border bg-surface px-3.5 py-3 text-[12px] transition-colors hover:border-faint";
 
 export function Hero() {
   return (
-    <section id="about" className="mx-auto grid max-w-6xl items-center gap-10 px-4 pb-20 pt-16 sm:px-6 md:grid-cols-[1fr_auto] md:pt-24">
-      <div>
-        <p className="mb-4 inline-flex items-center gap-2 text-sm text-muted">
-          <span className="size-2 rounded-full bg-accent" aria-hidden />
-          {profile.location} · ฝึกงาน {profile.internshipPeriod}
+    <section id="about" className="pb-24 pt-20">
+      <div className="flex items-start justify-between gap-6">
+        <Image
+          src={profile.photo}
+          alt={`รูปของ${profile.name}`}
+          width={72}
+          height={72}
+          priority
+          className="size-[72px] rounded-2xl border border-border object-cover"
+        />
+        <p className="mt-5 flex items-center gap-2 rounded-full border border-accent/30 bg-accent-soft px-3 py-1.5 text-[11px] text-accent">
+          <span className="size-1.5 rounded-full bg-accent" aria-hidden />
+          กำลังหาที่ฝึกงาน
         </p>
-        <h1 className="text-4xl font-bold leading-tight tracking-tight text-balance sm:text-6xl">
-          สวัสดีครับ ผม<span className="text-accent">ภานุวัฒน์</span>
-        </h1>
-        <p className="mt-3 text-xl font-medium text-foreground/90 sm:text-2xl">{profile.role}</p>
-        <p className="mt-6 max-w-2xl leading-relaxed text-muted text-pretty">{profile.intro}</p>
-        <div className="mt-8 flex flex-wrap gap-3">
-          <Link
-            href="/#work"
-            className="rounded-lg bg-accent px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-accent/85"
-          >
-            ดูผลงาน
-          </Link>
-          <a
-            href={profile.github}
-            target="_blank"
-            rel="noreferrer"
-            className="rounded-lg border border-border px-5 py-2.5 text-sm font-medium transition-colors hover:border-accent hover:text-accent"
-          >
-            GitHub
+      </div>
+
+      <p className="mt-8 text-[10px] font-semibold uppercase tracking-[0.18em] text-muted">
+        Hello, world. I&apos;m Panuwat.
+      </p>
+      <h1 className="mt-4 font-display text-[40px] font-semibold leading-[1.18] tracking-[-0.03em] sm:text-[54px]">
+        นักพัฒนาซอฟต์แวร์
+        <br />
+        <span className="text-faint">สาย Full-Stack.</span>
+      </h1>
+
+      <div className="mt-10 flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between">
+        <div className="max-w-[470px]">
+          <p className="text-[15px] leading-[1.9] text-muted">{profile.intro}</p>
+          <p className="mt-5 flex items-center gap-2 text-[11px] text-muted">
+            <MapPin className="size-3.5" aria-hidden />
+            {profile.location}, ประเทศไทย · ฝึกงาน {profile.internshipPeriod}
+          </p>
+        </div>
+        <div className="flex gap-2">
+          <a href={profile.github} target="_blank" rel="noreferrer" className={outlineButton}>
+            <span className="flex items-center gap-2.5">
+              <GithubIcon />
+              GitHub
+            </span>
+            <ArrowUpRight className="size-3.5 text-muted" aria-hidden />
           </a>
           {profile.resumeUrl ? (
-            <a
-              href={profile.resumeUrl}
-              className="rounded-lg border border-border px-5 py-2.5 text-sm font-medium transition-colors hover:border-accent hover:text-accent"
-            >
-              ดาวน์โหลดเรซูเม่
+            <a href={profile.resumeUrl} target="_blank" rel="noreferrer" className={outlineButton}>
+              <span className="flex items-center gap-2.5">
+                <FileText className="size-4" aria-hidden />
+                เรซูเม่
+              </span>
+              <ArrowUpRight className="size-3.5 text-muted" aria-hidden />
             </a>
           ) : null}
         </div>
       </div>
-      <Image
-        src={profile.photo}
-        alt={`รูปของ${profile.name}`}
-        width={220}
-        height={280}
-        priority
-        className="hidden aspect-[3/4] w-44 rounded-2xl border border-border object-cover md:block lg:w-52"
-      />
+
+      <a href="#work" className="mt-12 inline-flex items-center gap-3 text-[12px] font-semibold">
+        ดูผลงานของผม
+        <ArrowDown className="size-4" aria-hidden />
+      </a>
     </section>
   );
 }

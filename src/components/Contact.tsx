@@ -1,32 +1,32 @@
+import { ArrowUpRight, MapPin } from "lucide-react";
 import { profile } from "@/data/profile";
-import { SectionHeading } from "./SectionHeading";
 
 export function Contact() {
   return (
-    <section id="contact" className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
-      <SectionHeading index="05" title="ติดต่อ" />
-      <div className="rounded-2xl border border-border bg-gradient-to-br from-surface to-background p-8 sm:p-12">
-        <p className="max-w-xl text-2xl font-semibold leading-snug text-balance sm:text-3xl">
-          กำลังหาที่ฝึกงานตำแหน่ง Software Developer <span className="whitespace-nowrap">ช่วง {profile.internshipPeriod}</span>
-        </p>
-        <p className="mt-3 text-muted">ยินดีพูดคุยและสัมภาษณ์ทั้งแบบออนไลน์และที่บริษัท</p>
-        <div className="mt-8 flex flex-wrap gap-3">
+    <section id="contact" className="py-14">
+      <div className="flex flex-col gap-8 rounded-lg border border-border bg-surface-2 p-8 sm:p-10 md:flex-row md:items-center md:justify-between">
+        <div>
+          <p className="text-[10px] font-semibold uppercase tracking-[0.08em] text-muted">05 / ติดต่อ</p>
+          <h2 className="mt-4 font-display text-[28px] font-semibold leading-tight tracking-[-0.02em] sm:text-[34px]">
+            เริ่มจากการพูดคุยกัน<span className="text-accent">.</span>
+          </h2>
+          <p className="mt-3 text-[13px] text-muted">
+            กำลังหาที่ฝึกงาน Software Developer <span className="whitespace-nowrap">ช่วง {profile.internshipPeriod}</span>
+          </p>
+        </div>
+        <div className="flex shrink-0 flex-col items-start gap-3 md:items-center">
           <a
             href={`mailto:${profile.email}`}
-            className="rounded-lg bg-accent px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-accent/85"
+            className="flex items-center gap-6 rounded-md bg-accent px-5 py-3 text-[13px] font-medium text-accent-ink transition-opacity hover:opacity-90"
           >
             ส่งอีเมล
+            <ArrowUpRight className="size-4" aria-hidden />
           </a>
-          <a
-            href={profile.github}
-            target="_blank"
-            rel="noreferrer"
-            className="rounded-lg border border-border px-5 py-2.5 text-sm font-medium transition-colors hover:border-accent hover:text-accent"
-          >
-            GitHub
-          </a>
+          <p className="flex items-center gap-1.5 text-[11px] text-muted">
+            <MapPin className="size-3.5" aria-hidden />
+            {profile.location}, ประเทศไทย
+          </p>
         </div>
-        <p className="mt-6 text-sm text-muted">{profile.email}</p>
       </div>
     </section>
   );

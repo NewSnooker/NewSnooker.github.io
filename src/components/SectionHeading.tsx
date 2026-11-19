@@ -1,17 +1,23 @@
 type SectionHeadingProps = {
   index: string;
+  eyebrow: string;
   title: string;
-  description?: string;
+  aside?: React.ReactNode;
 };
 
-export function SectionHeading({ index, title, description }: SectionHeadingProps) {
+export function SectionHeading({ index, eyebrow, title, aside }: SectionHeadingProps) {
   return (
-    <div className="mb-8 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
-      <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-        <span className="mr-3 text-base font-medium text-accent">{index} /</span>
-        {title}
-      </h2>
-      {description ? <p className="text-sm text-muted">{description}</p> : null}
+    <div className="mb-8 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+      <div>
+        <p className="text-[10px] font-semibold uppercase tracking-[0.08em] text-muted">
+          {index} / {eyebrow}
+        </p>
+        <h2 className="mt-3 font-display text-[27px] font-semibold leading-tight tracking-[-0.02em]">
+          {title}
+          <span className="text-accent">.</span>
+        </h2>
+      </div>
+      {aside ? <div className="text-[12px] text-muted">{aside}</div> : null}
     </div>
   );
 }
