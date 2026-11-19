@@ -11,7 +11,7 @@ import { SectionHeading } from "./SectionHeading";
 
 type Filter = "all" | ProjectCategory;
 
-const filters: Filter[] = ["all", "web", "mobile", "game", "design", "mini"];
+const filters: Filter[] = ["all", "web", "mobile", "game", "design"];
 
 const PAGE_SIZE = 4;
 

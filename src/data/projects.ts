@@ -1,4 +1,4 @@
-export type ProjectCategory = "web" | "mobile" | "game" | "design" | "mini";
+export type ProjectCategory = "web" | "mobile" | "game" | "design";
 
 export type Project = {
   slug: string;
@@ -27,7 +27,6 @@ export const categoryLabels: Record<ProjectCategory, string> = {
   mobile: "Mobile",
   game: "Game",
   design: "Design",
-  mini: "Mini Projects",
 };
 
 const gh = (repo: string) => `https://github.com/NewSnooker/${repo}`;
@@ -172,7 +171,7 @@ export const projects: Project[] = [
     slug: "full-stack-docker",
     title: "Full-stack Docker",
     subtitle: "แอป React + Express + MongoDB ใน Docker",
-    category: "mini",
+    category: "web",
     year: 2568,
     status: "done",
     summary: "ฝึกรันแอปแบบ Full-stack ทั้ง Frontend, Backend และฐานข้อมูลด้วย Docker Compose",
@@ -189,7 +188,7 @@ export const projects: Project[] = [
     slug: "daily-weather",
     title: "Daily Weather",
     subtitle: "เว็บพยากรณ์อากาศ",
-    category: "mini",
+    category: "web",
     year: 2567,
     status: "done",
     summary: "เว็บดูสภาพอากาศ ดึงข้อมูลจาก OpenWeatherMap API",
