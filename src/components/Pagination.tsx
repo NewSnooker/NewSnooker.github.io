@@ -9,6 +9,9 @@ type PaginationProps = {
 const iconButton =
   "grid size-9 place-items-center rounded-lg border border-border bg-surface text-foreground transition-colors hover:border-faint";
 
+// Show the "last page" jump only when there are enough pages for it to save clicks.
+const JUMP_MIN_PAGES = 4;
+
 // Arrow buttons are hidden (but keep their space) when there is nowhere to go.
 export function Pagination({ page, pageCount, onChange }: PaginationProps) {
   if (pageCount <= 1) return null;
@@ -55,16 +58,18 @@ export function Pagination({ page, pageCount, onChange }: PaginationProps) {
       >
         <ChevronRight className="size-4" aria-hidden />
       </button>
-      <button
-        type="button"
-        onClick={() => onChange(pageCount)}
-        aria-label="ไปหน้าสุดท้าย"
-        aria-hidden={isLast}
-        tabIndex={isLast ? -1 : undefined}
-        className={`${iconButton} ${hidden(isLast)}`}
-      >
-        <ChevronsRight className="size-4" aria-hidden />
-      </button>
+      {pageCount >= JUMP_MIN_PAGES ? (
+        <button
+          type="button"
+          onClick={() => onChange(pageCount)}
+          aria-label="ไปหน้าสุดท้าย"
+          aria-hidden={isLast}
+          tabIndex={isLast ? -1 : undefined}
+          className={`${iconButton} ${hidden(isLast)}`}
+        >
+          <ChevronsRight className="size-4" aria-hidden />
+        </button>
+      ) : null}
     </nav>
   );
 }
