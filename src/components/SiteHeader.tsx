@@ -12,7 +12,7 @@ const sections = [
   { id: "contact", label: "ติดต่อ" },
 ];
 
-const navLinks = sections.slice(0, 3);
+const navLinks = sections.slice(0, 4);
 const sectionIds = sections.map((section) => section.id);
 
 export function SiteHeader() {
@@ -39,7 +39,7 @@ export function SiteHeader() {
           </span>
         </a>
         <div className="flex items-center gap-3 sm:gap-8">
-          <nav aria-label="เมนูหลัก" className="hidden sm:block">
+          <nav aria-label="เมนูหลัก" className="hidden md:block">
             <ul className="flex items-center gap-8 text-[12px]">
               {navLinks.map((link) => {
                 const current = link.id === active;
@@ -48,7 +48,7 @@ export function SiteHeader() {
                     <a
                       href={`#${link.id}`}
                       aria-current={current ? "true" : undefined}
-                      className={`relative py-1 transition-colors hover:text-foreground ${
+                      className={`relative whitespace-nowrap py-1 transition-colors hover:text-foreground ${
                         current ? "text-foreground" : "text-muted"
                       }`}
                     >
