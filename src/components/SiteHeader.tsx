@@ -2,9 +2,9 @@ import { ArrowUpRight, CodeXml } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
 
 const links = [
-  { href: "#experience", label: "ประสบการณ์" },
   { href: "#stack", label: "ทักษะ" },
   { href: "#work", label: "ผลงาน" },
+  { href: "#experience", label: "ประสบการณ์" },
 ];
 
 export function SiteHeader() {

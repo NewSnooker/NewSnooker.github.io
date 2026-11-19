@@ -4,7 +4,7 @@ import { SectionHeading } from "./SectionHeading";
 export function Education() {
   return (
     <section id="education" className="py-14">
-      <SectionHeading index="02" eyebrow="การศึกษา" title="การศึกษา" />
+      <SectionHeading index="04" eyebrow="การศึกษา" title="การศึกษา" />
       <ol className="space-y-10">
         {education.map((item) => (
           <li key={item.school} className="grid gap-4 md:grid-cols-[230px_1fr]">

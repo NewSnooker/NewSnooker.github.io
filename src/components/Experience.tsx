@@ -5,7 +5,7 @@ import { SectionHeading } from "./SectionHeading";
 export function Experience() {
   return (
     <section id="experience" className="py-14">
-      <SectionHeading index="01" eyebrow="ประสบการณ์" title="ประสบการณ์ฝึกงาน" />
+      <SectionHeading index="03" eyebrow="ประสบการณ์" title="ประสบการณ์ฝึกงาน" />
       <ol className="space-y-10">
         {experience.map((job) => (
           <li key={job.company} className="grid gap-4 md:grid-cols-[230px_1fr]">

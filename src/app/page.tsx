@@ -13,10 +13,10 @@ export default function Home() {
       <SiteHeader />
       <main id="main" className="mx-auto max-w-[960px] px-4 pb-10 sm:px-6 lg:px-0">
         <Hero />
-        <Experience />
-        <Education />
         <Skills />
         <Work />
+        <Experience />
+        <Education />
         <Contact />
       </main>
       <SiteFooter />

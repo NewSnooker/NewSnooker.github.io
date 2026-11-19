@@ -1,16 +1,19 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { ArrowRight, ArrowUpRight, ExternalLink, Search } from "lucide-react";
 import { categoryLabels, projects, type Project, type ProjectCategory } from "@/data/projects";
 import { GithubIcon } from "./icons";
 import { ProjectCover } from "./ProjectCover";
+import { Pagination } from "./Pagination";
 import { ProjectModal } from "./ProjectModal";
 import { SectionHeading } from "./SectionHeading";
 
 type Filter = "all" | ProjectCategory;
 
 const filters: Filter[] = ["all", "web", "mobile", "game", "design", "mini"];
+
+const PAGE_SIZE = 4;
 
 const filterLabel = (filter: Filter) => (filter === "all" ? "ทั้งหมด" : categoryLabels[filter]);
 
@@ -23,14 +26,25 @@ export function Work() {
   const [filter, setFilter] = useState<Filter>("all");
   const [query, setQuery] = useState("");
   const [open, setOpen] = useState<Project | null>(null);
+  const [page, setPage] = useState(1);
+  const sectionRef = useRef<HTMLElement>(null);
 
   const shown = projects.filter(
     (project) => (filter === "all" || project.category === filter) && (query.trim() === "" || matches(project, query)),
   );
 
+  const pageCount = Math.max(1, Math.ceil(shown.length / PAGE_SIZE));
+  const currentPage = Math.min(page, pageCount);
+  const visible = shown.slice((currentPage - 1) * PAGE_SIZE, currentPage * PAGE_SIZE);
+
+  const goToPage = (next: number) => {
+    setPage(next);
+    sectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   return (
-    <section id="work" className="py-14">
-      <SectionHeading index="04" eyebrow="ผลงาน" title="ไอเดียที่ทำให้ใช้งานได้จริง" aside="งานบางส่วนที่สนุกกับการสร้าง" />
+    <section id="work" ref={sectionRef} className="py-14">
+      <SectionHeading index="02" eyebrow="ผลงาน" title="ไอเดียที่ทำให้ใช้งานได้จริง" aside="งานบางส่วนที่สนุกกับการสร้าง" />
 
       <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <div role="tablist" aria-label="กรองผลงานตามประเภท" className="flex flex-wrap gap-1">
@@ -42,7 +56,10 @@ export function Work() {
                 role="tab"
                 type="button"
                 aria-selected={selected}
-                onClick={() => setFilter(item)}
+                onClick={() => {
+                  setFilter(item);
+                  setPage(1);
+                }}
                 className={`rounded-md px-3 py-2 text-[12px] transition-colors ${
                   selected ? "bg-surface-2 text-foreground" : "text-muted hover:text-foreground"
                 }`}
@@ -58,7 +75,10 @@ export function Work() {
           <input
             type="search"
             value={query}
-            onChange={(event) => setQuery(event.target.value)}
+            onChange={(event) => {
+              setQuery(event.target.value);
+              setPage(1);
+            }}
             placeholder="ค้นหาโปรเจกต์..."
             className="w-full bg-transparent py-2 text-foreground placeholder:text-faint focus:outline-none"
           />
@@ -67,7 +87,7 @@ export function Work() {
 
       {shown.length > 0 ? (
         <div className="grid gap-x-6 gap-y-14 md:grid-cols-2">
-          {shown.map((project) => (
+          {visible.map((project) => (
             <article key={project.slug} className="group">
               <button
                 type="button"
@@ -118,6 +138,9 @@ export function Work() {
             </article>
           ))}
         </div>
+      ) : null}
+      {shown.length > 0 ? (
+        <Pagination page={currentPage} pageCount={pageCount} onChange={goToPage} />
       ) : (
         <div className="rounded-md border border-dashed border-border px-6 py-16 text-center">
           <p className="text-[14px]">
@@ -128,6 +151,7 @@ export function Work() {
             onClick={() => {
               setFilter("all");
               setQuery("");
+              setPage(1);
             }}
             className="mt-4 rounded-md border border-border bg-surface px-4 py-2 text-[12px] hover:border-faint"
           >
