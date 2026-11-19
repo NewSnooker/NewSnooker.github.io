@@ -1,50 +1,16 @@
-export type SkillGroupId = "frontend" | "backend" | "mobile" | "database" | "tools" | "design" | "ai" | "learning";
-
 export type SkillGroup = {
-  id: SkillGroupId;
   label: string;
   items: string[];
 };
 
+// Each item name must have an icon in src/components/skillIcons.tsx.
 export const skillGroups: SkillGroup[] = [
-  {
-    id: "frontend",
-    label: "Frontend",
-    items: ["HTML & CSS", "JavaScript", "TypeScript", "React", "Next.js", "Tailwind CSS"],
-  },
-  {
-    id: "backend",
-    label: "Backend",
-    items: ["Node.js", "Express", "Elysia", "FastAPI", "REST API"],
-  },
-  {
-    id: "mobile",
-    label: "Mobile",
-    items: ["Flutter", "Dart"],
-  },
-  {
-    id: "database",
-    label: "Database",
-    items: ["SQL", "MySQL", "MongoDB", "Prisma ORM"],
-  },
-  {
-    id: "tools",
-    label: "Deploy & Tools",
-    items: ["Docker", "Git", "GitHub", "Vercel", "Render", "Supabase", "Azure"],
-  },
-  {
-    id: "design",
-    label: "Design",
-    items: ["Figma"],
-  },
-  {
-    id: "ai",
-    label: "AI",
-    items: ["YOLO Object Detection", "Google Colab", "Kaggle"],
-  },
-  {
-    id: "learning",
-    label: "กำลังศึกษา",
-    items: ["Java", "Spring Boot", "Angular"],
-  },
+  { label: "Frontend", items: ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Next.js", "Tailwind CSS"] },
+  { label: "Backend", items: ["Node.js", "Express", "Elysia", "FastAPI", "REST API"] },
+  { label: "Mobile", items: ["Flutter", "Dart"] },
+  { label: "Database", items: ["SQL", "MySQL", "MongoDB", "Prisma"] },
+  { label: "Deploy & Tools", items: ["Docker", "Git", "GitHub", "Vercel", "Render", "Supabase", "Azure"] },
+  { label: "Design", items: ["Figma"] },
+  { label: "AI", items: ["YOLO", "Google Colab", "Kaggle"] },
+  { label: "กำลังศึกษา", items: ["Java", "Spring Boot", "Angular"] },
 ];

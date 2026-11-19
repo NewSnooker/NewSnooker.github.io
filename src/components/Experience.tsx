@@ -1,11 +1,11 @@
-import Image from "next/image";
 import { experience } from "@/data/profile";
+import { PhotoAlbum } from "./PhotoAlbum";
 import { SectionHeading } from "./SectionHeading";
 
 export function Experience() {
   return (
     <section id="experience" className="py-14">
-      <SectionHeading index="03" eyebrow="ประสบการณ์" title="ประสบการณ์ฝึกงาน" />
+      <SectionHeading index="01" eyebrow="ประสบการณ์" title="ประสบการณ์ฝึกงาน" />
       <ol className="space-y-10">
         {experience.map((job) => (
           <li key={job.company} className="grid gap-4 md:grid-cols-[230px_1fr]">
@@ -29,15 +29,7 @@ export function Experience() {
                   </li>
                 ))}
               </ul>
-              {job.image ? (
-                <Image
-                  src={job.image}
-                  alt={`ภาพจากการฝึกงานที่${job.company}`}
-                  width={720}
-                  height={405}
-                  className="mt-5 w-full max-w-md rounded-md border border-border object-cover"
-                />
-              ) : null}
+              <PhotoAlbum photos={job.photos} title={`ภาพจากการฝึกงานที่${job.company}`} />
             </div>
           </li>
         ))}

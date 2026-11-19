@@ -4,7 +4,7 @@ import { profile } from "@/data/profile";
 export function Contact() {
   return (
     <section id="contact" className="py-14">
-      <div className="flex flex-col gap-8 rounded-lg border border-border bg-surface-2 p-8 sm:p-10 md:flex-row md:items-center md:justify-between">
+      <div className="flex flex-col gap-8 rounded-xl border border-border bg-surface p-8 sm:p-10 md:flex-row md:items-center md:justify-between">
         <div>
           <p className="text-[10px] font-semibold uppercase tracking-[0.08em] text-muted">05 / ติดต่อ</p>
           <h2 className="mt-4 font-display text-[28px] font-semibold leading-tight tracking-[-0.02em] sm:text-[34px]">

@@ -30,7 +30,7 @@ export function Work() {
 
   return (
     <section id="work" className="py-14">
-      <SectionHeading index="02" eyebrow="ผลงาน" title="ไอเดียที่ทำให้ใช้งานได้จริง" aside="งานบางส่วนที่สนุกกับการสร้าง" />
+      <SectionHeading index="04" eyebrow="ผลงาน" title="ไอเดียที่ทำให้ใช้งานได้จริง" aside="งานบางส่วนที่สนุกกับการสร้าง" />
 
       <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <div role="tablist" aria-label="กรองผลงานตามประเภท" className="flex flex-wrap gap-1">
@@ -73,7 +73,7 @@ export function Work() {
                 type="button"
                 onClick={() => setOpen(project)}
                 aria-label={`ดูรายละเอียด ${project.title}`}
-                className="block w-full overflow-hidden rounded-md border border-border transition-colors hover:border-faint"
+                className="block w-full overflow-hidden rounded-xl border border-border transition-colors hover:border-faint"
               >
                 <ProjectCover project={project} />
               </button>

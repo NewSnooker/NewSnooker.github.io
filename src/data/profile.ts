@@ -1,3 +1,5 @@
+import type { Photo } from "@/components/PhotoAlbum";
+
 export const profile = {
   name: "ภานุวัฒน์ มะธิโต",
   nameEn: "Panuwat Mathito",
@@ -37,7 +39,15 @@ export const education = [
   },
 ];
 
-export const experience = [
+export const experience: {
+  company: string;
+  location: string;
+  position: string;
+  period: string;
+  about: string;
+  tasks: string[];
+  photos: Photo[];
+}[] = [
   {
     company: "บริษัท แกรนด์ เอทีเอส จำกัด",
     location: "จ.ปทุมธานี",
@@ -49,7 +59,9 @@ export const experience = [
       "ทำแลปเชื่อมต่อเครือข่าย LAN → Firewall (Zyxel USG60) → Switch → Access Point และตั้งค่าอุปกรณ์ผ่านหน้า GUI",
       "เรียนพื้นฐาน Docker และ Java Spring Boot จากทีมนักพัฒนา",
     ],
-    // Put a lab photo at public/images/experience/firewall-lab.jpg and set this path.
-    image: undefined as string | undefined,
+    // Album: put photos in public/images/experience/grand-ats/ and list them here.
+    photos: [
+      { src: "/images/experience/grand-ats/firewall-lab.jpg", caption: "แลปเชื่อมต่อ Firewall Zyxel USG60 กับ Switch" },
+    ],
   },
 ];

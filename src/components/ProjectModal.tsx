@@ -68,7 +68,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
             </h3>
             <p className="text-[13px] text-muted">{project.subtitle}</p>
 
-            <dl className="mt-5 grid grid-cols-2 gap-x-6 gap-y-3 rounded-md border border-border bg-surface p-4 sm:grid-cols-3">
+            <dl className="mt-5 grid grid-cols-2 gap-x-6 gap-y-3 rounded-lg border border-border bg-surface p-4 sm:grid-cols-3">
               {facts.map((fact) => (
                 <div key={fact.label}>
                   <dt className="text-[10px] uppercase tracking-[0.04em] text-faint">{fact.label}</dt>
