@@ -16,11 +16,11 @@ export function Experience() {
               {job.period}
             </p>
             <div>
-              <h3 className="font-display text-[17px] font-semibold tracking-[-0.01em]">{job.position}</h3>
-              <p className="mt-1 text-[12px] text-muted">
+              <h3 className="font-display text-[17px] font-semibold tracking-[-0.01em]">
                 {job.company}, {job.location}
-              </p>
-              <p className="mt-3 text-[13px] leading-[1.8] text-muted">{job.about}</p>
+              </h3>
+              <p className="mt-1 text-[13px] leading-[1.8] text-muted">{job.about}</p>
+              <p className="mt-3 text-[13px] font-semibold">{job.position}</p>
               <ul className="mt-3 space-y-1.5">
                 {job.tasks.map((task) => (
                   <li key={task} className="flex gap-3 text-[13px] leading-[1.8] text-muted">
