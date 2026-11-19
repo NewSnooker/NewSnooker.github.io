@@ -58,7 +58,7 @@ export const projects: Project[] = [
       "มีระบบผู้ดูแล สำหรับจัดการผู้ใช้ สลับโมเดล AI และดูสถิติการใช้งาน",
     ],
     stack: ["Next.js", "TypeScript", "FastAPI", "YOLO", "MongoDB", "Prisma", "Auth.js", "Docker Compose"],
-    repos: [],
+    repos: [{ label: "Code", url: "https://github.com/NewSnooker/acne-detection" }],
     demo: "https://acne-web.calmsand-e76a4fc0.japaneast.azurecontainerapps.io",
     featured: true,
   },

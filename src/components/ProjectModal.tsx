@@ -67,10 +67,29 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
               <span>{categoryLabels[project.category]}</span>
               <span className="tabular-nums">{project.year}</span>
             </div>
-            <h3 id="project-modal-title" className="mt-2 font-display text-[24px] font-semibold tracking-[-0.02em]">
-              {project.title}
-            </h3>
-            <p className="text-[13px] text-muted">{project.subtitle}</p>
+            <div className="mt-2 flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+              <div className="min-w-0">
+                <h3 id="project-modal-title" className="font-display text-[24px] font-semibold tracking-[-0.02em]">
+                  {project.title}
+                </h3>
+                <p className="text-[13px] text-muted">{project.subtitle}</p>
+              </div>
+              <div className="flex shrink-0 flex-wrap items-center gap-x-5 gap-y-2 text-[12px] sm:justify-end sm:pt-2">
+                {project.repos.map((repo) => (
+                  <a key={repo.url} href={repo.url} target="_blank" rel="noreferrer" className="flex items-center gap-2 underline-offset-4 hover:underline">
+                    <GithubIcon />
+                    {repo.label}
+                  </a>
+                ))}
+                {project.demo ? (
+                  <a href={project.demo} target="_blank" rel="noreferrer" className="flex items-center gap-2 underline-offset-4 hover:underline">
+                    เปิดเว็บจริง
+                    <ExternalLink className="size-3.5" aria-hidden />
+                  </a>
+                ) : null}
+                {project.repos.length === 0 ? <span className="text-muted">โค้ดเป็น repository ส่วนตัว</span> : null}
+              </div>
+            </div>
 
             <dl className="mt-5 grid grid-cols-2 gap-x-6 gap-y-3 rounded-lg border border-border bg-surface p-4 sm:grid-cols-3">
               {facts.map((fact) => (
@@ -100,25 +119,6 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                 </li>
               ))}
             </ul>
-
-
-            <div className="mt-7 flex flex-wrap items-center gap-5 border-t border-border pt-5 text-[12px]">
-              {project.repos.map((repo) => (
-                <a key={repo.url} href={repo.url} target="_blank" rel="noreferrer" className="flex items-center gap-2 underline-offset-4 hover:underline">
-                  <GithubIcon />
-                  {repo.label}
-                </a>
-              ))}
-              {project.demo ? (
-                <a href={project.demo} target="_blank" rel="noreferrer" className="flex items-center gap-2 underline-offset-4 hover:underline">
-                  เปิดเว็บจริง
-                  <ExternalLink className="size-3.5" aria-hidden />
-                </a>
-              ) : null}
-              {project.repos.length === 0 ? (
-                <span className="text-muted">โค้ดเป็น repository ส่วนตัว</span>
-              ) : null}
-            </div>
           </div>
         </article>
       ) : null}
