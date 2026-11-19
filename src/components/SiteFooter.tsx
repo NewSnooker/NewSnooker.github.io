@@ -5,6 +5,7 @@ const links = [
   { href: "#work", label: "ผลงาน" },
   { href: "#stack", label: "ทักษะ" },
   { href: "#experience", label: "ประสบการณ์" },
+  { href: "#education", label: "การศึกษา" },
 ];
 
 export function SiteFooter() {
