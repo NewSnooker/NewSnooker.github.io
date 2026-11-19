@@ -1,7 +1,6 @@
 import { ArrowUpRight, Download, MapPin, Phone } from "lucide-react";
-import { SiLine } from "react-icons/si";
+import { SiGmail, SiLine } from "react-icons/si";
 import { profile } from "@/data/profile";
-import { CopyEmail } from "./CopyEmail";
 import { GithubIcon } from "./icons";
 
 // Opens Gmail's compose window in the browser, so it works without a mail app.
@@ -16,6 +15,13 @@ type Channel = {
 };
 
 const channels: Channel[] = [
+  {
+    label: "อีเมล",
+    value: profile.email,
+    href: composeUrl,
+    icon: <SiGmail className="size-4" style={{ color: "#EA4335" }} aria-hidden />,
+    external: true,
+  },
   {
     label: "โทรศัพท์",
     value: profile.phone,
@@ -77,9 +83,6 @@ export function Contact() {
         </div>
 
         <ul className="mt-8 grid gap-2 border-t border-border pt-8 sm:grid-cols-2">
-          <li>
-            <CopyEmail email={profile.email} />
-          </li>
           {channels.map((channel) => (
             <li key={channel.label}>
               <a

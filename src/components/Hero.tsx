@@ -1,7 +1,7 @@
-import Image from "next/image";
 import { ArrowDown, ArrowUpRight, Download, FileText, MapPin } from "lucide-react";
 import { profile } from "@/data/profile";
 import { GithubIcon } from "./icons";
+import { ProfilePhoto } from "./ProfilePhoto";
 
 const outlineButton =
   "group flex min-w-32 items-center justify-between gap-6 rounded-md border border-border bg-surface px-3.5 py-3 text-[12px] transition-colors hover:border-faint";
@@ -10,22 +10,15 @@ export function Hero() {
   return (
     <section id="about" className="pb-24 pt-20">
       <div className="flex items-start justify-between gap-6">
-        <Image
-          src={profile.photo}
-          alt={`รูปของ${profile.name}`}
-          width={72}
-          height={72}
-          priority
-          className="size-[72px] rounded-2xl border border-border object-cover"
-        />
+        <ProfilePhoto src={profile.photo} alt={`รูปของ${profile.name}`} />
         <p className="mt-5 flex items-center gap-2 rounded-full border border-accent/30 bg-accent-soft px-3 py-1.5 text-[11px] text-accent">
           <span className="size-1.5 rounded-full bg-accent" aria-hidden />
-          กำลังหาที่ฝึกงาน
+          กำลังมองหาที่ฝึกงาน
         </p>
       </div>
 
       <p className="mt-8 text-[10px] font-semibold uppercase tracking-[0.18em] text-muted">
-        Hello, world. I&apos;m Panuwat.
+        Hello, world. I&apos;m Phanuwat.
       </p>
       <h1 className="mt-4 font-display text-[40px] font-semibold leading-[1.18] tracking-[-0.03em] sm:text-[54px]">
         นักพัฒนาซอฟต์แวร์
@@ -62,7 +55,7 @@ export function Hero() {
       </div>
 
       <a href="#work" className="group mt-12 inline-flex items-center gap-3 text-[12px] font-semibold underline-offset-4 hover:underline">
-        ดูผลงานของผม
+        ดูผลงาน
         <ArrowDown className="size-4 transition-transform group-hover:translate-y-0.5" aria-hidden />
       </a>
     </section>

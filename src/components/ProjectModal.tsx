@@ -126,7 +126,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                 </a>
               ) : null}
               {project.repos.length === 0 ? (
-                <span className="text-muted">โค้ดเป็น repository ส่วนตัว ขอดูได้ตอนสัมภาษณ์</span>
+                <span className="text-muted">โค้ดเป็น repository ส่วนตัว</span>
               ) : null}
             </div>
           </div>

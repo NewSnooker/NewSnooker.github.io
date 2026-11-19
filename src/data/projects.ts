@@ -35,6 +35,7 @@ const gh = (repo: string) => `https://github.com/NewSnooker/${repo}`;
 export const projects: Project[] = [
   {
     slug: "acne-ai",
+    cover: "/images/projects/acne-ai/cover.jpg",
     title: "AcneAI",
     subtitle: "ระบบตรวจจับและจำแนกชนิดสิวจากภาพถ่ายใบหน้า",
     category: "web",
@@ -52,10 +53,12 @@ export const projects: Project[] = [
     ],
     stack: ["Next.js", "TypeScript", "FastAPI", "YOLO", "MongoDB", "Prisma", "Auth.js", "Docker Compose"],
     repos: [],
+    demo: "https://acne-web.calmsand-e76a4fc0.japaneast.azurecontainerapps.io",
     featured: true,
   },
   {
     slug: "project-management-system",
+    cover: "/images/projects/project-management-system/cover.jpg",
     title: "ระบบบริหารจัดการโปรเจกต์",
     subtitle: "Project Management System",
     category: "web",
@@ -67,7 +70,6 @@ export const projects: Project[] = [
     highlights: [
       "บอร์ด Kanban ลากการ์ดงานข้ามคอลัมน์ รอทำ / กำลังทำ / เสร็จแล้ว และบันทึกสถานะลงฐานข้อมูล",
       "ล็อกอินด้วย Google / GitHub และส่งอีเมลแจ้งเตือน",
-      "แก้เว็บล่มหลัง Node.js 20 หมดอายุการสนับสนุน โดยอ่าน log หาสาเหตุ และแก้ให้ build บน Node.js 22 ได้",
     ],
     stack: ["Next.js", "TypeScript", "Prisma", "MongoDB", "NextAuth", "Vercel"],
     repos: [{ label: "Code", url: gh("it-udvc-pms") }],
@@ -76,6 +78,7 @@ export const projects: Project[] = [
   },
   {
     slug: "library-management-system",
+    cover: "/images/projects/library-management-system/cover.jpg",
     title: "ระบบห้องสมุด",
     subtitle: "Library Management System",
     category: "web",

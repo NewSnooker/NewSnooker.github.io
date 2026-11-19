@@ -6,7 +6,7 @@ import { skillIcons } from "./skillIcons";
 export function Skills() {
   return (
     <section id="stack" className="py-14">
-      <SectionHeading index="01" eyebrow="ทักษะ" title="เครื่องมือที่ใช้ทำงาน" aside="ใช้จริงในโปรเจกต์ที่ทำมา" />
+      <SectionHeading index="01" eyebrow="ทักษะ" title="เครื่องมือที่ใช้ในการทำงาน" aside="ใช้จริงในโปรเจกต์ที่ทำมา" />
 
       <div className="divide-y divide-border rounded-xl border border-border bg-surface">
         {skillGroups.map((group) => (
