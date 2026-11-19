@@ -102,7 +102,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
               </div>
             </div>
 
-            <dl className="mt-5 grid grid-cols-2 gap-x-6 gap-y-3 rounded-lg border border-border bg-surface p-4 sm:grid-cols-3">
+            <dl className="mt-5 grid grid-cols-2 gap-x-6 gap-y-3 rounded-lg border border-border bg-surface p-4 sm:grid-cols-4">
               {facts.map((fact) => (
                 <div key={fact.label}>
                   <dt className="text-[10px] uppercase tracking-[0.04em] text-faint">{fact.label}</dt>
