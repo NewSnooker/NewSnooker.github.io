@@ -80,6 +80,7 @@ export function PhotoAlbum({ photos, title }: { photos: Photo[]; title: string }
       >
         {current ? (
           <figure>
+            <figcaption className="px-5 py-3.5 text-[16px] font-medium leading-snug">{current.caption}</figcaption>
             <div
               onPointerDown={onPointerDown}
               onPointerMove={onPointerMove}
@@ -94,7 +95,7 @@ export function PhotoAlbum({ photos, title }: { photos: Photo[]; title: string }
                 height={1067}
                 draggable={false}
                 style={{ transform: `translateX(${dragX}px)`, transition: dragX === 0 ? "transform 0.2s" : "none" }}
-                className="max-h-[75vh] w-full object-contain"
+                className="max-h-[70vh] w-full object-contain"
               />
               {photos.length > 1 ? (
                 <>
@@ -142,7 +143,6 @@ export function PhotoAlbum({ photos, title }: { photos: Photo[]; title: string }
                 <X className="size-4" aria-hidden />
               </button>
             </div>
-            <figcaption className="px-5 py-3 text-[14px] text-muted">{current.caption}</figcaption>
           </figure>
         ) : null}
       </dialog>
