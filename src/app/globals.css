@@ -5,16 +5,17 @@
 /* Stone greys (warm neutral, like shadcn/ui "Stone"). Dark is the default (set on <html>). */
 :root,
 [data-theme="light"] {
-  --background: #fafaf9;
-  --surface: #ffffff;
-  --surface-2: #f5f5f4;
-  --border: #e7e5e4;
+  /* Stone 150 page, stone 100 cards, stone 200 hover/inset, stone 300 borders. */
+  --background: #eeedeb;
+  --surface: #f5f5f4;
+  --surface-2: #e7e5e4;
+  --border: #d6d3d1;
   --foreground: #1c1917;
-  --muted: #78716c;
-  --faint: #a8a29e;
+  --muted: #6b6560;
+  --faint: #8a847f;
   --accent: #44403c;
-  --accent-soft: #44403c12;
-  --accent-ink: #fafaf9;
+  --accent-soft: #44403c14;
+  --accent-ink: #f5f5f4;
 }
 
 [data-theme="dark"] {
