@@ -36,7 +36,7 @@ export const projects: Project[] = [
   {
     slug: "acne-ai",
     cover: "/images/projects/acne-ai/cover.jpg",
-    gallery: ["/images/projects/acne-ai/01.jpg", "/images/projects/acne-ai/02.jpg", "/images/projects/acne-ai/03.jpg", "/images/projects/acne-ai/04.jpg", "/images/projects/acne-ai/05.jpg", "/images/projects/acne-ai/06.jpg", "/images/projects/acne-ai/07.jpg", "/images/projects/acne-ai/08.jpg"],
+    gallery: ["/images/projects/acne-ai/01.jpg", "/images/projects/acne-ai/02.jpg", "/images/projects/acne-ai/03.jpg", "/images/projects/acne-ai/04.jpg", "/images/projects/acne-ai/05.jpg"],
     title: "AcneAI",
     subtitle: "ระบบตรวจจับและจำแนกชนิดสิวจากภาพถ่ายใบหน้า",
     category: "web",
