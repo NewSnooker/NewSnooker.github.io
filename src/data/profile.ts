@@ -12,7 +12,7 @@ export const profile = {
   phone: "065-576-7707",
   github: "https://github.com/NewSnooker",
   // Your own LINE link, e.g. "https://line.me/ti/p/xxxxxxxx". The LINE button shows once this is set.
-  line: undefined as string | undefined,
+  line: "https://line.me/ti/p/jB78Xf2IQt" as string | undefined,
   // PDF under public/. Remove (set to undefined) to hide the download buttons.
   resumeUrl: "/resume/Resume_Panuwat_Mathito.pdf" as string | undefined,
   photo: "/images/profile.jpg",
