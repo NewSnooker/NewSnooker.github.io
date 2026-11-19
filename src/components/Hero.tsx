@@ -23,7 +23,7 @@ export function Hero() {
       <h1 className="mt-4 font-display text-[40px] font-semibold leading-[1.18] tracking-[-0.03em] sm:text-[54px]">
         นักศึกษาไอที
         <br />
-        <span className="text-faint">พร้อมเรียนรู้งานพัฒนาซอฟต์แวร์.</span>
+        <span className="text-faint">สายพัฒนาซอฟต์แวร์.</span>
       </h1>
 
       <div className="mt-10 flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between">
