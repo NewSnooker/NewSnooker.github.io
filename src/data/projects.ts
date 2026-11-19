@@ -179,14 +179,20 @@ export const projects: Project[] = [
   },
   {
     slug: "react-context",
+    cover: "/images/projects/react-context/cover.jpg",
+    gallery: ["/images/projects/react-context/01.jpg"],
     title: "React Context",
     subtitle: "ฝึกจัดการ state ด้วย Context",
     category: "mini",
     year: 2567,
     status: "done",
-    summary: "ฝึกส่งข้อมูลระหว่างหลายหน้าด้วย React Context และการทำ routing",
-    highlights: ["แชร์ state ข้ามหน้าโดยไม่ต้องส่ง props ต่อกันหลายชั้น"],
-    stack: ["React", "React Router", "Vite", "Tailwind CSS"],
+    summary:
+      "หน้าร้านค้าจำลอง ดึงรายการสินค้าจาก DummyJSON API แสดงเป็นรายการและหน้ารายละเอียดสินค้า ใช้ React Context แชร์ข้อมูลสินค้าและตะกร้าข้ามหน้า",
+    highlights: [
+      "แชร์ข้อมูลสินค้าและตะกร้าข้ามหน้าด้วย Context โดยไม่ต้องส่ง props ต่อกันหลายชั้น",
+      "แยกหน้ารายการกับหน้ารายละเอียดสินค้าด้วย React Router พร้อมสถานะกำลังโหลดและข้อผิดพลาด",
+    ],
+    stack: ["React", "React Router", "Vite", "Tailwind CSS", "DaisyUI"],
     repos: [{ label: "Code", url: gh("react_context") }],
   },
 ];
