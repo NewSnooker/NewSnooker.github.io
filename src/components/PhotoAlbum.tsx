@@ -10,6 +10,8 @@ export type Photo = { src: string; caption: string };
 export function PhotoAlbum({ photos, title }: { photos: Photo[]; title: string }) {
   const [index, setIndex] = useState<number | null>(null);
   const dialogRef = useRef<HTMLDialogElement>(null);
+  const drag = useRef<{ x: number; width: number } | null>(null);
+  const [dragX, setDragX] = useState(0);
 
   useEffect(() => {
     const dialog = dialogRef.current;
@@ -24,6 +26,27 @@ export function PhotoAlbum({ photos, title }: { photos: Photo[]; title: string }
     setIndex((current) => (current === null ? null : (current + delta + photos.length) % photos.length));
 
   const current = index === null ? null : photos[index];
+
+  // Drag (mouse) or swipe (touch) sideways on the photo to change it.
+  const onPointerDown = (event: React.PointerEvent<HTMLDivElement>) => {
+    if (photos.length < 2 || (event.pointerType === "mouse" && event.button !== 0)) return;
+    if ((event.target as HTMLElement).closest("button")) return;
+    drag.current = { x: event.clientX, width: event.currentTarget.clientWidth };
+    event.currentTarget.setPointerCapture(event.pointerId);
+  };
+
+  const onPointerMove = (event: React.PointerEvent<HTMLDivElement>) => {
+    if (drag.current) setDragX(event.clientX - drag.current.x);
+  };
+
+  const endDrag = (event: React.PointerEvent<HTMLDivElement>) => {
+    if (!drag.current) return;
+    const dx = event.clientX - drag.current.x;
+    const limit = drag.current.width * 0.12;
+    drag.current = null;
+    setDragX(0);
+    if (Math.abs(dx) > limit) step(dx < 0 ? 1 : -1);
+  };
 
   return (
     <>
@@ -57,12 +80,20 @@ export function PhotoAlbum({ photos, title }: { photos: Photo[]; title: string }
       >
         {current ? (
           <figure>
-            <div className="group/carousel relative bg-surface-2">
+            <div
+              onPointerDown={onPointerDown}
+              onPointerMove={onPointerMove}
+              onPointerUp={endDrag}
+              onPointerCancel={endDrag}
+              className="group/carousel relative touch-pan-y select-none overflow-hidden bg-surface-2 sm:cursor-grab sm:active:cursor-grabbing"
+            >
               <Image
                 src={current.src}
                 alt={current.caption}
                 width={1600}
                 height={1067}
+                draggable={false}
+                style={{ transform: `translateX(${dragX}px)`, transition: dragX === 0 ? "transform 0.2s" : "none" }}
                 className="max-h-[75vh] w-full object-contain"
               />
               {photos.length > 1 ? (

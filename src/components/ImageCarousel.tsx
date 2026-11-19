@@ -30,6 +30,36 @@ export function ImageCarousel({ images, alt }: ImageCarouselProps) {
     track.scrollTo({ left: clamped * track.clientWidth, behavior: "smooth" });
   };
 
+  // Mouse drag (touch already scrolls natively): follow the pointer, then settle on a slide.
+  const drag = useRef<{ x: number; left: number } | null>(null);
+  const [dragging, setDragging] = useState(false);
+
+  const onPointerDown = (event: React.PointerEvent<HTMLDivElement>) => {
+    const track = trackRef.current;
+    if (!track || images.length < 2 || event.pointerType !== "mouse" || event.button !== 0) return;
+    drag.current = { x: event.clientX, left: track.scrollLeft };
+    track.setPointerCapture(event.pointerId);
+    setDragging(true);
+  };
+
+  const onPointerMove = (event: React.PointerEvent<HTMLDivElement>) => {
+    const track = trackRef.current;
+    if (!track || !drag.current) return;
+    track.scrollLeft = drag.current.left - (event.clientX - drag.current.x);
+  };
+
+  const endDrag = (event: React.PointerEvent<HTMLDivElement>) => {
+    const track = trackRef.current;
+    if (!track || !drag.current) return;
+    const dx = event.clientX - drag.current.x;
+    const start = Math.round(drag.current.left / track.clientWidth);
+    drag.current = null;
+    setDragging(false);
+    const moved = Math.abs(dx) > track.clientWidth * 0.12 ? (dx < 0 ? 1 : -1) : 0;
+    const target = Math.min(images.length - 1, Math.max(0, start + moved));
+    track.scrollTo({ left: target * track.clientWidth, behavior: "smooth" });
+  };
+
   const many = images.length > 1;
 
   return (
@@ -46,7 +76,13 @@ export function ImageCarousel({ images, alt }: ImageCarouselProps) {
         tabIndex={many ? 0 : -1}
         aria-roledescription="carousel"
         aria-label={`ภาพหน้าจอ ${alt}`}
-        className="flex snap-x snap-mandatory overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+        onPointerDown={onPointerDown}
+        onPointerMove={onPointerMove}
+        onPointerUp={endDrag}
+        onPointerCancel={endDrag}
+        className={`flex select-none overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden ${
+          dragging ? "cursor-grabbing" : "snap-x snap-mandatory sm:cursor-grab"
+        }`}
       >
         {images.map((src, i) => (
           <div
@@ -61,6 +97,7 @@ export function ImageCarousel({ images, alt }: ImageCarouselProps) {
               width={1600}
               height={900}
               priority={i === 0}
+              draggable={false}
               className="aspect-[16/9] w-full bg-surface-2 object-contain"
             />
           </div>
