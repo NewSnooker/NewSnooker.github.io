@@ -18,13 +18,13 @@ export function SiteFooter() {
           <ul className="flex flex-wrap gap-5">
             {links.map((link) => (
               <li key={link.href}>
-                <a href={link.href} className="hover:text-foreground">
+                <a href={link.href} className="underline-offset-4 hover:text-foreground hover:underline">
                   {link.label}
                 </a>
               </li>
             ))}
             <li>
-              <a href="#top" className="hover:text-foreground">
+              <a href="#top" className="underline-offset-4 hover:text-foreground hover:underline">
                 กลับขึ้นด้านบน ↑
               </a>
             </li>

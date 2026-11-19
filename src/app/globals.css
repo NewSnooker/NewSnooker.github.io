@@ -65,6 +65,33 @@ body {
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
+/* In the base layer so utilities (e.g. focus-visible:outline-none) can override. */
+@layer base {
+  /* Tailwind v4 leaves buttons with the default arrow cursor. */
+  button:not(:disabled),
+  [role="button"],
+  summary,
+  label[for] {
+    cursor: pointer;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+}
+
+@keyframes crumb-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 ::selection {
   background: var(--accent);
   color: var(--accent-ink);

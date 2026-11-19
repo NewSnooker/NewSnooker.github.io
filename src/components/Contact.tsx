@@ -17,10 +17,10 @@ export function Contact() {
         <div className="flex shrink-0 flex-col items-start gap-3 md:items-center">
           <a
             href={`mailto:${profile.email}`}
-            className="flex items-center gap-6 rounded-md bg-accent px-5 py-3 text-[13px] font-medium text-accent-ink transition-opacity hover:opacity-90"
+            className="group flex items-center gap-6 rounded-md bg-accent px-5 py-3 text-[13px] font-medium text-accent-ink transition-opacity hover:opacity-90"
           >
             ส่งอีเมล
-            <ArrowUpRight className="size-4" aria-hidden />
+            <ArrowUpRight className="size-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" aria-hidden />
           </a>
           <p className="flex items-center gap-1.5 text-[11px] text-muted">
             <MapPin className="size-3.5" aria-hidden />

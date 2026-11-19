@@ -114,13 +114,13 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
 
             <div className="mt-7 flex flex-wrap items-center gap-5 border-t border-border pt-5 text-[12px]">
               {project.repos.map((repo) => (
-                <a key={repo.url} href={repo.url} target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-accent">
+                <a key={repo.url} href={repo.url} target="_blank" rel="noreferrer" className="flex items-center gap-2 underline-offset-4 hover:underline">
                   <GithubIcon />
                   {repo.label}
                 </a>
               ))}
               {project.demo ? (
-                <a href={project.demo} target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-accent">
+                <a href={project.demo} target="_blank" rel="noreferrer" className="flex items-center gap-2 underline-offset-4 hover:underline">
                   เปิดเว็บจริง
                   <ExternalLink className="size-3.5" aria-hidden />
                 </a>

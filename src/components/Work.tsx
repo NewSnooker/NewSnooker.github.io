@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { ArrowRight, ArrowUpRight, ExternalLink, Search } from "lucide-react";
+import { ArrowRight, ArrowUpRight, ExternalLink, Search, X } from "lucide-react";
 import { categoryLabels, projects, type Project, type ProjectCategory } from "@/data/projects";
 import { GithubIcon } from "./icons";
 import { ProjectCover } from "./ProjectCover";
@@ -69,7 +69,7 @@ export function Work() {
             );
           })}
         </div>
-        <label className="flex items-center gap-2 text-[12px] text-muted sm:w-52">
+        <label className="flex h-10 items-center gap-2 rounded-lg border border-border bg-surface px-3 text-[12px] text-muted transition-colors hover:border-faint focus-within:border-foreground/60 sm:w-60">
           <Search className="size-4 shrink-0" aria-hidden />
           <span className="sr-only">ค้นหาโปรเจกต์</span>
           <input
@@ -80,8 +80,21 @@ export function Work() {
               setPage(1);
             }}
             placeholder="ค้นหาโปรเจกต์..."
-            className="w-full bg-transparent py-2 text-foreground placeholder:text-faint focus:outline-none"
+            className="w-full bg-transparent py-2 text-foreground placeholder:text-faint focus:outline-none focus-visible:outline-none [&::-webkit-search-cancel-button]:hidden"
           />
+          {query ? (
+            <button
+              type="button"
+              onClick={() => {
+                setQuery("");
+                setPage(1);
+              }}
+              aria-label="ล้างคำค้นหา"
+              className="grid size-6 shrink-0 place-items-center rounded-md text-muted hover:bg-surface-2 hover:text-foreground"
+            >
+              <X className="size-3.5" aria-hidden />
+            </button>
+          ) : null}
         </label>
       </div>
 
@@ -95,7 +108,9 @@ export function Work() {
                 aria-label={`ดูรายละเอียด ${project.title}`}
                 className="block w-full overflow-hidden rounded-xl border border-border transition-colors hover:border-faint"
               >
-                <ProjectCover project={project} />
+                <div className="transition-transform duration-500 ease-out group-hover:scale-[1.03]">
+                  <ProjectCover project={project} />
+                </div>
               </button>
               <div className="mt-6 flex items-center justify-between text-[11px] text-muted">
                 <span>{categoryLabels[project.category]}</span>
@@ -103,7 +118,7 @@ export function Work() {
               </div>
               <div className="mt-2 flex items-start justify-between gap-4">
                 <h3 className="font-display text-[18px] font-semibold tracking-[-0.01em]">
-                  <button type="button" onClick={() => setOpen(project)} className="text-left hover:text-accent">
+                  <button type="button" onClick={() => setOpen(project)} className="text-left underline-offset-4 hover:underline">
                     {project.title}
                   </button>
                 </h3>
@@ -118,20 +133,38 @@ export function Work() {
                 ))}
               </ul>
               <div className="mt-5 flex flex-wrap items-center gap-6 text-[12px]">
-                <button type="button" onClick={() => setOpen(project)} className="flex items-center gap-2 hover:text-accent">
+                <button
+                  type="button"
+                  onClick={() => setOpen(project)}
+                  className="group/link flex items-center gap-2 underline-offset-4 hover:underline"
+                >
                   ดูรายละเอียด
-                  <ArrowRight className="size-3.5" aria-hidden />
+                  <ArrowRight className="size-3.5 transition-transform group-hover/link:translate-x-0.5" aria-hidden />
                 </button>
                 {project.repos.map((repo) => (
-                  <a key={repo.url} href={repo.url} target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-accent">
+                  <a
+                    key={repo.url}
+                    href={repo.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex items-center gap-2 underline-offset-4 hover:underline"
+                  >
                     <GithubIcon />
                     {repo.label}
                   </a>
                 ))}
                 {project.demo ? (
-                  <a href={project.demo} target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-accent">
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="group/link flex items-center gap-2 underline-offset-4 hover:underline"
+                  >
                     Live demo
-                    <ExternalLink className="size-3.5" aria-hidden />
+                    <ExternalLink
+                      className="size-3.5 transition-transform group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5"
+                      aria-hidden
+                    />
                   </a>
                 ) : null}
               </div>
