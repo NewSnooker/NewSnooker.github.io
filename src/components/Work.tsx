@@ -63,17 +63,17 @@ export function Work() {
                   setFilter(item);
                   setPage(1);
                 }}
-                className={`rounded-md px-3 py-2 text-[12px] transition-colors ${
+                className={`rounded-md px-3 py-2 text-[14px] transition-colors ${
                   selected ? "bg-surface-2 text-foreground" : "text-muted hover:text-foreground"
                 }`}
               >
                 {filterLabel(item)}
-                <sup className="ml-1 text-[9px] tabular-nums text-faint">{filterCount(item)}</sup>
+                <sup className="ml-1 text-[11px] tabular-nums text-faint">{filterCount(item)}</sup>
               </button>
             );
           })}
         </div>
-        <label className="flex h-10 items-center gap-2 rounded-lg border border-border bg-surface px-3 text-[12px] text-muted transition-colors hover:border-faint focus-within:border-foreground/60 sm:w-60">
+        <label className="flex h-10 items-center gap-2 rounded-lg border border-border bg-surface px-3 text-[14px] text-muted transition-colors hover:border-faint focus-within:border-foreground/60 sm:w-60">
           <Search className="size-4 shrink-0" aria-hidden />
           <span className="sr-only">ค้นหาโปรเจกต์</span>
           <input
@@ -116,27 +116,27 @@ export function Work() {
                   <ProjectCover project={project} />
                 </div>
               </button>
-              <div className="mt-6 flex items-center justify-between text-[11px] text-muted">
+              <div className="mt-6 flex items-center justify-between text-[13px] text-muted">
                 <span>{categoryLabels[project.category]}</span>
                 <span className="tabular-nums">{project.year}</span>
               </div>
               <div className="mt-2 flex items-start justify-between gap-4">
-                <h3 className="font-display text-[18px] font-semibold tracking-[-0.01em]">
+                <h3 className="font-display text-[20px] font-semibold tracking-[-0.01em]">
                   <button type="button" onClick={() => setOpen(project)} className="text-left underline-offset-4 hover:underline">
                     {project.title}
                   </button>
                 </h3>
                 <ArrowUpRight className="mt-1 size-4 shrink-0 text-muted transition-colors group-hover:text-accent" aria-hidden />
               </div>
-              <p className="mt-2 text-[13px] leading-[1.8] text-muted">{project.summary}</p>
+              <p className="mt-2 text-[16px] leading-[1.8] text-muted">{project.summary}</p>
               <ul className="mt-4 flex flex-wrap gap-1.5" aria-label="เครื่องมือที่ใช้">
                 {project.stack.slice(0, 6).map((tool) => (
-                  <li key={tool} className="rounded border border-border px-2 py-1 text-[10px] text-muted">
+                  <li key={tool} className="rounded border border-border px-2 py-1 text-[12px] text-muted">
                     {tool}
                   </li>
                 ))}
               </ul>
-              <div className="mt-5 flex flex-wrap items-center gap-6 text-[12px]">
+              <div className="mt-5 flex flex-wrap items-center gap-6 text-[14px]">
                 <button
                   type="button"
                   onClick={() => setOpen(project)}
@@ -183,7 +183,7 @@ export function Work() {
         <Pagination page={currentPage} pageCount={pageCount} onChange={goToPage} />
       ) : (
         <div className="rounded-md border border-dashed border-border px-6 py-16 text-center">
-          <p className="text-[14px]">
+          <p className="text-[16px]">
             {query.trim() ? `ไม่พบโปรเจกต์ที่ตรงกับ "${query}"` : `กำลังเพิ่มผลงานในหมวด ${filterLabel(filter)}`}
           </p>
           <button
@@ -193,7 +193,7 @@ export function Work() {
               setQuery("");
               setPage(1);
             }}
-            className="mt-4 rounded-md border border-border bg-surface px-4 py-2 text-[12px] hover:border-faint"
+            className="mt-4 rounded-md border border-border bg-surface px-4 py-2 text-[14px] hover:border-faint"
           >
             ดูผลงานทั้งหมด
           </button>

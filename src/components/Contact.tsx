@@ -54,11 +54,11 @@ export function Contact() {
       <div className="rounded-xl border border-border bg-surface p-8 sm:p-10">
         <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
           <div>
-            <p className="text-[10px] font-semibold uppercase tracking-[0.08em] text-muted">05 / ติดต่อ</p>
+            <p className="text-[12px] font-semibold uppercase tracking-[0.08em] text-muted">05 / ติดต่อ</p>
             <h2 className="mt-4 font-display text-[28px] font-semibold leading-tight tracking-[-0.02em] sm:text-[34px]">
               เริ่มจากการพูดคุยกัน<span className="text-accent">.</span>
             </h2>
-            <p className="mt-3 text-[13px] text-muted">
+            <p className="mt-3 text-[16px] text-muted">
               กำลังหาที่ฝึกงาน Software Developer <span className="whitespace-nowrap">ช่วง {profile.internshipPeriod}</span>
             </p>
           </div>
@@ -67,7 +67,7 @@ export function Contact() {
               href={composeUrl}
               target="_blank"
               rel="noreferrer"
-              className="group flex items-center gap-6 rounded-md bg-accent px-5 py-3 text-[13px] font-medium text-accent-ink transition-opacity hover:opacity-90"
+              className="group flex items-center gap-6 rounded-md bg-accent px-5 py-3 text-[16px] font-medium text-accent-ink transition-opacity hover:opacity-90"
             >
               ส่งอีเมล
               <ArrowUpRight
@@ -75,7 +75,7 @@ export function Contact() {
                 aria-hidden
               />
             </a>
-            <p className="flex items-center gap-1.5 text-[11px] text-muted">
+            <p className="flex items-center gap-1.5 text-[13px] text-muted">
               <MapPin className="size-3.5" aria-hidden />
               {profile.location}, ประเทศไทย
             </p>
@@ -94,8 +94,8 @@ export function Contact() {
                   {channel.icon}
                 </span>
                 <span className="min-w-0 flex-1">
-                  <span className="block text-[11px] text-muted">{channel.label}</span>
-                  <span className="block truncate text-[13px]">{channel.value}</span>
+                  <span className="block text-[13px] text-muted">{channel.label}</span>
+                  <span className="block truncate text-[16px]">{channel.value}</span>
                 </span>
                 <ArrowUpRight
                   className="size-3.5 shrink-0 text-muted transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
@@ -115,8 +115,8 @@ export function Contact() {
                   <Download className="size-4" aria-hidden />
                 </span>
                 <span className="min-w-0 flex-1">
-                  <span className="block text-[11px] text-muted">เรซูเม่</span>
-                  <span className="block truncate text-[13px]">ดาวน์โหลดเรซูเม่ (PDF)</span>
+                  <span className="block text-[13px] text-muted">เรซูเม่</span>
+                  <span className="block truncate text-[16px]">ดาวน์โหลดเรซูเม่ (PDF)</span>
                 </span>
               </a>
             </li>

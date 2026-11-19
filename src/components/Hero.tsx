@@ -4,20 +4,20 @@ import { GithubIcon } from "./icons";
 import { ProfilePhoto } from "./ProfilePhoto";
 
 const outlineButton =
-  "group flex min-w-32 items-center justify-between gap-6 rounded-md border border-border bg-surface px-3.5 py-3 text-[12px] transition-colors hover:border-faint";
+  "group flex min-w-32 items-center justify-between gap-6 rounded-md border border-border bg-surface px-3.5 py-3 text-[14px] transition-colors hover:border-faint";
 
 export function Hero() {
   return (
     <section id="about" className="pb-24 pt-20">
       <div className="flex items-start justify-between gap-6">
         <ProfilePhoto src={profile.photo} alt={`รูปของ${profile.name}`} />
-        <p className="mt-5 flex items-center gap-2 rounded-full border border-border bg-surface px-3 dark:border-accent/30 dark:bg-accent-soft py-1.5 text-[11px] text-accent">
+        <p className="mt-5 flex items-center gap-2 rounded-full border border-border bg-surface px-3 dark:border-accent/30 dark:bg-accent-soft py-1.5 text-[13px] text-accent">
           <span className="size-1.5 rounded-full bg-emerald-500" aria-hidden />
           กำลังมองหาที่ฝึกงาน
         </p>
       </div>
 
-      <p className="mt-8 text-[10px] font-semibold uppercase tracking-[0.18em] text-muted">
+      <p className="mt-8 text-[12px] font-semibold uppercase tracking-[0.18em] text-muted">
         Hello, world. I&apos;m Phanuwat.
       </p>
       <h1 className="mt-4 font-display text-[40px] font-semibold leading-[1.18] tracking-[-0.03em] sm:text-[54px]">
@@ -29,11 +29,11 @@ export function Hero() {
       <div className="mt-10 flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between">
         <div className="max-w-[470px]">
           {profile.intro.split("\n").map((line) => (
-            <p key={line} className="text-[15px] leading-[1.9] text-muted [&:not(:first-child)]:mt-1">
+            <p key={line} className="text-[16px] leading-[1.9] text-muted [&:not(:first-child)]:mt-1">
               {line}
             </p>
           ))}
-          <p className="mt-5 flex items-center gap-2 text-[11px] text-muted">
+          <p className="mt-5 flex items-center gap-2 text-[13px] text-muted">
             <MapPin className="size-3.5" aria-hidden />
             {profile.location}, ประเทศไทย · ฝึกงาน {profile.internshipPeriod}
           </p>
@@ -58,7 +58,7 @@ export function Hero() {
         </div>
       </div>
 
-      <a href="#work" className="group mt-12 inline-flex items-center gap-3 text-[12px] font-semibold underline-offset-4 hover:underline">
+      <a href="#work" className="group mt-12 inline-flex items-center gap-3 text-[14px] font-semibold underline-offset-4 hover:underline">
         ดูผลงาน
         <ArrowDown className="size-4 transition-transform group-hover:translate-y-0.5" aria-hidden />
       </a>

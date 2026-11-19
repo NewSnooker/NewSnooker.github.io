@@ -99,7 +99,7 @@ export function ImageCarousel({ images, alt }: ImageCarouselProps) {
               />
             ))}
           </div>
-          <span className="absolute left-3 top-3 rounded-full bg-black/55 px-2 py-0.5 text-[11px] tabular-nums text-white">
+          <span className="absolute left-3 top-3 rounded-full bg-black/55 px-2 py-0.5 text-[13px] tabular-nums text-white">
             {index + 1} / {images.length}
           </span>
         </>

@@ -28,7 +28,7 @@ export function SiteHeader() {
         ข้ามไปที่เนื้อหา
       </a>
       <div className="mx-auto flex h-[88px] max-w-[1120px] items-center justify-between gap-4 border-b border-border px-4 sm:px-6 xl:px-0">
-        <a href="#top" className="group flex items-center gap-2.5 text-[13px]">
+        <a href="#top" className="group flex items-center gap-2.5 text-[16px]">
           <CodeXml className="size-5 text-accent transition-transform group-hover:-rotate-6" aria-hidden />
           <span className="font-semibold">newsnooker</span>
           <span className="text-muted">
@@ -40,7 +40,7 @@ export function SiteHeader() {
         </a>
         <div className="flex items-center gap-3 sm:gap-8">
           <nav aria-label="เมนูหลัก" className="hidden md:block">
-            <ul className="flex items-center gap-8 text-[12px]">
+            <ul className="flex items-center gap-8 text-[14px]">
               {navLinks.map((link) => {
                 const current = link.id === active;
                 return (
@@ -67,7 +67,7 @@ export function SiteHeader() {
           </nav>
           <a
             href="#contact"
-            className="group flex items-center gap-2 rounded-md border border-border bg-surface px-3 py-2 text-[12px] transition-colors hover:border-faint"
+            className="group flex items-center gap-2 rounded-md border border-border bg-surface px-3 py-2 text-[14px] transition-colors hover:border-faint"
           >
             ติดต่อ
             <ArrowUpRight

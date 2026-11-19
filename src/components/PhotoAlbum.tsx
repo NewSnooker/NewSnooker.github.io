@@ -74,7 +74,7 @@ export function PhotoAlbum({ photos, title }: { photos: Photo[]; title: string }
                 <X className="size-4" aria-hidden />
               </button>
             </div>
-            <figcaption className="flex items-center justify-between gap-4 px-5 py-3 text-[12px] text-muted">
+            <figcaption className="flex items-center justify-between gap-4 px-5 py-3 text-[14px] text-muted">
               <span>{current.caption}</span>
               {photos.length > 1 ? (
                 <span className="flex shrink-0 items-center gap-2">

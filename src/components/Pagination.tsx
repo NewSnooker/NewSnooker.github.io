@@ -40,7 +40,7 @@ export function Pagination({ page, pageCount, onChange }: PaginationProps) {
           onClick={() => onChange(n)}
           aria-label={`หน้า ${n}`}
           aria-current={n === page ? "page" : undefined}
-          className={`size-9 rounded-lg text-[12px] tabular-nums transition-colors ${
+          className={`size-9 rounded-lg text-[14px] tabular-nums transition-colors ${
             n === page ? "bg-accent text-accent-ink" : "text-muted hover:bg-surface-2 hover:text-foreground"
           }`}
         >
