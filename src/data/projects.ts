@@ -70,7 +70,7 @@ export const projects: Project[] = [
     category: "web",
     year: 2568,
     status: "done",
-    context: "โครงงาน ปวส. · ต่อยอดจาก Next.js starter kit",
+    context: "โครงงาน ปวส.",
     summary:
       "ระบบจัดการโปรเจกต์ งาน ลูกค้า ใบแจ้งหนี้ และการชำระเงิน มีบอร์ดงานแบบลากวาง (Kanban) สำหรับติดตามสถานะงาน",
     highlights: [
@@ -199,21 +199,6 @@ export const projects: Project[] = [
     ],
     stack: ["React", "TypeScript", "Vite", "Tailwind CSS", "OpenWeatherMap API"],
     repos: [{ label: "Code", url: gh("DailyWeather") }],
-  },
-  {
-    slug: "react-movie",
-    title: "React Movie",
-    subtitle: "เว็บค้นหาภาพยนตร์",
-    category: "mini",
-    year: 2567,
-    status: "done",
-    summary: "เว็บแสดงรายการภาพยนตร์จาก TMDB API เลือกดูตามปี พร้อมลิงก์ไปค้นหาบน YouTube",
-    highlights: [
-      "ดึงรายการภาพยนตร์จาก TMDB API กรองตามปี และแบ่งหน้า (pagination)",
-      "กดชื่อเรื่องแล้วไปค้นหาต่อบน YouTube ได้",
-    ],
-    stack: ["React", "TypeScript", "Vite", "Tailwind CSS", "TMDB API"],
-    repos: [{ label: "Code", url: gh("react_movie") }],
   },
   {
     slug: "supabase-realtime-chat",
