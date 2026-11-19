@@ -28,7 +28,11 @@ export function Hero() {
 
       <div className="mt-10 flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between">
         <div className="max-w-[470px]">
-          <p className="text-[15px] leading-[1.9] text-muted">{profile.intro}</p>
+          {profile.intro.split("\n").map((line) => (
+            <p key={line} className="text-[15px] leading-[1.9] text-muted [&:not(:first-child)]:mt-1">
+              {line}
+            </p>
+          ))}
           <p className="mt-5 flex items-center gap-2 text-[11px] text-muted">
             <MapPin className="size-3.5" aria-hidden />
             {profile.location}, ประเทศไทย · ฝึกงาน {profile.internshipPeriod}
