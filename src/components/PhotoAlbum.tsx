@@ -80,7 +80,17 @@ export function PhotoAlbum({ photos, title }: { photos: Photo[]; title: string }
       >
         {current ? (
           <figure>
-            <figcaption className="px-5 py-3.5 text-[16px] font-medium leading-snug">{current.caption}</figcaption>
+            <div className="flex items-center justify-between gap-4 px-5 py-3">
+              <figcaption className="text-[16px] font-medium leading-snug">{current.caption}</figcaption>
+              <button
+                type="button"
+                onClick={() => setIndex(null)}
+                aria-label="ปิด"
+                className="grid size-9 shrink-0 place-items-center rounded-full border border-border transition-colors hover:border-faint hover:bg-surface-2"
+              >
+                <X className="size-4" aria-hidden />
+              </button>
+            </div>
             <div
               onPointerDown={onPointerDown}
               onPointerMove={onPointerMove}
@@ -134,14 +144,6 @@ export function PhotoAlbum({ photos, title }: { photos: Photo[]; title: string }
                   </span>
                 </>
               ) : null}
-              <button
-                type="button"
-                onClick={() => setIndex(null)}
-                aria-label="ปิด"
-                className="absolute right-3 top-3 grid size-9 place-items-center rounded-full border border-border bg-background/90"
-              >
-                <X className="size-4" aria-hidden />
-              </button>
             </div>
           </figure>
         ) : null}
