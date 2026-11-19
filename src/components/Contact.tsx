@@ -88,7 +88,7 @@ export function Contact() {
               <a
                 href={channel.href}
                 {...(channel.external ? { target: "_blank", rel: "noreferrer" } : {})}
-                className="group flex items-center gap-3 rounded-lg border border-border bg-surface-2 px-4 py-3 transition-colors hover:border-faint"
+                className="group flex items-center gap-3 rounded-lg border border-border bg-surface px-4 py-3 dark:bg-surface-2 transition-colors hover:border-faint"
               >
                 <span className="grid size-9 shrink-0 place-items-center rounded-md border border-border bg-surface">
                   {channel.icon}
@@ -109,7 +109,7 @@ export function Contact() {
               <a
                 href={profile.resumeUrl}
                 download
-                className="group flex items-center gap-3 rounded-lg border border-border bg-surface-2 px-4 py-3 transition-colors hover:border-faint"
+                className="group flex items-center gap-3 rounded-lg border border-border bg-surface px-4 py-3 dark:bg-surface-2 transition-colors hover:border-faint"
               >
                 <span className="grid size-9 shrink-0 place-items-center rounded-md border border-border bg-surface">
                   <Download className="size-4" aria-hidden />
