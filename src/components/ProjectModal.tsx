@@ -1,10 +1,10 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import Image from "next/image";
 import { ExternalLink, X } from "lucide-react";
 import { categoryLabels, teamLabel, type Project } from "@/data/projects";
 import { GithubIcon } from "./icons";
+import { ImageCarousel } from "./ImageCarousel";
 import { ProjectCover } from "./ProjectCover";
 
 type ProjectModalProps = {
@@ -47,7 +47,11 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
       {project ? (
         <article>
           <div className="relative overflow-hidden border-b border-border">
-            <ProjectCover project={project} priority />
+            {project.cover ? (
+              <ImageCarousel images={[project.cover, ...(project.gallery ?? [])]} alt={project.title} />
+            ) : (
+              <ProjectCover project={project} priority />
+            )}
             <button
               type="button"
               onClick={onClose}
@@ -97,20 +101,6 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
               ))}
             </ul>
 
-            {project.gallery && project.gallery.length > 0 ? (
-              <div className="mt-6 grid gap-3 sm:grid-cols-2">
-                {project.gallery.map((src, i) => (
-                  <Image
-                    key={src}
-                    src={src}
-                    alt={`${project.title} ภาพที่ ${i + 1}`}
-                    width={1600}
-                    height={900}
-                    className="w-full rounded-md border border-border"
-                  />
-                ))}
-              </div>
-            ) : null}
 
             <div className="mt-7 flex flex-wrap items-center gap-5 border-t border-border pt-5 text-[12px]">
               {project.repos.map((repo) => (

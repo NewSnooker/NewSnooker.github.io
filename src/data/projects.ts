@@ -36,6 +36,7 @@ export const projects: Project[] = [
   {
     slug: "acne-ai",
     cover: "/images/projects/acne-ai/cover.jpg",
+    gallery: ["/images/projects/acne-ai/01.jpg", "/images/projects/acne-ai/02.jpg", "/images/projects/acne-ai/03.jpg", "/images/projects/acne-ai/04.jpg"],
     title: "AcneAI",
     subtitle: "ระบบตรวจจับและจำแนกชนิดสิวจากภาพถ่ายใบหน้า",
     category: "web",
@@ -59,6 +60,7 @@ export const projects: Project[] = [
   {
     slug: "project-management-system",
     cover: "/images/projects/project-management-system/cover.jpg",
+    gallery: ["/images/projects/project-management-system/01.jpg", "/images/projects/project-management-system/02.jpg"],
     title: "ระบบบริหารจัดการโปรเจกต์",
     subtitle: "Project Management System",
     category: "web",
@@ -79,6 +81,7 @@ export const projects: Project[] = [
   {
     slug: "library-management-system",
     cover: "/images/projects/library-management-system/cover.jpg",
+    gallery: ["/images/projects/library-management-system/01.jpg", "/images/projects/library-management-system/02.jpg"],
     title: "ระบบห้องสมุด",
     subtitle: "Library Management System",
     category: "web",
