@@ -5,21 +5,23 @@
 /* Stone greys (warm neutral, like shadcn/ui "Stone"). Dark is the default (set on <html>). */
 :root,
 [data-theme="light"] {
-  /* Stone 150 page, stone 100 cards, stone 200 hover/inset, stone 300 borders. */
-  --background: #eeedeb;
-  --surface: #f5f5f4;
+  /* Stone 100 page, stone 50 cards, stone 200 hover/inset, stone 400 borders, white popups. */
+  --background: #f5f5f4;
+  --surface: #fafaf9;
   --surface-2: #e7e5e4;
-  --border: #d6d3d1;
+  --popup: #ffffff;
+  --border: #a8a29e;
   --foreground: #1c1917;
-  --muted: #6b6560;
-  --faint: #8a847f;
+  --muted: #57534e;
+  --faint: #78716c;
   --accent: #44403c;
   --accent-soft: #44403c14;
-  --accent-ink: #f5f5f4;
+  --accent-ink: #fafaf9;
 }
 
 [data-theme="dark"] {
   --background: #121110;
+  --popup: #121110;
   --surface: #1c1a19;
   --surface-2: #252321;
   --border: #2f2c2a;
@@ -35,6 +37,7 @@
   --color-background: var(--background);
   --color-surface: var(--surface);
   --color-surface-2: var(--surface-2);
+  --color-popup: var(--popup);
   --color-border: var(--border);
   --color-foreground: var(--foreground);
   --color-muted: var(--muted);

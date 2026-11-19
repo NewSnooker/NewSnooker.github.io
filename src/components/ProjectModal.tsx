@@ -42,7 +42,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
         if (event.target === dialogRef.current) onClose();
       }}
       aria-labelledby="project-modal-title"
-      className="m-auto max-h-[90vh] w-[min(760px,calc(100vw-2rem))] overflow-y-auto rounded-xl border border-border bg-background p-0 text-foreground shadow-2xl"
+      className="m-auto max-h-[90vh] w-[min(760px,calc(100vw-2rem))] overflow-y-auto rounded-xl border border-border bg-popup p-0 text-foreground shadow-2xl"
     >
       {project ? (
         <article>

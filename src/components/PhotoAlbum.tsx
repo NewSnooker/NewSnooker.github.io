@@ -53,7 +53,7 @@ export function PhotoAlbum({ photos, title }: { photos: Photo[]; title: string }
           if (event.key === "ArrowLeft") step(-1);
         }}
         aria-label={title}
-        className="m-auto w-[min(960px,calc(100vw-2rem))] overflow-hidden rounded-xl border border-border bg-background p-0 text-foreground"
+        className="m-auto w-[min(960px,calc(100vw-2rem))] overflow-hidden rounded-xl border border-border bg-popup p-0 text-foreground"
       >
         {current ? (
           <figure>

@@ -33,7 +33,7 @@ export function ProfilePhoto({ src, alt }: { src: string; alt: string }) {
           if (event.target === dialogRef.current) close();
         }}
         aria-label="รูปโปรไฟล์"
-        className="m-auto w-[min(420px,calc(100vw-2rem))] overflow-hidden rounded-xl border border-border bg-background p-0"
+        className="m-auto w-[min(420px,calc(100vw-2rem))] overflow-hidden rounded-xl border border-border bg-popup p-0"
       >
         <div className="relative">
           <Image src={src} alt={alt} width={840} height={840} className="w-full object-cover" />
