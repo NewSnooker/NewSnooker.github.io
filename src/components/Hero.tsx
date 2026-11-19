@@ -12,7 +12,7 @@ export function Hero() {
       <div className="flex items-start justify-between gap-6">
         <ProfilePhoto src={profile.photo} alt={`รูปของ${profile.name}`} />
         <p className="mt-5 flex items-center gap-2 rounded-full border border-accent/30 bg-accent-soft px-3 py-1.5 text-[11px] text-accent">
-          <span className="size-1.5 rounded-full bg-accent" aria-hidden />
+          <span className="size-1.5 rounded-full bg-emerald-500" aria-hidden />
           กำลังมองหาที่ฝึกงาน
         </p>
       </div>
