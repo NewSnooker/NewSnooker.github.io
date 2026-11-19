@@ -67,27 +67,38 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
               <span>{categoryLabels[project.category]}</span>
               <span className="tabular-nums">{project.year}</span>
             </div>
-            <div className="mt-2 flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+            <div className="mt-2 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
               <div className="min-w-0">
                 <h3 id="project-modal-title" className="font-display text-[24px] font-semibold tracking-[-0.02em]">
                   {project.title}
                 </h3>
                 <p className="text-[13px] text-muted">{project.subtitle}</p>
               </div>
-              <div className="flex shrink-0 flex-wrap items-center gap-x-5 gap-y-2 text-[12px] sm:justify-end sm:pt-2">
+              <div className="flex shrink-0 flex-wrap items-center gap-2 sm:justify-end">
                 {project.repos.map((repo) => (
-                  <a key={repo.url} href={repo.url} target="_blank" rel="noreferrer" className="flex items-center gap-2 underline-offset-4 hover:underline">
+                  <a
+                    key={repo.url}
+                    href={repo.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex items-center gap-2 rounded-md border border-border bg-surface px-3.5 py-2.5 text-[12px] font-medium transition-colors hover:border-faint hover:bg-surface-2"
+                  >
                     <GithubIcon />
                     {repo.label}
                   </a>
                 ))}
                 {project.demo ? (
-                  <a href={project.demo} target="_blank" rel="noreferrer" className="flex items-center gap-2 underline-offset-4 hover:underline">
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex items-center gap-2 rounded-md border border-accent bg-accent px-3.5 py-2.5 text-[12px] font-medium text-accent-ink transition-opacity hover:opacity-85"
+                  >
                     เปิดเว็บจริง
                     <ExternalLink className="size-3.5" aria-hidden />
                   </a>
                 ) : null}
-                {project.repos.length === 0 ? <span className="text-muted">โค้ดเป็น repository ส่วนตัว</span> : null}
+                {project.repos.length === 0 ? <span className="text-[12px] text-muted">โค้ดเป็น repository ส่วนตัว</span> : null}
               </div>
             </div>
 

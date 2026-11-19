@@ -61,7 +61,7 @@ export function ImageCarousel({ images, alt }: ImageCarouselProps) {
               width={1600}
               height={900}
               priority={i === 0}
-              className="aspect-[16/9] w-full object-cover object-top"
+              className="aspect-[16/9] w-full bg-surface-2 object-contain"
             />
           </div>
         ))}
