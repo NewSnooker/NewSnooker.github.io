@@ -117,7 +117,7 @@ export function Work() {
                 </div>
               </button>
               <div className="mt-6 flex items-center justify-between text-[13px] text-muted">
-                <span>{categoryLabels[project.category]}</span>
+                <span>{categoryLabels[project.category]}{project.status === "in-progress" ? " · กำลังพัฒนา" : ""}</span>
                 <span className="tabular-nums">{project.year}</span>
               </div>
               <div className="mt-2 flex items-start justify-between gap-4">
