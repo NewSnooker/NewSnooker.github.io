@@ -185,23 +185,6 @@ export const projects: Project[] = [
     repos: [{ label: "Code", url: gh("flutter_contact_phone") }],
   },
   {
-    slug: "full-stack-docker",
-    title: "Full-stack Docker",
-    subtitle: "แอป React + Express + MongoDB ใน Docker",
-    category: "web",
-    year: 2568,
-    status: "done",
-    summary: "ฝึกรันแอปแบบ Full-stack ทั้ง Frontend, Backend และฐานข้อมูลด้วย Docker Compose",
-    highlights: [
-      "แยก container ของ client, server และ MongoDB แล้วเชื่อมกันผ่าน Docker network เดียวกัน",
-      "ใช้ Dockerfile แยกโหมดพัฒนา (แก้โค้ดแล้วเห็นผลทันทีผ่าน volume) กับโหมดใช้งานจริง",
-      "build หน้าเว็บแบบ multi-stage แล้วเสิร์ฟด้วย Nginx",
-      "เก็บข้อมูล MongoDB ไว้ใน volume ข้อมูลไม่หายเมื่อปิด container",
-    ],
-    stack: ["Docker", "Docker Compose", "React", "Express", "MongoDB"],
-    repos: [{ label: "Code", url: gh("full-stack-docker") }],
-  },
-  {
     slug: "daily-weather",
     title: "Daily Weather",
     subtitle: "เว็บพยากรณ์อากาศ",
