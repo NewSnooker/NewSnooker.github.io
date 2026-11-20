@@ -143,12 +143,13 @@ export const projects: Project[] = [
   },
   {
     slug: "e-commerce-flutter",
+    cover: "/images/projects/e-commerce-flutter/cover.jpg",
     title: "E-commerce App",
     subtitle: "แอปร้านค้าออนไลน์ด้วย Flutter",
     category: "mobile",
     year: 2567,
     status: "done",
-    summary: "หน้าตาแอปร้านค้าออนไลน์บนมือถือ มีเมนูด้านล่างสำหรับสลับหน้า",
+    summary: "งานออกแบบหน้าจอ (UI) แอปร้านค้าออนไลน์บนมือถือ มีเมนูด้านล่างสำหรับสลับหน้า",
     highlights: [
       "ออกแบบหน้าแอป: หน้าแนะนำ, เข้าสู่ระบบ / สมัครสมาชิก, หน้าแรกแสดงสินค้าแยกหมวด และหน้ารายละเอียดสินค้า",
       "แถบเมนูด้านล่างแบบเคลื่อนไหว (curved_navigation_bar) สำหรับสลับหน้า",
