@@ -2,7 +2,7 @@
 
 import { useRef, useState } from "react";
 import { ArrowRight, ArrowUpRight, ExternalLink, Search, X } from "lucide-react";
-import { categoryLabels, projects, type Project, type ProjectCategory } from "@/data/projects";
+import { categoryLabels, projects, type Project, type ProjectCategory, statusLabels } from "@/data/projects";
 import { GithubIcon } from "./icons";
 import { ProjectCover } from "./ProjectCover";
 import { Pagination } from "./Pagination";
@@ -117,7 +117,7 @@ export function Work() {
                 </div>
               </button>
               <div className="mt-6 flex items-center justify-between text-[13px] text-muted">
-                <span>{categoryLabels[project.category]}{project.status === "in-progress" ? " · กำลังพัฒนา" : ""}</span>
+                <span>{categoryLabels[project.category]}{statusLabels[project.status] ? ` · ${statusLabels[project.status]}` : ""}</span>
                 <span className="tabular-nums">{project.year}</span>
               </div>
               <div className="mt-2 flex items-start justify-between gap-4">

@@ -8,7 +8,7 @@ export type Project = {
   subtitleEn?: string;
   category: ProjectCategory;
   year: number;
-  status: "done" | "in-progress";
+  status: "done" | "in-progress" | "paused";
   // How the work was done. For team work, say what *you* did.
   // Leave out until confirmed. For team work, say what *you* did in `role`.
   team?: { kind: "solo" } | { kind: "team"; size: number; role?: string };
@@ -22,6 +22,12 @@ export type Project = {
   cover?: string;
   gallery?: string[];
   featured?: boolean;
+};
+
+// Shown next to the category when a project is not finished.
+export const statusLabels: Partial<Record<Project["status"], string>> = {
+  "in-progress": "กำลังพัฒนา",
+  paused: "ไม่ได้พัฒนาต่อ",
 };
 
 export const categoryLabels: Record<ProjectCategory, string> = {
@@ -126,8 +132,8 @@ export const projects: Project[] = [
     subtitle: "ระบบสมาชิกและจัดการผู้ใช้ แยก Backend / Frontend",
     category: "web",
     year: 2568,
-    status: "in-progress",
-    summary: "ระบบเกมออนไลน์ที่ยังอยู่ระหว่างพัฒนา (ไม่ได้พัฒนาต่อมาระยะหนึ่งแล้ว) ส่วนที่ทำไปแล้วคือระบบสมาชิกและหลังบ้านจัดการผู้ใช้ เป็นโปรเจกต์ที่ได้ฝึกเขียน REST API ด้วย Elysia และจัดการข้อมูลผู้ใช้ เช่น soft delete และบังคับออกจากระบบ",
+    status: "paused",
+    summary: "พยายามสร้างเว็บเกมออนไลน์และนำเกมมาใส่ แต่ไม่ได้ทำต่อจนจบ ส่วนที่ทำเสร็จคือระบบสมาชิกและหลังบ้านจัดการผู้ใช้ แม้ไม่ได้ไปต่อ แต่เป็นโปรเจกต์ที่ได้เรียนรู้มาก ทั้งการเขียน REST API ด้วย Elysia, soft delete และการบังคับผู้ใช้ออกจากระบบ",
     highlights: [
       "เขียน REST API ด้วย Elysia บน Bun แบ่งเป็น controller / service พร้อมเอกสาร API (Swagger)",
       "ลบผู้ใช้แบบ soft delete กู้คืนได้ และมีงานตั้งเวลา (cron) ลบถาวรเมื่อครบ 7 วัน โดยลบข้อมูลที่เกี่ยวข้องใน transaction เดียว",

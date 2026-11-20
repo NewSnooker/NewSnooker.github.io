@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { ExternalLink, X } from "lucide-react";
-import { categoryLabels, teamLabel, type Project } from "@/data/projects";
+import { categoryLabels, teamLabel, type Project, statusLabels } from "@/data/projects";
 import { GithubIcon } from "./icons";
 import { ImageCarousel } from "./ImageCarousel";
 import { ProjectCover } from "./ProjectCover";
@@ -26,7 +26,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
   const facts = project
     ? [
         { label: "ประเภท", value: categoryLabels[project.category] },
-        ...(project.status === "in-progress" ? [{ label: "สถานะ", value: "กำลังพัฒนา" }] : []),
+        ...(statusLabels[project.status] ? [{ label: "สถานะ", value: statusLabels[project.status] as string }] : []),
         ...(project.team ? [{ label: "รูปแบบงาน", value: teamLabel(project.team) }] : []),
         ...(project.team?.kind === "team" && project.team.role ? [{ label: "ส่วนที่ทำ", value: project.team.role }] : []),
         ...(project.context ? [{ label: "ที่มา", value: project.context }] : []),
@@ -64,7 +64,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
 
           <div className="p-6 sm:p-8">
             <div className="flex items-center justify-between text-[13px] text-muted">
-              <span>{categoryLabels[project.category]}{project.status === "in-progress" ? " · กำลังพัฒนา" : ""}</span>
+              <span>{categoryLabels[project.category]}{statusLabels[project.status] ? ` · ${statusLabels[project.status]}` : ""}</span>
               <span className="tabular-nums">{project.year}</span>
             </div>
             <div className="mt-2 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
