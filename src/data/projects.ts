@@ -54,6 +54,7 @@ export const projects: Project[] = [
       "เปรียบเทียบโมเดลด้วยค่า mAP@0.5, Precision, Recall และ F1-score โมเดลที่ใช้งานจริงได้ mAP@0.5 60.36% (โมเดลเริ่มต้น 36.98%)",
       "แบ่งสิทธิ์ผู้ใช้กับผู้ดูแลด้วย Auth.js และตรวจสิทธิ์ทั้งที่ middleware และในทุก API",
       "รันทั้งระบบ (เว็บ, AI, ฐานข้อมูล) ได้ในคำสั่งเดียวด้วย Docker Compose และขึ้นใช้งานจริงบน Azure",
+      "แยกฐานข้อมูลและที่เก็บไฟล์ของแต่ละ environment (Docker, Vercel + Render และ Azure) ไม่ให้ข้อมูลปนกัน",
       "มีระบบผู้ดูแล สำหรับจัดการผู้ใช้ สลับโมเดล AI และดูสถิติการใช้งาน",
     ],
     stack: ["Next.js", "TypeScript", "FastAPI", "YOLO", "MongoDB", "Prisma", "Auth.js", "Docker Compose"],
