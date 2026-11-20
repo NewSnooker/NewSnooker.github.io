@@ -127,7 +127,7 @@ export const projects: Project[] = [
   {
     slug: "snooker-g",
     cover: "/images/projects/snooker-g/cover.jpg",
-    gallery: ["/images/projects/snooker-g/01.jpg", "/images/projects/snooker-g/02.jpg"],
+    gallery: ["/images/projects/snooker-g/01.jpg", "/images/projects/snooker-g/02.jpg", "/images/projects/snooker-g/03.jpg"],
     title: "Snooker G",
     subtitle: "ระบบสมาชิกและจัดการผู้ใช้ แยก Backend / Frontend",
     category: "web",
@@ -135,7 +135,7 @@ export const projects: Project[] = [
     status: "paused",
     summary: "พยายามสร้างเว็บเกมออนไลน์และนำเกมมาใส่ แต่ไม่ได้ทำต่อจนจบ ส่วนที่ทำเสร็จคือระบบสมาชิกและหลังบ้านจัดการผู้ใช้ แม้ไม่ได้ไปต่อ แต่เป็นโปรเจกต์ที่ได้เรียนรู้มาก ทั้งการเขียน REST API ด้วย Elysia, soft delete และการบังคับผู้ใช้ออกจากระบบ",
     highlights: [
-      "เขียน REST API ด้วย Elysia บน Bun แบ่งเป็น controller / service พร้อมเอกสาร API (Swagger)",
+      "เขียน REST API ด้วย Elysia บน Bun แบ่งเป็น controller / service พร้อมเอกสาร API (OpenAPI) ที่เปิดดูและทดสอบเรียกได้ผ่านหน้า Scalar",
       "ลบผู้ใช้แบบ soft delete กู้คืนได้ และมีงานตั้งเวลา (cron) ลบถาวรเมื่อครบ 7 วัน โดยลบข้อมูลที่เกี่ยวข้องใน transaction เดียว",
       "ผู้ดูแลสูงสุดบังคับผู้ใช้ออกจากระบบ (ทีละคนหรือหลายคนพร้อมกัน) และเข้าสู่ระบบแทนผู้ใช้ได้ โดยบันทึกประวัติลงฐานข้อมูลทุกครั้ง",
       "บันทึก log ด้วย Winston ทั้งใน controller, service และงานตั้งเวลา แสดงทาง console และเก็บ log ข้อผิดพลาดเป็นไฟล์รายวัน (บีบอัด เก็บย้อนหลัง 14 วัน)",
