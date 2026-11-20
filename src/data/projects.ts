@@ -44,7 +44,7 @@ export const projects: Project[] = [
     category: "web",
     year: 2569,
     status: "done",
-    team: { kind: "team", size: 2 },
+    team: { kind: "team", size: 2, role: "ออกแบบและพัฒนาระบบ" },
     context: "โครงงานปริญญาตรี",
     summary:
       "เว็บแอปที่ให้ผู้ใช้อัปโหลดภาพใบหน้า แล้วใช้ AI ตรวจจับสิว 6 ชนิด ประเมินความรุนแรง และให้คำแนะนำการดูแลผิวเบื้องต้น",
@@ -73,6 +73,7 @@ export const projects: Project[] = [
     category: "web",
     year: 2568,
     status: "done",
+    team: { kind: "team", size: 4, role: "ออกแบบและพัฒนาระบบ" },
     context: "โครงงาน ปวส.",
     summary:
       "ระบบจัดการโปรเจกต์ งาน ลูกค้า ใบแจ้งหนี้ และการชำระเงิน มีบอร์ดงานแบบลากวาง (Kanban) สำหรับติดตามสถานะงาน",
@@ -99,6 +100,7 @@ export const projects: Project[] = [
     category: "web",
     year: 2567,
     status: "done",
+    team: { kind: "team", size: 4, role: "ออกแบบและพัฒนาระบบ" },
     summary: "ระบบยืม-คืนหนังสือ รายการหนังสือโปรด และหลังบ้านสำหรับผู้ดูแลจัดการหนังสือ หมวดหมู่ และแบนเนอร์",
     highlights: [
       "ออกแบบฐานข้อมูลด้วย Prisma + MongoDB แยกหนังสือ หมวดหมู่ ผู้ใช้ การยืม และเก็บจำนวนหนังสือทั้งหมดกับจำนวนคงเหลือแยกกัน",
