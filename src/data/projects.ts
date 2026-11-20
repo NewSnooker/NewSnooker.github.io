@@ -209,6 +209,7 @@ export const projects: Project[] = [
   {
     slug: "supabase-realtime-chat",
     cover: "/images/projects/supabase-realtime-chat/cover.jpg",
+    gallery: ["/images/projects/supabase-realtime-chat/01.jpg"],
     title: "Realtime Chat",
     subtitle: "แชทแบบเรียลไทม์ด้วย Supabase",
     category: "web",
