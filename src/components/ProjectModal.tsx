@@ -26,7 +26,6 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
   const facts = project
     ? [
         { label: "ประเภท", value: categoryLabels[project.category] },
-        { label: "ปี", value: String(project.year) },
         ...(project.team ? [{ label: "รูปแบบงาน", value: teamLabel(project.team) }] : []),
         ...(project.team?.kind === "team" && project.team.role ? [{ label: "ส่วนที่ทำ", value: project.team.role }] : []),
         ...(project.context ? [{ label: "ที่มา", value: project.context }] : []),
