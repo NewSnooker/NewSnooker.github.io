@@ -73,6 +73,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                   {project.title}
                 </h3>
                 <p className="text-[16px] text-muted">{project.subtitle}</p>
+                {project.subtitleEn ? <p className="text-[14px] text-faint">{project.subtitleEn}</p> : null}
               </div>
               <div className="flex shrink-0 flex-wrap items-center gap-2 sm:justify-end">
                 {project.repos.map((repo) => (

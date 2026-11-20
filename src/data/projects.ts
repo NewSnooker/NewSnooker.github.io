@@ -4,6 +4,8 @@ export type Project = {
   slug: string;
   title: string;
   subtitle: string;
+  // Official English name, shown under the subtitle in the popup.
+  subtitleEn?: string;
   category: ProjectCategory;
   year: number;
   status: "done" | "in-progress";
@@ -37,7 +39,8 @@ export const projects: Project[] = [
     cover: "/images/projects/acne-ai/cover.jpg",
     gallery: ["/images/projects/acne-ai/01.jpg", "/images/projects/acne-ai/02.jpg", "/images/projects/acne-ai/03.jpg", "/images/projects/acne-ai/04.jpg", "/images/projects/acne-ai/05.jpg"],
     title: "AcneAI",
-    subtitle: "ระบบตรวจจับและจำแนกชนิดสิวจากภาพถ่ายใบหน้า",
+    subtitle: "ระบบตรวจจับและจำแนกชนิดสิวจากภาพถ่ายใบหน้าด้วยเทคนิค Object Detection",
+    subtitleEn: "Facial Acne Detection and Classification System Using Object Detection",
     category: "web",
     year: 2569,
     status: "done",
@@ -47,13 +50,13 @@ export const projects: Project[] = [
       "เว็บแอปที่ให้ผู้ใช้อัปโหลดภาพใบหน้า แล้วใช้ AI ตรวจจับสิว 6 ชนิด ประเมินความรุนแรง และให้คำแนะนำการดูแลผิวเบื้องต้น",
     highlights: [
       "แยกระบบเป็นเว็บแอป (Next.js) กับ AI Service (FastAPI) ที่ทำหน้าที่ตรวจภาพอย่างเดียว คุยกันผ่าน REST API และยืนยันกันด้วย API key",
-      "ใช้โมเดล YOLO ตรวจจับสิว 6 ชนิด แล้วคำนวณระดับความรุนแรงตามเกณฑ์ที่กำหนดไว้ในเล่มโครงงาน",
+      "ใช้ Ultralytics YOLO เทรนโมเดลจากชุดข้อมูลบน Roboflow Universe เพื่อตรวจจับสิว 6 ชนิด แล้วคำนวณระดับความรุนแรงตามเกณฑ์ที่กำหนดไว้ในเล่มโครงงาน",
       "เปรียบเทียบโมเดลด้วยค่า mAP@0.5, Precision, Recall และ F1-score โมเดลที่ใช้งานจริงได้ mAP@0.5 60.36% (โมเดลเริ่มต้น 36.98%)",
       "เก็บไฟล์โมเดลไว้ในฐานข้อมูล ให้ AI Service โหลดผ่าน API แล้วเก็บ cache ลงดิสก์ ผู้ดูแลจึงอัปโหลดและสลับโมเดลได้จากหน้าเว็บ",
       "ทดลองเทคนิค Test-Time Augmentation (TTA) และวัดผลเทียบกับการตรวจแบบปกติ",
       "แบ่งสิทธิ์ผู้ใช้กับผู้ดูแลด้วย Auth.js และตรวจสิทธิ์ทั้งที่ middleware และในทุก API",
       "รันทั้งระบบ (เว็บ, AI, ฐานข้อมูล) ได้ในคำสั่งเดียวด้วย Docker Compose และขึ้นใช้งานจริงบน Azure",
-      "แยกฐานข้อมูลและที่เก็บไฟล์ของแต่ละที่ที่ขึ้นระบบ (Docker / Vercel / Azure) ไม่ให้ข้อมูลปนกัน",
+      "แยกฐานข้อมูลและที่เก็บไฟล์ของแต่ละ environment (Docker, Vercel + Render และ Azure) ไม่ให้ข้อมูลปนกัน",
       "มีระบบผู้ดูแล สำหรับจัดการผู้ใช้ สลับโมเดล AI และดูสถิติการใช้งาน",
     ],
     stack: ["Next.js", "TypeScript", "FastAPI", "YOLO", "MongoDB", "Prisma", "Auth.js", "Docker Compose"],
