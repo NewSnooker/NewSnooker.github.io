@@ -92,7 +92,7 @@ export const projects: Project[] = [
   {
     slug: "library-management-system",
     cover: "/images/projects/library-management-system/cover.jpg",
-    gallery: ["/images/projects/library-management-system/01.jpg", "/images/projects/library-management-system/02.jpg", "/images/projects/library-management-system/03.jpg", "/images/projects/library-management-system/04.jpg"],
+    gallery: ["/images/projects/library-management-system/01.jpg", "/images/projects/library-management-system/02.jpg", "/images/projects/library-management-system/03.jpg", "/images/projects/library-management-system/04.jpg", "/images/projects/library-management-system/05.jpg"],
     title: "ระบบห้องสมุด",
     subtitle: "Library Management System",
     category: "web",
