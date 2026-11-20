@@ -65,7 +65,7 @@ export const projects: Project[] = [
   {
     slug: "project-management-system",
     cover: "/images/projects/project-management-system/cover.jpg",
-    gallery: ["/images/projects/project-management-system/01.jpg", "/images/projects/project-management-system/02.jpg", "/images/projects/project-management-system/03.jpg", "/images/projects/project-management-system/04.jpg", "/images/projects/project-management-system/05.jpg", "/images/projects/project-management-system/11.jpg", "/images/projects/project-management-system/06.jpg", "/images/projects/project-management-system/07.jpg", "/images/projects/project-management-system/08.jpg", "/images/projects/project-management-system/09.jpg", "/images/projects/project-management-system/10.jpg"],
+    gallery: ["/images/projects/project-management-system/01.jpg", "/images/projects/project-management-system/02.jpg", "/images/projects/project-management-system/03.jpg", "/images/projects/project-management-system/04.jpg", "/images/projects/project-management-system/05.jpg", "/images/projects/project-management-system/11.jpg", "/images/projects/project-management-system/12.jpg", "/images/projects/project-management-system/13.jpg", "/images/projects/project-management-system/06.jpg", "/images/projects/project-management-system/07.jpg", "/images/projects/project-management-system/08.jpg", "/images/projects/project-management-system/09.jpg", "/images/projects/project-management-system/10.jpg"],
     title: "ระบบบริหารจัดการโปรเจกต์",
     subtitle: "Project Management System",
     category: "web",
@@ -76,12 +76,12 @@ export const projects: Project[] = [
     summary:
       "ระบบภายในองค์กรสำหรับบริษัทเดียว ใช้จัดการโปรเจกต์ งาน ลูกค้า ใบแจ้งหนี้ และการชำระเงิน มีบอร์ดงานแบบลากวาง (Kanban) สำหรับติดตามสถานะงาน",
     highlights: [
-      "บอร์ด Kanban ลากการ์ดงานข้ามคอลัมน์ รอทำ / กำลังทำ / เสร็จแล้ว แบ่งงานเป็นโมดูล และบันทึกสถานะลงฐานข้อมูล",
+      "แบ่งโครงการเป็นฟีเจอร์ แต่ละฟีเจอร์มีบอร์ด Kanban ลากการ์ดงานข้ามคอลัมน์ งานที่ต้องทำ / กำลังดำเนินการ / ทำเสร็จแล้ว พร้อมแถบความคืบหน้าเป็นเปอร์เซ็นต์ และบันทึกสถานะลงฐานข้อมูล",
       "แดชบอร์ดสรุปจำนวนโครงการ งบประมาณรวม ลูกค้า และสมาชิก พร้อมรายการโครงการและลูกค้าล่าสุด",
       "จัดการลูกค้า: เพิ่มหรือเชิญลูกค้าเข้าระบบ ค้นหา กรองตามช่วงวันที่ ส่งอีเมล และดาวน์โหลดข้อมูล",
       "จัดการโครงการ: กำหนดงบประมาณและวันเริ่ม-สิ้นสุด แสดงเวลาที่เหลือหรือเกินกำหนด สถานะเสร็จสิ้น และตั้งผลงานเป็นส่วนตัวหรือสาธารณะ",
-      "หน้ารายละเอียดโครงการ: ค่าใช้จ่ายเทียบกับงบประมาณ ช่วงเวลา สมาชิก ข้อมูลลูกค้า และโน้ตโครงการด้วยตัวแก้ไขข้อความ (พิมพ์ / เพื่อเลือกรูปแบบ) เชิญสมาชิกเข้าร่วมโครงการได้",
-      "ส่งอีเมลหาลูกค้าจากในระบบ แนบไฟล์ได้ และมีหน้ารายชื่อผู้ติดตาม",
+      "หน้ารายละเอียดโครงการ: ค่าใช้จ่ายเทียบกับงบประมาณ ช่วงเวลา สมาชิก ข้อมูลลูกค้า โน้ตโครงการด้วยตัวแก้ไขข้อความ (พิมพ์ / เพื่อเลือกรูปแบบ) ความคิดเห็น และการชำระเงินกับใบแจ้งหนี้แยกเป็นแท็บ เชิญสมาชิกเข้าร่วมโครงการได้",
+      "ส่งอีเมลหาลูกค้าจากในระบบ แนบไฟล์ได้",
       "การชำระเงินแยกตามโครงการ เปิดดูในใบแจ้งหนี้ และสั่งพิมพ์ใบแจ้งหนี้จากหน้าเว็บ",
       "จัดการไฟล์แบบโฟลเดอร์ แสดงพื้นที่ที่ใช้เทียบกับโควตา อัปโหลดไฟล์ด้วย UploadThing",
       "แบ่งสิทธิ์ผู้ใช้ 4 ระดับ (ผู้ดูแล, เจ้าของงาน, ลูกค้า, สมาชิกทีม) เข้าสู่ระบบด้วยอีเมลหรือบัญชี Google / GitHub",
