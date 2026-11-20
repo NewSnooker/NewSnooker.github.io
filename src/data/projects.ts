@@ -159,6 +159,7 @@ export const projects: Project[] = [
   },
   {
     slug: "contact-phone-flutter",
+    cover: "/images/projects/contact-phone-flutter/cover.jpg",
     title: "Contact Phone App",
     subtitle: "แอปรายชื่อติดต่อด้วย Flutter",
     category: "mobile",
