@@ -65,7 +65,7 @@ export const projects: Project[] = [
   {
     slug: "project-management-system",
     cover: "/images/projects/project-management-system/cover.jpg",
-    gallery: ["/images/projects/project-management-system/01.jpg", "/images/projects/project-management-system/02.jpg"],
+    gallery: ["/images/projects/project-management-system/01.jpg", "/images/projects/project-management-system/02.jpg", "/images/projects/project-management-system/03.jpg", "/images/projects/project-management-system/04.jpg", "/images/projects/project-management-system/05.jpg", "/images/projects/project-management-system/06.jpg", "/images/projects/project-management-system/07.jpg"],
     title: "ระบบบริหารจัดการโปรเจกต์",
     subtitle: "Project Management System",
     category: "web",
