@@ -275,6 +275,7 @@ export const projects: Project[] = [
     slug: "hotel-job-board-ui",
     cover: "/images/projects/hotel-job-board/cover.jpg",
     gallery: [
+      "/images/projects/hotel-job-board/10.jpg",
       "/images/projects/hotel-job-board/05.jpg",
       "/images/projects/hotel-job-board/04.jpg",
       "/images/projects/hotel-job-board/06.jpg",
