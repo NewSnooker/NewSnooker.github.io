@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+/* Stone greys (warm neutral, like shadcn/ui "Stone"). Dark is the default (set on <html>). */
+:root,
+[data-theme="light"] {
+  /* Stone 100 page, stone 50 cards, stone 200 hover/inset, stone 400 borders, white popups. */
+  --background: #f5f5f4;
+  --surface: #fafaf9;
+  --surface-2: #e7e5e4;
+  --popup: #ffffff;
+  --border: #a8a29e;
+  --foreground: #0c0a09;
+  --muted: #44403c;
+  --faint: #57534e;
+  --accent: #44403c;
+  --accent-soft: #44403c14;
+  --accent-ink: #fafaf9;
+}
+
+[data-theme="dark"] {
+  --background: #121110;
+  --popup: #121110;
+  --surface: #1c1a19;
+  --surface-2: #252321;
+  --border: #2f2c2a;
+  --foreground: #f5f5f4;
+  --muted: #a8a29e;
+  --faint: #78716c;
+  --accent: #d6d3d1;
+  --accent-soft: #d6d3d114;
+  --accent-ink: #1c1917;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-popup: var(--popup);
+  --color-border: var(--border);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-ink: var(--accent-ink);
+  /* Latin glyphs from DM Sans / Manrope, Thai glyphs fall back to Anuphan. */
+  --font-sans: var(--font-dm-sans), var(--font-anuphan), sans-serif;
+  --font-display: var(--font-manrope), var(--font-anuphan), sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4.5rem;
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* In the base layer so utilities (e.g. focus-visible:outline-none) can override. */
+@layer base {
+  /* Tailwind v4 leaves buttons with the default arrow cursor. */
+  button:not(:disabled),
+  [role="button"],
+  summary,
+  label[for] {
+    cursor: pointer;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+}
+
+@keyframes crumb-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+dialog::backdrop {
+  background: rgb(12 10 9 / 0.7);
+  backdrop-filter: blur(4px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
