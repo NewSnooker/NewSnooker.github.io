@@ -5,12 +5,12 @@ export type SkillGroup = {
 
 // Each item name must have an icon in src/components/skillIcons.tsx.
 export const skillGroups: SkillGroup[] = [
-  { label: "Languages", items: ["Python", "Java", "C++"] },
-  { label: "Frontend", items: ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Next.js", "Tailwind CSS"] },
-  { label: "Backend", items: ["Node.js", "Express", "Elysia", "FastAPI", "REST API", "Swagger"] },
-  { label: "Mobile", items: ["Flutter", "Dart"] },
-  { label: "Database", items: ["SQL", "MySQL", "phpMyAdmin", "MongoDB", "Prisma"] },
-  { label: "Deploy & Tools", items: ["Docker", "VS Code", "Postman", "Git", "GitHub", "Vercel", "Render", "Supabase", "Azure"] },
+  { label: "Languages", items: ["HTML", "CSS", "JavaScript", "TypeScript", "Dart", "SQL", "Python", "Java", "C++"] },
+  { label: "Frontend", items: ["React", "Next.js", "Tailwind CSS"] },
+  { label: "Backend", items: ["Node.js", "Express", "Elysia", "FastAPI", "REST API"] },
+  { label: "Mobile", items: ["Flutter"] },
+  { label: "Database", items: ["MySQL", "phpMyAdmin", "MongoDB", "Prisma"] },
+  { label: "Tools & Platforms", items: ["VS Code", "Git", "GitHub", "Docker", "Postman", "Swagger", "Vercel", "Render", "Supabase", "Azure"] },
   { label: "Design", items: ["Figma", "draw.io"] },
   { label: "AI", items: ["YOLO", "Google Colab", "Kaggle"] },
   { label: "กำลังศึกษา", items: ["Spring Boot", "Angular"] },
