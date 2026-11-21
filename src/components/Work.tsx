@@ -157,7 +157,7 @@ export function Work() {
                     {repo.label}
                   </a>
                 ))}
-                {project.repos.length === 0 ? (
+                {project.repos.length === 0 && project.category !== "design" ? (
                   <span className="text-muted">Private repository</span>
                 ) : null}
                 {project.demo ? (

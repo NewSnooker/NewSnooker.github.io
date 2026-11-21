@@ -247,11 +247,19 @@ export const projects: Project[] = [
   {
     slug: "vitalbite-figma",
     cover: "/images/projects/vitalbite-figma/cover.jpg",
+    gallery: [
+      "/images/projects/vitalbite-figma/01.jpg",
+      "/images/projects/vitalbite-figma/02.jpg",
+      "/images/projects/vitalbite-figma/03.jpg",
+      "/images/projects/vitalbite-figma/04.jpg",
+      "/images/projects/vitalbite-figma/05.jpg",
+    ],
     title: "Vitalbite",
     subtitle: "ออกแบบ UI แอปร้านอาหารเพื่อสุขภาพ",
     category: "design",
     year: 2568,
     status: "done",
+    team: { kind: "solo" },
     summary: "งานออกแบบ UI และ Prototype บน Figma สำหรับแอปมือถือร้านขายอาหารเพื่อสุขภาพและอาหารเสริม",
     highlights: [
       "ออกแบบหน้าจอครบทั้ง flow ตั้งแต่ Home, สมัครสมาชิก/เข้าสู่ระบบ, หน้าสินค้าแยกตามหมวด, รายละเอียดสินค้า, ตะกร้า ไปจนถึงชำระเงินด้วย QR และหน้าชำระเงินสำเร็จ",
@@ -261,6 +269,7 @@ export const projects: Project[] = [
     ],
     stack: ["Figma", "UI Design", "Prototype", "Component"],
     repos: [],
+    demo: "https://www.figma.com/proto/BnkIdCYwIi24dVMbWywbAm/E-Commerce-Project?node-id=1-4603&t=E9AFHOOSJ7SjX6FY-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A4603",
   },
   {
     slug: "supabase-realtime-chat",
