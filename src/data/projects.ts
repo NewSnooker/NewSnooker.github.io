@@ -257,12 +257,14 @@ export const projects: Project[] = [
   {
     slug: "roblox-tum-tang",
     cover: "/images/projects/roblox-tum-tang/cover.jpg",
+    gallery: ["/images/projects/roblox-tum-tang/01.jpg", "/images/projects/roblox-tum-tang/02.jpg"],
     title: "Tum Tang Kung Sod!",
     subtitle: "เกมทำอาหารอีสานใน Roblox",
     category: "game",
     year: 2569,
     status: "done",
-    context: "งานในรายวิชา (มินิโปรเจค) ทำเป็นทีมนักศึกษา",
+    team: { kind: "team", size: 2, role: "ออกแบบและพัฒนาเกม วางโครงสร้างระบบและเสียง โดยใช้เครื่องมือช่วยเขียนสคริปต์ Luau" },
+    context: "งานในรายวิชา (มินิโปรเจค)",
     summary: "เกมทำอาหารแนว Co-op ได้แรงบันดาลใจจาก Overcooked 2 ผสมกับอาหารอีสาน ผู้เล่นช่วยกันทำตำแตงกุ้งสดให้ทันออเดอร์",
     highlights: [
       "เกมกระเป๋าที่เก็บของได้ 9 ชิ้น ผู้เล่นต้องวิ่งส่งของหรือโยนวัตถุดิบให้เพื่อนในโหมด Co-op",
