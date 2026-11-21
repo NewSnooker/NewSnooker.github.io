@@ -126,6 +126,20 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
 
             <p className="mt-6 text-[16px] leading-[1.9] text-foreground/90">{project.summary}</p>
 
+            {project.learned?.length ? (
+              <>
+                <h4 className="mt-6 text-[12px] font-semibold uppercase tracking-[0.08em] text-muted">สิ่งที่ได้เรียนรู้</h4>
+                <ul className="mt-3 space-y-2">
+                  {project.learned.map((item) => (
+                    <li key={item} className="flex gap-3 text-[16px] leading-[1.8] text-muted">
+                      <span aria-hidden className="mt-[9px] size-1.5 shrink-0 rounded-full bg-accent" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </>
+            ) : null}
+
             <h4 className="mt-6 text-[12px] font-semibold uppercase tracking-[0.08em] text-muted">จุดเด่น</h4>
             <ul className="mt-3 space-y-2">
               {project.highlights.map((item) => (
