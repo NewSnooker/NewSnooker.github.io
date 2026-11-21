@@ -127,7 +127,7 @@ export const projects: Project[] = [
   {
     slug: "med-reminder",
     cover: "/images/projects/med-reminder/cover.jpg",
-    gallery: ["/images/projects/med-reminder/01.jpg"],
+    gallery: ["/images/projects/med-reminder/01.jpg", "/images/projects/med-reminder/02.jpg", "/images/projects/med-reminder/03.jpg"],
     title: "ระบบเตือนการทานยา",
     subtitle: "Medication Reminder",
     category: "web",
