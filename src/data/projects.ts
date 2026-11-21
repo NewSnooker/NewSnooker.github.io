@@ -211,6 +211,7 @@ export const projects: Project[] = [
   },
   {
     slug: "daily-weather",
+    cover: "/images/projects/daily-weather/cover.jpg",
     title: "Daily Weather",
     subtitle: "เว็บพยากรณ์อากาศ",
     category: "web",
