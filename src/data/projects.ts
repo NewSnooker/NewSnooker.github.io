@@ -37,8 +37,8 @@ export const statusLabels: Partial<Record<Project["status"], string>> = {
 export const categoryLabels: Record<ProjectCategory, string> = {
   web: "Web",
   mobile: "Mobile",
-  game: "Game",
   design: "Design",
+  game: "Game",
 };
 
 const gh = (repo: string) => `https://github.com/NewSnooker/${repo}`;
