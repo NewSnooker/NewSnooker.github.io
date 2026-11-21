@@ -10,7 +10,7 @@ export const skillGroups: SkillGroup[] = [
   { label: "Backend", items: ["Node.js", "Express", "Elysia", "FastAPI", "REST API"] },
   { label: "Mobile", items: ["Flutter"] },
   { label: "Database", items: ["MySQL", "phpMyAdmin", "MongoDB", "Prisma"] },
-  { label: "Tools & Platforms", items: ["VS Code", "Git", "GitHub", "Docker", "Postman", "Swagger", "Vercel", "Render", "Supabase", "Azure"] },
+  { label: "Dev Tools", items: ["VS Code", "Git", "GitHub", "Docker", "Postman", "Swagger", "Vercel", "Render", "Supabase", "Azure"] },
   { label: "Design", items: ["Figma", "draw.io"] },
   { label: "AI", items: ["YOLO", "Google Colab", "Kaggle"] },
   { label: "กำลังศึกษา", items: ["Spring Boot", "Angular"] },
