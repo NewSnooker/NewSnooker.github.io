@@ -18,6 +18,8 @@ export type Project = {
   stack: string[];
   repos: { label: string; url: string }[];
   demo?: string;
+  // Button text for `demo`. Defaults to "Live site".
+  demoLabel?: string;
   // Paths under public/, e.g. "/images/projects/acne-ai/cover.png".
   cover?: string;
   gallery?: string[];
@@ -251,6 +253,26 @@ export const projects: Project[] = [
     ],
     stack: ["Flutter", "Dart"],
     repos: [{ label: "Code", url: gh("e-commerce-flutter-app") }],
+  },
+  {
+    slug: "roblox-tum-tang",
+    cover: "/images/projects/roblox-tum-tang/cover.jpg",
+    title: "Tum Tang Kung Sod!",
+    subtitle: "เกมทำอาหารอีสานใน Roblox",
+    category: "game",
+    year: 2569,
+    status: "done",
+    context: "งานในรายวิชา (มินิโปรเจค) ทำเป็นทีมนักศึกษา",
+    summary: "เกมทำอาหารแนว Co-op ได้แรงบันดาลใจจาก Overcooked 2 ผสมกับอาหารอีสาน ผู้เล่นช่วยกันทำตำแตงกุ้งสดให้ทันออเดอร์",
+    highlights: [
+      "เกมกระเป๋าที่เก็บของได้ 9 ชิ้น ผู้เล่นต้องวิ่งส่งของหรือโยนวัตถุดิบให้เพื่อนในโหมด Co-op",
+      "มีระบบออเดอร์และจับเวลา ขั้นตอนหั่นผัก ตำครก 4 ขั้นตอน และมินิเกมกะจังหวะลวกกุ้ง",
+      "สรุปคะแนนเมื่อจบรอบ พัฒนาด้วย Roblox Studio และสคริปต์ Luau",
+    ],
+    stack: ["Roblox Studio", "Luau"],
+    repos: [],
+    demo: "https://www.youtube.com/watch?v=8q-w_c4PBKc",
+    demoLabel: "ดูวิดีโอ",
   },
   {
     slug: "supabase-realtime-chat",

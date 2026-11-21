@@ -95,11 +95,11 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                     rel="noreferrer"
                     className="flex items-center gap-2 rounded-md border border-accent bg-accent px-3.5 py-2.5 text-[14px] font-medium text-accent-ink transition-opacity hover:opacity-85"
                   >
-                    Live site
+                    {project.demoLabel ?? "Live site"}
                     <ExternalLink className="size-3.5" aria-hidden />
                   </a>
                 ) : null}
-                {project.repos.length === 0 && project.category !== "design" ? <span className="text-[14px] text-muted">Private repository</span> : null}
+                {project.repos.length === 0 && project.category !== "design" && project.category !== "game" ? <span className="text-[14px] text-muted">Private repository</span> : null}
               </div>
             </div>
 
