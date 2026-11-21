@@ -174,6 +174,21 @@ export function Work() {
                     />
                   </a>
                 ) : null}
+                {project.links?.map((link) => (
+                  <a
+                    key={link.url}
+                    href={link.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="group/link flex items-center gap-2 underline-offset-4 hover:underline"
+                  >
+                    {link.label}
+                    <ExternalLink
+                      className="size-3.5 transition-transform group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5"
+                      aria-hidden
+                    />
+                  </a>
+                ))}
               </div>
             </article>
           ))}

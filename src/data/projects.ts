@@ -20,6 +20,8 @@ export type Project = {
   demo?: string;
   // Button text for `demo`. Defaults to "Live site".
   demoLabel?: string;
+  // Extra external buttons (e.g. a demo video) shown after `demo`.
+  links?: { label: string; url: string }[];
   // Paths under public/, e.g. "/images/projects/acne-ai/cover.png".
   cover?: string;
   gallery?: string[];
@@ -257,7 +259,7 @@ export const projects: Project[] = [
   {
     slug: "roblox-tum-tang",
     cover: "/images/projects/roblox-tum-tang/cover.jpg",
-    gallery: ["/images/projects/roblox-tum-tang/01.jpg", "/images/projects/roblox-tum-tang/02.jpg"],
+    gallery: ["/images/projects/roblox-tum-tang/01.jpg", "/images/projects/roblox-tum-tang/03.jpg", "/images/projects/roblox-tum-tang/02.jpg"],
     title: "Tum Tang Kung Sod!",
     subtitle: "เกมทำอาหารอีสานใน Roblox",
     category: "game",
@@ -269,12 +271,13 @@ export const projects: Project[] = [
     highlights: [
       "เกมกระเป๋าที่เก็บของได้ 9 ชิ้น ผู้เล่นต้องวิ่งส่งของหรือโยนวัตถุดิบให้เพื่อนในโหมด Co-op",
       "มีระบบออเดอร์และจับเวลา ขั้นตอนหั่นผัก ตำครก 4 ขั้นตอน และมินิเกมกะจังหวะลวกกุ้ง",
-      "สรุปคะแนนเมื่อจบรอบ พัฒนาด้วย Roblox Studio และสคริปต์ Luau",
+      "แยกสคริปต์ฝั่งเซิร์ฟเวอร์ตามหน้าที่ เช่น จัดการออเดอร์ จับเวลาเกม จำกัดกระเป๋า กระดานคะแนน และการทิ้งของ พัฒนาด้วย Roblox Studio และ Luau",
     ],
     stack: ["Roblox Studio", "Luau"],
     repos: [],
-    demo: "https://www.youtube.com/watch?v=8q-w_c4PBKc",
-    demoLabel: "ดูวิดีโอ",
+    demo: "https://www.roblox.com/th/games/125295112041451/Tum-Tang-Kung-Sod",
+    demoLabel: "เล่นเกม",
+    links: [{ label: "ดูวิดีโอ", url: "https://www.youtube.com/watch?v=8q-w_c4PBKc" }],
   },
   {
     slug: "supabase-realtime-chat",

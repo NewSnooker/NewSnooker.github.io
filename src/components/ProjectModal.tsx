@@ -99,6 +99,18 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                     <ExternalLink className="size-3.5" aria-hidden />
                   </a>
                 ) : null}
+                {project.links?.map((link) => (
+                  <a
+                    key={link.url}
+                    href={link.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex items-center gap-2 rounded-md border border-border bg-surface px-3.5 py-2.5 text-[14px] font-medium transition-colors hover:border-faint hover:bg-surface-2"
+                  >
+                    {link.label}
+                    <ExternalLink className="size-3.5" aria-hidden />
+                  </a>
+                ))}
                 {project.repos.length === 0 && project.category !== "design" && project.category !== "game" ? <span className="text-[14px] text-muted">Private repository</span> : null}
               </div>
             </div>
