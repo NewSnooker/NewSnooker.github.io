@@ -245,7 +245,7 @@ export const projects: Project[] = [
     repos: [{ label: "Code", url: gh("auth0") }],
   },
   {
-    slug: "vitalbite-figma",
+    slug: "ecommerce-ui-design",
     cover: "/images/projects/vitalbite-figma/cover.jpg",
     gallery: [
       "/images/projects/vitalbite-figma/01.jpg",
@@ -254,8 +254,8 @@ export const projects: Project[] = [
       "/images/projects/vitalbite-figma/04.jpg",
       "/images/projects/vitalbite-figma/05.jpg",
     ],
-    title: "Vitalbite",
-    subtitle: "ออกแบบ UI แอปร้านอาหารเพื่อสุขภาพ",
+    title: "E-commerce UI Design",
+    subtitle: "ออกแบบ UI แอปร้านค้าออนไลน์ด้วย Figma",
     category: "design",
     year: 2568,
     status: "done",
