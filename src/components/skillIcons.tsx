@@ -1,8 +1,10 @@
 import type { IconType } from "react-icons";
 import {
   SiAngular,
+  SiCplusplus,
   SiCss,
   SiDart,
+  SiDiagramsdotnet,
   SiDocker,
   SiExpress,
   SiFastapi,
@@ -18,7 +20,10 @@ import {
   SiMysql,
   SiNextdotjs,
   SiNodedotjs,
+  SiPhpmyadmin,
+  SiPostman,
   SiPrisma,
+  SiPython,
   SiReact,
   SiRender,
   SiSpringboot,
@@ -31,7 +36,7 @@ import {
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
 import { TbApi, TbSql } from "react-icons/tb";
-import { VscAzure } from "react-icons/vsc";
+import { VscAzure, VscVscode } from "react-icons/vsc";
 
 // `color` is the brand colour. Brands whose colour is black use the text colour
 // instead (leave `color` out) so they stay visible in dark mode.
@@ -69,6 +74,12 @@ export const skillIcons: Record<string, SkillIcon> = {
   YOLO: { icon: SiUltralytics, color: "#0B23A9" },
   "Google Colab": { icon: SiGooglecolab, color: "#F9AB00" },
   Kaggle: { icon: SiKaggle, color: "#20BEFF" },
+  Python: { icon: SiPython, color: "#3776AB" },
+  "C++": { icon: SiCplusplus, color: "#00599C" },
+  phpMyAdmin: { icon: SiPhpmyadmin, color: "#6C78AF" },
+  Postman: { icon: SiPostman, color: "#FF6C37" },
+  "VS Code": { icon: VscVscode, color: "#007ACC" },
+  "draw.io": { icon: SiDiagramsdotnet, color: "#F08705" },
   Java: { icon: FaJava, color: "#E76F00" },
   "Spring Boot": { icon: SiSpringboot, color: "#6DB33F" },
   Angular: { icon: SiAngular, color: "#DD0031" },
