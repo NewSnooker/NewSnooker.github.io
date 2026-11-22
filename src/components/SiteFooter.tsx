@@ -10,7 +10,7 @@ const links = [
 
 export function SiteFooter() {
   return (
-    <footer>
+    <footer className="band band-footer">
       <div className="mx-auto max-w-[1120px] px-4 sm:px-6 xl:px-0">
         <div className="flex flex-col gap-4 border-t border-border py-8 text-[13px] text-muted sm:flex-row sm:items-center sm:justify-between">
           <p>

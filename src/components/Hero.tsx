@@ -8,7 +8,7 @@ const outlineButton =
 
 export function Hero() {
   return (
-    <section id="about" data-theme="dark" className="band band-dark pb-14 pt-10 text-foreground">
+    <section id="about" className="band band-hero pb-14 pt-10">
       <div className="flex items-start justify-between gap-6">
         <ProfilePhoto src={profile.photo} alt={`รูปของ${profile.name}`} />
         <p className="mt-2 flex items-center gap-2 rounded-full border border-border bg-surface px-3 dark:border-accent/30 dark:bg-accent-soft py-1.5 text-[13px] text-accent">

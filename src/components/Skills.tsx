@@ -27,7 +27,7 @@ export function Skills() {
   const [showAll, setShowAll] = useState(false);
 
   return (
-    <section id="stack" className="py-14">
+    <section id="stack" className="band band-skills py-14">
       <SectionHeading index="02" eyebrow="ทักษะ" title="เครื่องมือที่ใช้ในการทำงาน" aside="ใช้จริงในโปรเจกต์ที่ทำมา" />
 
       {/* Both panels stay mounted and animate their height, so the page does not jump when toggling. */}

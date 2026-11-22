@@ -118,21 +118,30 @@ dialog::backdrop {
   }
 }
 
-/* Light theme only: alternate section backgrounds as full-width bands so sections are easy to tell apart.
-   The box-shadow + clip-path pair paints the band edge to edge while the content stays in the centred column. */
+/* Light theme only: each section gets its own soft tone, and the tones blend into each other with gradients
+   (each band ends on the colour the next one starts with), so there are no hard edges between sections.
+   The ::before layer is full-bleed while the content stays in the centred column. Dark theme keeps one background. */
+html {
+  overflow-x: clip;
+}
+
 [data-theme="light"] .band {
-  --band-color: #f5f5f4;
-  background-color: var(--band-color);
-  box-shadow: 0 0 0 100vmax var(--band-color);
-  clip-path: inset(0 -100vmax);
+  position: relative;
+  isolation: isolate;
 }
 
-[data-theme="light"] .band-hero {
-  --band-color: #fafaf9;
+[data-theme="light"] .band::before {
+  content: "";
+  position: absolute;
+  inset: 0 calc(50% - 50vw);
+  z-index: -1;
+  background: linear-gradient(to bottom, var(--band-from), var(--band-to));
 }
 
-/* Dark band for contact and footer. These elements also set data-theme="dark", so their content uses the dark tokens. */
-[data-theme="light"] .band-dark {
-  --band-color: #121110;
-}
-
+[data-theme="light"] .band-hero { --band-from: #ffffff; --band-to: #fafaf9; }
+[data-theme="light"] .band-work { --band-from: #fafaf9; --band-to: #efeeec; }
+[data-theme="light"] .band-skills { --band-from: #efeeec; --band-to: #f5f5f4; }
+[data-theme="light"] .band-experience { --band-from: #f5f5f4; --band-to: #ebe9e7; }
+[data-theme="light"] .band-education { --band-from: #ebe9e7; --band-to: #f3f2f0; }
+[data-theme="light"] .band-contact { --band-from: #f3f2f0; --band-to: #e7e5e4; }
+[data-theme="light"] .band-footer { --band-from: #e7e5e4; --band-to: #e7e5e4; }

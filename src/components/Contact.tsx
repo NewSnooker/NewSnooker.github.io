@@ -50,7 +50,7 @@ const channels: Channel[] = [
 
 export function Contact() {
   return (
-    <section id="contact" className="py-14">
+    <section id="contact" className="band band-contact py-14">
       <div className="rounded-xl border border-border bg-surface p-8 sm:p-10">
         <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
           <div>

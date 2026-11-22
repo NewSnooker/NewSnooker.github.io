@@ -4,7 +4,7 @@ import { SectionHeading } from "./SectionHeading";
 
 export function Experience() {
   return (
-    <section id="experience" className="py-14">
+    <section id="experience" className="band band-experience py-14">
       <SectionHeading index="03" eyebrow="ประสบการณ์" title="ประสบการณ์ฝึกงาน" />
       <ol className="space-y-10">
         {experience.map((job) => (

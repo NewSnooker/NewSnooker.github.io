@@ -3,7 +3,7 @@ import { SectionHeading } from "./SectionHeading";
 
 export function Education() {
   return (
-    <section id="education" className="py-14">
+    <section id="education" className="band band-education py-14">
       <SectionHeading index="04" eyebrow="การศึกษา" title="การศึกษา" />
       <ol className="space-y-10">
         {education.map((item) => (
