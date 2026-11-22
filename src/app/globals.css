@@ -118,8 +118,7 @@ dialog::backdrop {
   }
 }
 
-/* Light theme only: sections alternate between stone 100 and stone 200, with a soft fade at the top of
-   each section instead of a hard edge.
+/* Light theme only: sections alternate between stone 100 and stone 200 as solid full-width bands.
    The ::before layer is full-bleed while the content stays in the centred column. Dark theme keeps one background. */
 html {
   overflow-x: clip;
@@ -135,8 +134,8 @@ html {
   position: absolute;
   inset: 0 calc(50% - 50vw);
   z-index: -1;
-  /* Solid tone per section; only the first 160px fades in from the previous section's tone. */
-  background: linear-gradient(to bottom, var(--band-prev), var(--band-color) 160px);
+  /* One solid tone per section, with a hard edge between sections. */
+  background: var(--band-color);
 }
 
 [data-theme="light"] .band-hero { --band-prev: #ffffff; --band-color: #ffffff; }
