@@ -144,7 +144,7 @@ export function Work() {
 
   return (
     <section id="work" className="py-14">
-      <SectionHeading index="01" eyebrow="ผลงาน" title="ไอเดียที่ทำให้ใช้งานได้จริง" aside="ผลงานที่อยากให้ดูก่อน" />
+      <SectionHeading index="01" eyebrow="ผลงาน" title="ไอเดียที่ทำให้ใช้งานได้จริง" aside="ผลงานหลัก" />
 
       <div className="grid gap-x-6 gap-y-14 md:grid-cols-2">
         {featured.map((project) => (
