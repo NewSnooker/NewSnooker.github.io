@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div id="top">
       <SiteHeader />
-      <main id="main" className="mx-auto max-w-[960px] px-4 pb-10 sm:px-6 lg:px-0">
+      <main id="main" className="mx-auto max-w-[960px] px-4 sm:px-6 lg:px-0">
         <Hero />
         <Work />
         <Skills />

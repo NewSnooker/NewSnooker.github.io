@@ -131,3 +131,8 @@ dialog::backdrop {
   --band-color: #fafaf9;
 }
 
+/* Dark band for contact and footer. These elements also set data-theme="dark", so their content uses the dark tokens. */
+[data-theme="light"] .band-dark {
+  --band-color: #121110;
+}
+

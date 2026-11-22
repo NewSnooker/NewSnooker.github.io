@@ -10,27 +10,35 @@ const links = [
 
 export function SiteFooter() {
   return (
-    <footer className="mx-auto max-w-[1120px] px-4 sm:px-6 xl:px-0">
-      <div className="flex flex-col gap-4 border-t border-border py-8 text-[13px] text-muted sm:flex-row sm:items-center sm:justify-between">
-        <p>
-          © {new Date().getFullYear()} {profile.nameEn}
-        </p>
-        <nav aria-label="ลิงก์ท้ายเว็บ">
-          <ul className="flex flex-wrap gap-5">
-            {links.map((link) => (
-              <li key={link.href}>
-                <a href={link.href} className="underline-offset-4 hover:text-foreground hover:underline">
-                  {link.label}
+    <footer data-theme="dark" className="band band-dark text-foreground">
+      <div className="mx-auto max-w-[1120px] px-4 sm:px-6 xl:px-0">
+        <div className="flex flex-col gap-4 border-t border-border py-8 text-[13px] text-muted sm:flex-row sm:items-center sm:justify-between">
+          <p>
+            © {new Date().getFullYear()} {profile.nameEn}
+          </p>
+          <nav aria-label="ลิงก์ท้ายเว็บ">
+            <ul className="flex flex-wrap gap-5">
+              {links.map((link) => (
+                <li key={link.href}>
+                  <a
+                    href={link.href}
+                    className="underline-offset-4 hover:text-foreground hover:underline"
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+              <li>
+                <a
+                  href="#top"
+                  className="underline-offset-4 hover:text-foreground hover:underline"
+                >
+                  กลับขึ้นด้านบน ↑
                 </a>
               </li>
-            ))}
-            <li>
-              <a href="#top" className="underline-offset-4 hover:text-foreground hover:underline">
-                กลับขึ้นด้านบน ↑
-              </a>
-            </li>
-          </ul>
-        </nav>
+            </ul>
+          </nav>
+        </div>
       </div>
     </footer>
   );
