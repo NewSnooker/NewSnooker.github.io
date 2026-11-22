@@ -139,7 +139,7 @@ html {
 }
 
 [data-theme="light"] .band-hero { --band-prev: #ffffff; --band-color: #ffffff; }
-[data-theme="light"] .band-work { --band-prev: #ffffff; --band-color: #e7e5e4; }
+[data-theme="light"] .band-work { --band-prev: #ffffff; --band-color: #ffffff; }
 [data-theme="light"] .band-skills { --band-prev: #e7e5e4; --band-color: #f5f5f4; }
 [data-theme="light"] .band-experience { --band-prev: #f5f5f4; --band-color: #e7e5e4; }
 [data-theme="light"] .band-education { --band-prev: #e7e5e4; --band-color: #f5f5f4; }
