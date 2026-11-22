@@ -62,7 +62,7 @@ function ProjectCard({ project, onOpen }: ProjectCardProps) {
         </h3>
         <ArrowUpRight className="mt-1 size-4 shrink-0 text-muted transition-colors group-hover:text-accent" aria-hidden />
       </div>
-      <p className="mt-2 text-[16px] leading-[1.8] text-muted">{project.summary}</p>
+      <p className="mt-2 line-clamp-2 text-[16px] leading-[1.8] text-muted">{project.summary}</p>
       <div className="mt-5 flex flex-wrap items-center gap-6 text-[14px]">
         <button
           type="button"
