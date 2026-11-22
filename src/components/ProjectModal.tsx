@@ -113,10 +113,8 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
               </div>
             </div>
 
-            <p className="mt-5 text-[16px] leading-[1.9] text-foreground/90">{project.summary}</p>
-
             {facts.length > 0 ? (
-              <p className="mt-3 text-[14px] leading-[1.8] text-muted">{facts.join(" · ")}</p>
+              <p className="mt-4 text-[14px] leading-[1.8] text-muted">{facts.join(" · ")}</p>
             ) : null}
           </div>
 
@@ -129,7 +127,9 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
           </div>
 
           <div className="p-6 sm:p-8">
-            <h4 className="text-[12px] font-semibold uppercase tracking-[0.08em] text-muted">สิ่งที่พัฒนา</h4>
+            <p className="text-[16px] leading-[1.9] text-foreground/90">{project.summary}</p>
+
+            <h4 className="mt-6 text-[12px] font-semibold uppercase tracking-[0.08em] text-muted">สิ่งที่พัฒนา</h4>
             <ul className="mt-3 space-y-2">
               {project.highlights.map((item) => (
                 <li key={item} className="flex gap-3 text-[16px] leading-[1.8] text-muted">
