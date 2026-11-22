@@ -59,8 +59,8 @@ export function Skills() {
         <div className="overflow-hidden">
           <div className="divide-y divide-border rounded-xl border border-border bg-surface">
             {skillGroups.map((group) => (
-              <div key={group.label} className="grid gap-3 px-5 py-4 sm:grid-cols-[170px_1fr] sm:items-center">
-                <h3 className="flex items-center gap-2 text-[14px] text-muted">
+              <div key={group.label} className="grid gap-3 px-5 py-4 sm:grid-cols-[210px_1fr] sm:items-center">
+                <h3 className="flex items-center gap-2 whitespace-nowrap text-[14px] text-muted">
                   {group.label}
                   <span className="rounded border border-border px-1.5 text-[12px] tabular-nums text-faint">{group.items.length}</span>
                 </h3>
