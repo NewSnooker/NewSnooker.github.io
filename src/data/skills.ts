@@ -14,7 +14,6 @@ export const coreSkills: string[] = [
   "Tailwind CSS",
   "Docker",
   "Prisma",
-  "GitHub",
   "Git",
 ];
 
