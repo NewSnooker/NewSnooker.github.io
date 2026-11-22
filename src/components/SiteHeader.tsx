@@ -20,7 +20,7 @@ export function SiteHeader() {
   const crumb = sections.find((section) => section.id === active)?.label ?? "dev";
 
   return (
-    <header className="sticky top-0 z-40 bg-background/80 backdrop-blur">
+    <header className="sticky top-0 z-40 bg-popup/80 backdrop-blur">
       <a
         href="#main"
         className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-3 focus:rounded focus:bg-accent focus:px-3 focus:py-1.5 focus:text-accent-ink"

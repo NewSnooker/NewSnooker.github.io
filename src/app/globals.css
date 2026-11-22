@@ -117,3 +117,17 @@ dialog::backdrop {
     animation-duration: 0.01ms !important;
   }
 }
+
+/* Light theme only: alternate section backgrounds as full-width bands so sections are easy to tell apart.
+   The box-shadow + clip-path pair paints the band edge to edge while the content stays in the centred column. */
+[data-theme="light"] .band {
+  --band-color: #f5f5f4;
+  background-color: var(--band-color);
+  box-shadow: 0 0 0 100vmax var(--band-color);
+  clip-path: inset(0 -100vmax);
+}
+
+[data-theme="light"] .band-hero {
+  --band-color: #fafaf9;
+}
+
