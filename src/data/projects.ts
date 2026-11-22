@@ -14,8 +14,8 @@ export type Project = {
   team?: { kind: "solo" } | { kind: "team"; size: number; role?: string };
   context?: string;
   summary: string;
-  // What the author learned. Shown above the highlights in the popup.
-  learned?: string[];
+  // One sentence on what the author learned. Shown after the highlights in the popup.
+  learned?: string;
   highlights: string[];
   stack: string[];
   repos: { label: string; url: string }[];
@@ -48,6 +48,7 @@ const gh = (repo: string) => `https://github.com/NewSnooker/${repo}`;
 export const projects: Project[] = [
   {
     slug: "acne-ai",
+    featured: true,
     cover: "/images/projects/acne-ai/cover.jpg",
     gallery: ["/images/projects/acne-ai/06.jpg", "/images/projects/acne-ai/01.jpg", "/images/projects/acne-ai/02.jpg", "/images/projects/acne-ai/03.jpg", "/images/projects/acne-ai/07.jpg", "/images/projects/acne-ai/04.jpg", "/images/projects/acne-ai/11.jpg", "/images/projects/acne-ai/05.jpg", "/images/projects/acne-ai/12.jpg", "/images/projects/acne-ai/08.jpg", "/images/projects/acne-ai/09.jpg", "/images/projects/acne-ai/10.jpg"],
     title: "AcneAI",
@@ -72,10 +73,10 @@ export const projects: Project[] = [
     stack: ["Next.js", "TypeScript", "FastAPI", "YOLO", "MongoDB", "Prisma", "Auth.js", "Docker Compose"],
     repos: [{ label: "Code", url: "https://github.com/NewSnooker/acne-detection" }],
     demo: "https://acne-web.calmsand-e76a4fc0.japaneast.azurecontainerapps.io",
-    featured: true,
   },
   {
     slug: "project-management-system",
+    featured: true,
     cover: "/images/projects/project-management-system/cover.jpg",
     gallery: ["/images/projects/project-management-system/03.jpg", "/images/projects/project-management-system/04.jpg", "/images/projects/project-management-system/05.jpg", "/images/projects/project-management-system/11.jpg", "/images/projects/project-management-system/12.jpg", "/images/projects/project-management-system/13.jpg", "/images/projects/project-management-system/06.jpg", "/images/projects/project-management-system/07.jpg", "/images/projects/project-management-system/08.jpg", "/images/projects/project-management-system/09.jpg"],
     title: "ระบบบริหารจัดการโปรเจกต์",
@@ -101,10 +102,10 @@ export const projects: Project[] = [
     stack: ["Next.js", "TypeScript", "Prisma", "MongoDB", "NextAuth", "Vercel"],
     repos: [{ label: "Code", url: gh("it-udvc-pms") }],
     demo: "https://it-udvc-pms.vercel.app",
-    featured: true,
   },
   {
     slug: "library-management-system",
+    featured: true,
     cover: "/images/projects/library-management-system/cover.jpg",
     gallery: ["/images/projects/library-management-system/01.jpg", "/images/projects/library-management-system/02.jpg", "/images/projects/library-management-system/03.jpg", "/images/projects/library-management-system/04.jpg", "/images/projects/library-management-system/05.jpg"],
     title: "ระบบห้องสมุด",
@@ -128,10 +129,10 @@ export const projects: Project[] = [
     stack: ["Next.js", "Prisma", "MongoDB", "NextAuth", "Redux Toolkit", "TanStack Query"],
     repos: [{ label: "Code", url: gh("library_management_system") }],
     demo: "https://library-management-system-kohl.vercel.app",
-    featured: true,
   },
   {
     slug: "med-reminder",
+    featured: true,
     cover: "/images/projects/med-reminder/cover.jpg",
     gallery: ["/images/projects/med-reminder/01.jpg", "/images/projects/med-reminder/02.jpg", "/images/projects/med-reminder/03.jpg"],
     title: "ระบบเตือนการทานยา",
@@ -154,6 +155,46 @@ export const projects: Project[] = [
     ],
     stack: ["Next.js", "TypeScript", "NextAuth", "LINE Login", "REST API", "Git", "GitHub"],
     repos: [],
+  },
+  {
+    slug: "supabase-realtime-chat",
+    featured: true,
+    cover: "/images/projects/supabase-realtime-chat/cover.jpg",
+    gallery: ["/images/projects/supabase-realtime-chat/01.jpg"],
+    title: "Realtime Chat",
+    subtitle: "แชทแบบเรียลไทม์ด้วย Supabase",
+    category: "web",
+    year: 2567,
+    status: "done",
+    summary:
+      "เว็บแชทที่ผู้ใช้สมัครสมาชิกและเข้าสู่ระบบได้ สร้างห้องแชท ส่งข้อความและรูปภาพ โดยข้อความใหม่ขึ้นทันทีโดยไม่ต้องรีเฟรช",
+    highlights: [
+      "เข้าสู่ระบบด้วยอีเมล/รหัสผ่าน (ยืนยันอีเมลตอนสมัคร) หรือบัญชี GitHub ผ่าน Supabase Auth",
+      "สร้างห้องแชทได้ และรับข้อความใหม่แบบเรียลไทม์ด้วย Supabase Realtime",
+      "อัปโหลดรูปภาพในแชทไปเก็บที่ Supabase Storage",
+      "ตั้ง Row Level Security ในฐานข้อมูล ให้ทุกคนอ่านข้อความได้ แต่ต้องล็อกอินก่อนจึงจะส่งได้",
+    ],
+    stack: ["React", "Vite", "Supabase", "Tailwind CSS", "DaisyUI", "Vercel"],
+    repos: [{ label: "Code", url: gh("supabase_auth_realtime") }],
+    demo: "https://supabase-auth-realtime-chat.vercel.app",
+  },
+  {
+    slug: "e-commerce-flutter",
+    featured: true,
+    cover: "/images/projects/e-commerce-flutter/cover.jpg",
+    title: "E-commerce App",
+    subtitle: "แอปร้านค้าออนไลน์ด้วย Flutter",
+    category: "mobile",
+    year: 2567,
+    status: "done",
+    summary: "งานออกแบบหน้าจอ (UI) แอปร้านค้าออนไลน์บนมือถือ มีเมนูด้านล่างสำหรับสลับหน้า",
+    highlights: [
+      "ออกแบบหน้าแอป: หน้าแนะนำ, เข้าสู่ระบบ / สมัครสมาชิก, หน้าแรกแสดงสินค้าแยกหมวด และหน้ารายละเอียดสินค้า",
+      "แถบเมนูด้านล่างแบบเคลื่อนไหว (curved_navigation_bar) สำหรับสลับหน้า",
+      "รวมสไตล์ตัวอักษรที่ใช้ซ้ำไว้ใน widget กลางที่เดียว",
+    ],
+    stack: ["Flutter", "Dart"],
+    repos: [{ label: "Code", url: gh("e-commerce-flutter-app") }],
   },
   {
     slug: "snooker-g",
@@ -242,73 +283,6 @@ export const projects: Project[] = [
     demo: "https://www.figma.com/proto/BnkIdCYwIi24dVMbWywbAm/E-Commerce-Project?node-id=1-4603&t=E9AFHOOSJ7SjX6FY-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A4603",
   },
   {
-    slug: "e-commerce-flutter",
-    cover: "/images/projects/e-commerce-flutter/cover.jpg",
-    title: "E-commerce App",
-    subtitle: "แอปร้านค้าออนไลน์ด้วย Flutter",
-    category: "mobile",
-    year: 2567,
-    status: "done",
-    summary: "งานออกแบบหน้าจอ (UI) แอปร้านค้าออนไลน์บนมือถือ มีเมนูด้านล่างสำหรับสลับหน้า",
-    highlights: [
-      "ออกแบบหน้าแอป: หน้าแนะนำ, เข้าสู่ระบบ / สมัครสมาชิก, หน้าแรกแสดงสินค้าแยกหมวด และหน้ารายละเอียดสินค้า",
-      "แถบเมนูด้านล่างแบบเคลื่อนไหว (curved_navigation_bar) สำหรับสลับหน้า",
-      "รวมสไตล์ตัวอักษรที่ใช้ซ้ำไว้ใน widget กลางที่เดียว",
-    ],
-    stack: ["Flutter", "Dart"],
-    repos: [{ label: "Code", url: gh("e-commerce-flutter-app") }],
-  },
-  {
-    slug: "roblox-tum-tang",
-    cover: "/images/projects/roblox-tum-tang/cover.jpg",
-    gallery: ["/images/projects/roblox-tum-tang/04.jpg", "/images/projects/roblox-tum-tang/01.jpg", "/images/projects/roblox-tum-tang/03.jpg"],
-    title: "Tum Tang Kung Sod!",
-    subtitle: "เกมทำอาหารอีสานใน Roblox",
-    category: "game",
-    year: 2568,
-    status: "done",
-    team: { kind: "team", size: 2, role: "ออกแบบและพัฒนาเกม" },
-    summary: "เกมจำลองการทำตำแตงกุ้งสดแบบ Co-op ได้แรงบันดาลใจจาก Overcooked 2 ผสมกับอาหารอีสาน ผู้เล่นช่วยกันทำออเดอร์ให้ทันเวลาและสะสมคะแนนรวม",
-    learned: [
-      "ใช้งาน Roblox Studio สร้างฉากและเกม ใส่โมเดลและเสียง",
-      "เขียนสคริปต์ด้วยภาษา Luau",
-      "เข้าใจกลไกการทำงานของระบบฝั่งเซิร์ฟเวอร์และฝั่งไคลเอนต์ในเกม",
-    ],
-    highlights: [
-      "ระบบออเดอร์ 3 รายการพร้อมกัน แต่ละรายการมีเวลาจำกัด ส่งไม่ทันจะไม่นับคะแนน และออเดอร์ถัดไปขึ้นมาแทนทันที",
-      "กระเป๋าเก็บของได้ 9 ช่อง ผู้เล่นต้องวิ่งเก็บวัตถุดิบ พุ่งตัวให้ไปได้เร็วขึ้น และโยนวัตถุดิบให้เพื่อนช่วยทำในโหมด Co-op",
-      "ขั้นตอนทำอาหารหลายขั้น หั่นผัก ปอกเปลือกกุ้ง ตำครก 4 ขั้นตอนตามลำดับวัตถุดิบ (แก้ไขได้เฉพาะพริก) แล้วคลุกเคล้าและตักใส่จานเสิร์ฟ",
-      "มินิเกมลวกกุ้ง กด Space Bar ให้ตรงโซนสีเขียว 3 ครั้งติดกัน ยิ่งกดเข็มยิ่งเร็วและโซนยิ่งเล็กลง ถ้าพลาดจะได้กุ้งไหม้ที่ใช้ไม่ได้",
-      "เสิร์ฟผิดประเภท (เช่น กุ้งสุกแทนกุ้งสด) ยังได้ แต่คะแนนลดลง และมีสรุปคะแนนเมื่อจบรอบ",
-    ],
-    stack: ["Roblox Studio", "Luau"],
-    repos: [],
-    demo: "https://www.roblox.com/th/games/125295112041451/Tum-Tang-Kung-Sod",
-    demoLabel: "เล่นเกม",
-    links: [{ label: "ดูวิดีโอ", url: "https://www.youtube.com/watch?v=8q-w_c4PBKc" }],
-  },
-  {
-    slug: "supabase-realtime-chat",
-    cover: "/images/projects/supabase-realtime-chat/cover.jpg",
-    gallery: ["/images/projects/supabase-realtime-chat/01.jpg"],
-    title: "Realtime Chat",
-    subtitle: "แชทแบบเรียลไทม์ด้วย Supabase",
-    category: "web",
-    year: 2567,
-    status: "done",
-    summary:
-      "เว็บแชทที่ผู้ใช้สมัครสมาชิกและเข้าสู่ระบบได้ สร้างห้องแชท ส่งข้อความและรูปภาพ โดยข้อความใหม่ขึ้นทันทีโดยไม่ต้องรีเฟรช",
-    highlights: [
-      "เข้าสู่ระบบด้วยอีเมล/รหัสผ่าน (ยืนยันอีเมลตอนสมัคร) หรือบัญชี GitHub ผ่าน Supabase Auth",
-      "สร้างห้องแชทได้ และรับข้อความใหม่แบบเรียลไทม์ด้วย Supabase Realtime",
-      "อัปโหลดรูปภาพในแชทไปเก็บที่ Supabase Storage",
-      "ตั้ง Row Level Security ในฐานข้อมูล ให้ทุกคนอ่านข้อความได้ แต่ต้องล็อกอินก่อนจึงจะส่งได้",
-    ],
-    stack: ["React", "Vite", "Supabase", "Tailwind CSS", "DaisyUI", "Vercel"],
-    repos: [{ label: "Code", url: gh("supabase_auth_realtime") }],
-    demo: "https://supabase-auth-realtime-chat.vercel.app",
-  },
-  {
     slug: "contact-phone-flutter",
     cover: "/images/projects/contact-phone-flutter/cover.jpg",
     title: "Contact Phone App",
@@ -359,6 +333,31 @@ export const projects: Project[] = [
     ],
     stack: ["React", "TypeScript", "Vite", "Tailwind CSS", "OpenWeatherMap API"],
     repos: [{ label: "Code", url: gh("DailyWeather") }],
+  },
+  {
+    slug: "roblox-tum-tang",
+    cover: "/images/projects/roblox-tum-tang/cover.jpg",
+    gallery: ["/images/projects/roblox-tum-tang/04.jpg", "/images/projects/roblox-tum-tang/01.jpg", "/images/projects/roblox-tum-tang/03.jpg"],
+    title: "Tum Tang Kung Sod!",
+    subtitle: "เกมทำอาหารอีสานใน Roblox",
+    category: "game",
+    year: 2568,
+    status: "done",
+    team: { kind: "team", size: 2, role: "ออกแบบและพัฒนาเกม" },
+    summary: "เกมจำลองการทำตำแตงกุ้งสดแบบ Co-op ได้แรงบันดาลใจจาก Overcooked 2 ผสมกับอาหารอีสาน ผู้เล่นช่วยกันทำออเดอร์ให้ทันเวลาและสะสมคะแนนรวม",
+    learned: "ได้ใช้ Roblox Studio สร้างฉาก ใส่โมเดลและเสียง เขียนสคริปต์ด้วย Luau และเข้าใจการแบ่งงานระหว่างฝั่งเซิร์ฟเวอร์กับไคลเอนต์ในเกม",
+    highlights: [
+      "ระบบออเดอร์ 3 รายการพร้อมกัน แต่ละรายการมีเวลาจำกัด ส่งไม่ทันจะไม่นับคะแนน และออเดอร์ถัดไปขึ้นมาแทนทันที",
+      "กระเป๋าเก็บของได้ 9 ช่อง ผู้เล่นต้องวิ่งเก็บวัตถุดิบ พุ่งตัวให้ไปได้เร็วขึ้น และโยนวัตถุดิบให้เพื่อนช่วยทำในโหมด Co-op",
+      "ขั้นตอนทำอาหารหลายขั้น หั่นผัก ปอกเปลือกกุ้ง ตำครก 4 ขั้นตอนตามลำดับวัตถุดิบ (แก้ไขได้เฉพาะพริก) แล้วคลุกเคล้าและตักใส่จานเสิร์ฟ",
+      "มินิเกมลวกกุ้ง กด Space Bar ให้ตรงโซนสีเขียว 3 ครั้งติดกัน ยิ่งกดเข็มยิ่งเร็วและโซนยิ่งเล็กลง ถ้าพลาดจะได้กุ้งไหม้ที่ใช้ไม่ได้",
+      "เสิร์ฟผิดประเภท (เช่น กุ้งสุกแทนกุ้งสด) ยังได้ แต่คะแนนลดลง และมีสรุปคะแนนเมื่อจบรอบ",
+    ],
+    stack: ["Roblox Studio", "Luau"],
+    repos: [],
+    demo: "https://www.roblox.com/th/games/125295112041451/Tum-Tang-Kung-Sod",
+    demoLabel: "เล่นเกม",
+    links: [{ label: "ดูวิดีโอ", url: "https://www.youtube.com/watch?v=8q-w_c4PBKc" }],
   },
 ];
 

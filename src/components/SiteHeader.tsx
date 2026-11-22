@@ -5,8 +5,8 @@ import { ThemeToggle } from "./ThemeToggle";
 import { useActiveSection } from "./useActiveSection";
 
 const sections = [
-  { id: "stack", label: "ทักษะ" },
   { id: "work", label: "ผลงาน" },
+  { id: "stack", label: "ทักษะ" },
   { id: "experience", label: "ประสบการณ์" },
   { id: "education", label: "การศึกษา" },
   { id: "contact", label: "ติดต่อ" },

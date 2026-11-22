@@ -23,13 +23,12 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
     if (!project && dialog.open) dialog.close();
   }, [project]);
 
+  // Category and status are already in the top line, so only team, role and origin go here.
   const facts = project
     ? [
-        { label: "ประเภท", value: categoryLabels[project.category] },
-        ...(statusLabels[project.status] ? [{ label: "สถานะ", value: statusLabels[project.status] as string }] : []),
-        ...(project.team ? [{ label: "รูปแบบงาน", value: teamLabel(project.team) }] : []),
-        ...(project.team?.kind === "team" && project.team.role ? [{ label: "ส่วนที่ทำ", value: project.team.role }] : []),
-        ...(project.context ? [{ label: "ที่มา", value: project.context }] : []),
+        ...(project.team ? [teamLabel(project.team)] : []),
+        ...(project.team?.kind === "team" && project.team.role ? [`ส่วนที่ทำ: ${project.team.role}`] : []),
+        ...(project.context ? [project.context] : []),
       ]
     : [];
 
@@ -46,28 +45,23 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
     >
       {project ? (
         <article>
-          <div className="relative overflow-hidden border-b border-border">
-            {project.cover ? (
-              <ImageCarousel images={[project.cover, ...(project.gallery ?? [])]} alt={project.title} />
-            ) : (
-              <ProjectCover project={project} priority />
-            )}
-            <button
-              type="button"
-              onClick={onClose}
-              aria-label="ปิด"
-              className="absolute right-3 top-3 grid size-9 place-items-center rounded-full border border-border bg-background/90 transition-colors hover:border-faint"
-            >
-              <X className="size-4" aria-hidden />
-            </button>
-          </div>
-
-          <div className="p-6 sm:p-8">
-            <div className="flex items-center justify-between text-[13px] text-muted">
-              <span>{categoryLabels[project.category]}{statusLabels[project.status] ? ` · ${statusLabels[project.status]}` : ""}</span>
-              <span className="tabular-nums">{project.year}</span>
+          <div className="p-6 pb-5 sm:p-8 sm:pb-6">
+            <div className="flex items-center justify-between gap-4 text-[13px] text-muted">
+              <span>
+                {categoryLabels[project.category]}
+                {statusLabels[project.status] ? ` · ${statusLabels[project.status]}` : ""}
+                {` · ${project.year}`}
+              </span>
+              <button
+                type="button"
+                onClick={onClose}
+                aria-label="ปิด"
+                className="-mr-2 -mt-2 grid size-9 shrink-0 place-items-center rounded-full border border-border transition-colors hover:border-faint hover:bg-surface-2"
+              >
+                <X className="size-4" aria-hidden />
+              </button>
             </div>
-            <div className="mt-2 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+            <div className="mt-1 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
               <div className="min-w-0">
                 <h3 id="project-modal-title" className="font-display text-[26px] font-semibold tracking-[-0.02em]">
                   {project.title}
@@ -111,22 +105,37 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                     <ExternalLink className="size-3.5" aria-hidden />
                   </a>
                 ))}
-                {project.repos.length === 0 && project.category !== "design" && project.category !== "game" ? <span className="text-[14px] text-muted">Private repository</span> : null}
+                {project.repos.length === 0 && project.category !== "design" && project.category !== "game" ? (
+                  <span className="text-[14px] text-muted">Private repository</span>
+                ) : null}
               </div>
             </div>
 
-            <dl className="mt-5 grid grid-cols-2 gap-x-6 gap-y-3 rounded-lg border border-border bg-surface p-4 sm:grid-cols-4">
-              {facts.map((fact) => (
-                <div key={fact.label}>
-                  <dt className="text-[12px] uppercase tracking-[0.04em] text-faint">{fact.label}</dt>
-                  <dd className="mt-0.5 text-[14px]">{fact.value}</dd>
-                </div>
+            <p className="mt-5 text-[16px] leading-[1.9] text-foreground/90">{project.summary}</p>
+
+            <ul className="mt-4 flex flex-wrap gap-1.5" aria-label="เครื่องมือที่ใช้">
+              {project.stack.map((tool) => (
+                <li key={tool} className="rounded border border-border px-2 py-1 text-[12px] text-muted">
+                  {tool}
+                </li>
               ))}
-            </dl>
+            </ul>
 
-            <p className="mt-6 text-[16px] leading-[1.9] text-foreground/90">{project.summary}</p>
+            {facts.length > 0 ? (
+              <p className="mt-4 text-[14px] leading-[1.8] text-muted">{facts.join(" · ")}</p>
+            ) : null}
+          </div>
 
-            <h4 className="mt-6 text-[12px] font-semibold uppercase tracking-[0.08em] text-muted">จุดเด่น</h4>
+          <div className="relative overflow-hidden border-y border-border">
+            {project.cover ? (
+              <ImageCarousel images={[project.cover, ...(project.gallery ?? [])]} alt={project.title} />
+            ) : (
+              <ProjectCover project={project} priority />
+            )}
+          </div>
+
+          <div className="p-6 sm:p-8">
+            <h4 className="text-[12px] font-semibold uppercase tracking-[0.08em] text-muted">สิ่งที่พัฒนา</h4>
             <ul className="mt-3 space-y-2">
               {project.highlights.map((item) => (
                 <li key={item} className="flex gap-3 text-[16px] leading-[1.8] text-muted">
@@ -136,27 +145,12 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
               ))}
             </ul>
 
-            {project.learned?.length ? (
+            {project.learned ? (
               <>
                 <h4 className="mt-6 text-[12px] font-semibold uppercase tracking-[0.08em] text-muted">สิ่งที่ได้เรียนรู้</h4>
-                <ul className="mt-3 space-y-2">
-                  {project.learned.map((item) => (
-                    <li key={item} className="flex gap-3 text-[16px] leading-[1.8] text-muted">
-                      <span aria-hidden className="mt-[9px] size-1.5 shrink-0 rounded-full bg-accent" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+                <p className="mt-3 text-[16px] leading-[1.8] text-muted">{project.learned}</p>
               </>
             ) : null}
-
-            <ul className="mt-6 flex flex-wrap gap-1.5" aria-label="เครื่องมือที่ใช้">
-              {project.stack.map((tool) => (
-                <li key={tool} className="rounded border border-border px-2 py-1 text-[12px] text-muted">
-                  {tool}
-                </li>
-              ))}
-            </ul>
           </div>
         </article>
       ) : null}
