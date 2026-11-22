@@ -189,7 +189,7 @@ export function Work() {
   return (
     <section id="work">
       {/* Dark band in light mode. The popup stays outside it so it keeps the page theme. */}
-      <div data-theme="dark" className="band band-dark py-14 text-foreground">
+      <div data-theme="dark" className="band band-dark pb-14 pt-4 text-foreground">
         <SectionHeading
           index="01"
           eyebrow="ผลงาน"
