@@ -105,7 +105,8 @@ export function Contact() {
             </li>
           ))}
           {profile.resumeUrl ? (
-            <li>
+            // Spans both columns when it would otherwise sit alone on the last row.
+            <li className={channels.length % 2 === 0 ? "sm:col-span-2" : undefined}>
               <a
                 href={profile.resumeUrl}
                 download

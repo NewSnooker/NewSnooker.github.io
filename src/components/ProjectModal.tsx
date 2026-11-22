@@ -2,10 +2,12 @@
 
 import { useEffect, useRef } from "react";
 import { ExternalLink, X } from "lucide-react";
-import { categoryLabels, teamLabel, type Project, statusLabels } from "@/data/projects";
+import { teamLabel, type Project, statusLabels } from "@/data/projects";
 import { GithubIcon } from "./icons";
 import { ImageCarousel } from "./ImageCarousel";
+import { CategoryBadge } from "./CategoryBadge";
 import { ProjectCover } from "./ProjectCover";
+import { StackTags } from "./StackTags";
 
 type ProjectModalProps = {
   project: Project | null;
@@ -47,10 +49,10 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
         <article>
           <div className="p-6 pb-5 sm:p-8 sm:pb-6">
             <div className="flex items-center justify-between gap-4 text-[13px] text-muted">
-              <span>
-                {categoryLabels[project.category]}
-                {statusLabels[project.status] ? ` · ${statusLabels[project.status]}` : ""}
-                {` · ${project.year}`}
+              <span className="flex items-center gap-2">
+                <CategoryBadge category={project.category} />
+                {statusLabels[project.status] ? <span>{statusLabels[project.status]}</span> : null}
+                <span className="tabular-nums">{project.year}</span>
               </span>
               <button
                 type="button"
@@ -113,16 +115,8 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
 
             <p className="mt-5 text-[16px] leading-[1.9] text-foreground/90">{project.summary}</p>
 
-            <ul className="mt-4 flex flex-wrap gap-1.5" aria-label="เครื่องมือที่ใช้">
-              {project.stack.map((tool) => (
-                <li key={tool} className="rounded border border-border px-2 py-1 text-[12px] text-muted">
-                  {tool}
-                </li>
-              ))}
-            </ul>
-
             {facts.length > 0 ? (
-              <p className="mt-4 text-[14px] leading-[1.8] text-muted">{facts.join(" · ")}</p>
+              <p className="mt-3 text-[14px] leading-[1.8] text-muted">{facts.join(" · ")}</p>
             ) : null}
           </div>
 
@@ -151,6 +145,8 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                 <p className="mt-3 text-[16px] leading-[1.8] text-muted">{project.learned}</p>
               </>
             ) : null}
+
+            <StackTags items={project.stack} className="mt-6" />
           </div>
         </article>
       ) : null}

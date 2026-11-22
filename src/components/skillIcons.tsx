@@ -1,8 +1,10 @@
 import type { IconType } from "react-icons";
 import {
   SiAngular,
+  SiAuth0,
   SiCplusplus,
   SiCss,
+  SiDaisyui,
   SiDart,
   SiDiagramsdotnet,
   SiDocker,
@@ -15,7 +17,10 @@ import {
   SiGooglecolab,
   SiHtml5,
   SiJavascript,
+  SiJsonwebtokens,
   SiKaggle,
+  SiLine,
+  SiLua,
   SiMongodb,
   SiMysql,
   SiNextdotjs,
@@ -25,7 +30,10 @@ import {
   SiPrisma,
   SiPython,
   SiReact,
+  SiReactquery,
+  SiRedux,
   SiRender,
+  SiRobloxstudio,
   SiSpringboot,
   SiSupabase,
   SiSwagger,
@@ -33,9 +41,10 @@ import {
   SiTypescript,
   SiUltralytics,
   SiVercel,
+  SiVite,
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
-import { TbApi, TbSql } from "react-icons/tb";
+import { TbApi, TbBox, TbCloud, TbComponents, TbDevices, TbLayout, TbLock, TbPointer, TbSql } from "react-icons/tb";
 import { VscAzure, VscVscode } from "react-icons/vsc";
 
 // `color` is the brand colour. Brands whose colour is black use the text colour
@@ -83,4 +92,24 @@ export const skillIcons: Record<string, SkillIcon> = {
   Java: { icon: FaJava, color: "#E76F00" },
   "Spring Boot": { icon: SiSpringboot, color: "#6DB33F" },
   Angular: { icon: SiAngular, color: "#DD0031" },
+  // Project-only tags (shown on project cards and popups, not in the skills list).
+  "Auth.js": { icon: TbLock },
+  NextAuth: { icon: TbLock },
+  Auth0: { icon: SiAuth0, color: "#EB5424" },
+  DaisyUI: { icon: SiDaisyui, color: "#5A0EF8" },
+  daisyUI: { icon: SiDaisyui, color: "#5A0EF8" },
+  "Docker Compose": { icon: SiDocker, color: "#2496ED" },
+  JWT: { icon: SiJsonwebtokens, color: "#D63AFF" },
+  "LINE Login": { icon: SiLine, color: "#06C755" },
+  Luau: { icon: SiLua, color: "#00A2FF" },
+  "Roblox Studio": { icon: SiRobloxstudio, color: "#00A2FF" },
+  "Redux Toolkit": { icon: SiRedux, color: "#764ABC" },
+  "TanStack Query": { icon: SiReactquery, color: "#FF4154" },
+  Vite: { icon: SiVite, color: "#646CFF" },
+  Zustand: { icon: TbBox },
+  "OpenWeatherMap API": { icon: TbCloud, color: "#EB6E4B" },
+  "UI Design": { icon: TbLayout },
+  Prototype: { icon: TbPointer },
+  Component: { icon: TbComponents },
+  Responsive: { icon: TbDevices },
 };

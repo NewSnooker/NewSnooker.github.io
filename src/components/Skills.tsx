@@ -30,32 +30,50 @@ export function Skills() {
     <section id="stack" className="py-14">
       <SectionHeading index="02" eyebrow="ทักษะ" title="เครื่องมือที่ใช้ในการทำงาน" aside="ใช้จริงในโปรเจกต์ที่ทำมา" />
 
-      {showAll ? (
-        <div id="all-skills" className="divide-y divide-border rounded-xl border border-border bg-surface">
-          {skillGroups.map((group) => (
-            <div key={group.label} className="grid gap-3 px-5 py-4 sm:grid-cols-[170px_1fr] sm:items-center">
-              <h3 className="flex items-center gap-2 text-[14px] text-muted">
-                {group.label}
-                <span className="rounded border border-border px-1.5 text-[12px] tabular-nums text-faint">{group.items.length}</span>
-              </h3>
-              <ul className="flex flex-wrap gap-2">
-                {group.items.map((item) => (
-                  <SkillChip key={item} name={item} />
-                ))}
-              </ul>
-            </div>
-          ))}
+      {/* Both panels stay mounted and animate their height, so the page does not jump when toggling. */}
+      <div
+        className={`grid transition-[grid-template-rows,opacity] duration-300 ease-out motion-reduce:transition-none ${
+          showAll ? "grid-rows-[0fr] opacity-0" : "grid-rows-[1fr] opacity-100"
+        }`}
+        inert={showAll}
+      >
+        <div className="overflow-hidden">
+          <div className="rounded-xl border border-border bg-surface px-5 py-5">
+            <h3 className="text-[14px] text-muted">ใช้บ่อย</h3>
+            <ul className="mt-3 flex flex-wrap gap-2">
+              {coreSkills.map((item) => (
+                <SkillChip key={item} name={item} />
+              ))}
+            </ul>
+          </div>
         </div>
-      ) : (
-        <div className="rounded-xl border border-border bg-surface px-5 py-5">
-          <h3 className="text-[14px] text-muted">ใช้บ่อย</h3>
-          <ul className="mt-3 flex flex-wrap gap-2">
-            {coreSkills.map((item) => (
-              <SkillChip key={item} name={item} />
+      </div>
+
+      <div
+        id="all-skills"
+        className={`grid transition-[grid-template-rows,opacity] duration-300 ease-out motion-reduce:transition-none ${
+          showAll ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+        }`}
+        inert={!showAll}
+      >
+        <div className="overflow-hidden">
+          <div className="divide-y divide-border rounded-xl border border-border bg-surface">
+            {skillGroups.map((group) => (
+              <div key={group.label} className="grid gap-3 px-5 py-4 sm:grid-cols-[170px_1fr] sm:items-center">
+                <h3 className="flex items-center gap-2 text-[14px] text-muted">
+                  {group.label}
+                  <span className="rounded border border-border px-1.5 text-[12px] tabular-nums text-faint">{group.items.length}</span>
+                </h3>
+                <ul className="flex flex-wrap gap-2">
+                  {group.items.map((item) => (
+                    <SkillChip key={item} name={item} />
+                  ))}
+                </ul>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
-      )}
+      </div>
 
       <button
         type="button"

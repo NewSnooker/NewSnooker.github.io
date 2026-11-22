@@ -4,7 +4,9 @@ import { useRef, useState } from "react";
 import { ArrowRight, ArrowUpRight, ChevronDown, ExternalLink, Search, X } from "lucide-react";
 import { categoryLabels, projects, type Project, type ProjectCategory, statusLabels } from "@/data/projects";
 import { GithubIcon } from "./icons";
+import { CategoryBadge } from "./CategoryBadge";
 import { ProjectCover } from "./ProjectCover";
+import { StackTags } from "./StackTags";
 import { Pagination } from "./Pagination";
 import { ProjectModal } from "./ProjectModal";
 import { SectionHeading } from "./SectionHeading";
@@ -47,7 +49,10 @@ function ProjectCard({ project, onOpen }: ProjectCardProps) {
         </div>
       </button>
       <div className="mt-6 flex items-center justify-between text-[13px] text-muted">
-        <span>{categoryLabels[project.category]}{statusLabels[project.status] ? ` · ${statusLabels[project.status]}` : ""}</span>
+        <span className="flex items-center gap-2">
+          <CategoryBadge category={project.category} />
+          {statusLabels[project.status] ? <span>{statusLabels[project.status]}</span> : null}
+        </span>
         <span className="tabular-nums">{project.year}</span>
       </div>
       <div className="mt-2 flex items-start justify-between gap-4">
@@ -59,13 +64,7 @@ function ProjectCard({ project, onOpen }: ProjectCardProps) {
         <ArrowUpRight className="mt-1 size-4 shrink-0 text-muted transition-colors group-hover:text-accent" aria-hidden />
       </div>
       <p className="mt-2 text-[16px] leading-[1.8] text-muted">{project.summary}</p>
-      <ul className="mt-4 flex flex-wrap gap-1.5" aria-label="เครื่องมือที่ใช้">
-        {project.stack.slice(0, 6).map((tool) => (
-          <li key={tool} className="rounded border border-border px-2 py-1 text-[12px] text-muted">
-            {tool}
-          </li>
-        ))}
-      </ul>
+      <StackTags items={project.stack.slice(0, 6)} className="mt-4" />
       <div className="mt-5 flex flex-wrap items-center gap-6 text-[14px]">
         <button
           type="button"
@@ -147,7 +146,7 @@ export function Work() {
 
   return (
     <section id="work" className="py-14">
-      <SectionHeading index="01" eyebrow="ผลงาน" title="ไอเดียที่ทำให้ใช้งานได้จริง" aside="ผลงานเด่นที่เลือกมา" />
+      <SectionHeading index="01" eyebrow="ผลงาน" title="ไอเดียที่ทำให้ใช้งานได้จริง" aside="ผลงานที่อยากให้ดูก่อน" />
 
       <div className="grid gap-x-6 gap-y-14 md:grid-cols-2">
         {featured.map((project) => (
