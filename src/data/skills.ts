@@ -12,10 +12,9 @@ export const coreSkills: string[] = [
   "React",
   "Next.js",
   "Tailwind CSS",
-  "Node.js",
-  "Python",
-  "FastAPI",
-  "MySQL",
+  "Docker",
+  "Prisma",
+  "GitHub",
   "Git",
 ];
 
@@ -25,7 +24,8 @@ export const skillGroups: SkillGroup[] = [
     label: "Backend & Database",
     items: ["Node.js", "Express", "Elysia", "FastAPI", "REST API", "SQL", "MySQL", "phpMyAdmin", "MongoDB", "Prisma"],
   },
-  { label: "Mobile & AI", items: ["Flutter", "Dart", "Python", "YOLO", "Google Colab", "Kaggle"] },
+  { label: "Mobile", items: ["Flutter", "Dart"] },
+  { label: "AI", items: ["Python", "YOLO", "Google Colab", "Kaggle"] },
   {
     label: "Dev Tools",
     items: ["VS Code", "Git", "GitHub", "Docker", "Postman", "Swagger", "Vercel", "Render", "Supabase", "Azure", "Figma", "draw.io"],

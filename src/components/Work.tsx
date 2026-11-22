@@ -6,7 +6,6 @@ import { categoryLabels, projects, type Project, type ProjectCategory, statusLab
 import { GithubIcon } from "./icons";
 import { CategoryBadge } from "./CategoryBadge";
 import { ProjectCover } from "./ProjectCover";
-import { StackTags } from "./StackTags";
 import { Pagination } from "./Pagination";
 import { ProjectModal } from "./ProjectModal";
 import { SectionHeading } from "./SectionHeading";
@@ -64,7 +63,6 @@ function ProjectCard({ project, onOpen }: ProjectCardProps) {
         <ArrowUpRight className="mt-1 size-4 shrink-0 text-muted transition-colors group-hover:text-accent" aria-hidden />
       </div>
       <p className="mt-2 text-[16px] leading-[1.8] text-muted">{project.summary}</p>
-      <StackTags items={project.stack.slice(0, 6)} className="mt-4" />
       <div className="mt-5 flex flex-wrap items-center gap-6 text-[14px]">
         <button
           type="button"
