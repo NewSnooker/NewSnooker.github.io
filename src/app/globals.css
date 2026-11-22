@@ -5,12 +5,12 @@
 /* Stone greys (warm neutral, like shadcn/ui "Stone"). Dark is the default (set on <html>). */
 :root,
 [data-theme="light"] {
-  /* Stone 100 page, stone 50 cards, stone 200 hover/inset, stone 400 borders, white popups. */
-  --background: #f5f5f4;
-  --surface: #fafaf9;
-  --surface-2: #e7e5e4;
+  /* Stone 200 page with white cards, so cards stand out like in dark mode. Stone 100 hover, stone 300 borders. */
+  --background: #e7e5e4;
+  --surface: #ffffff;
+  --surface-2: #f5f5f4;
   --popup: #ffffff;
-  --border: #a8a29e;
+  --border: #d6d3d1;
   --foreground: #0c0a09;
   --muted: #44403c;
   --faint: #57534e;
