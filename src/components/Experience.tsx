@@ -1,0 +1,39 @@
+import { experience } from "@/data/profile";
+import { PhotoAlbum } from "./PhotoAlbum";
+import { SectionHeading } from "./SectionHeading";
+
+export function Experience() {
+  return (
+    <section id="experience" className="band band-experience py-14">
+      <SectionHeading index="03" eyebrow="ประสบการณ์" title="ประสบการณ์ฝึกงาน" />
+      <ol className="space-y-10">
+        {experience.map((job) => (
+          <li key={job.company} className="grid gap-4 md:grid-cols-[260px_1fr]">
+            <p className="flex items-center gap-3 self-start text-[14px] text-muted">
+              <span aria-hidden className="grid size-4 place-items-center rounded-full bg-accent-soft">
+                <span className="size-2 rounded-full bg-accent" />
+              </span>
+              {job.period}
+            </p>
+            <div>
+              <h3 className="font-display text-[19px] font-semibold tracking-[-0.01em]">
+                {job.company}, {job.location}
+              </h3>
+              <p className="mt-1 text-[16px] leading-[1.8] text-muted">{job.about}</p>
+              <p className="mt-3 text-[16px] font-semibold">{job.position}</p>
+              <ul className="mt-3 space-y-1.5">
+                {job.tasks.map((task) => (
+                  <li key={task} className="flex gap-3 text-[16px] leading-[1.8] text-muted">
+                    <span aria-hidden className="mt-[9px] size-1 shrink-0 rounded-full bg-faint" />
+                    {task}
+                  </li>
+                ))}
+              </ul>
+              <PhotoAlbum photos={job.photos} title={`ภาพจากการฝึกงานที่${job.company}`} />
+            </div>
+          </li>
+        ))}
+      </ol>
+    </section>
+  );
+}
