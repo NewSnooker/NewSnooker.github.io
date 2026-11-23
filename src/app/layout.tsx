@@ -8,7 +8,7 @@ const manrope = Manrope({ variable: "--font-manrope", subsets: ["latin"], weight
 const anuphan = Anuphan({ variable: "--font-anuphan", subsets: ["thai"], weight: ["400", "500", "600", "700"] });
 
 const siteUrl = "https://newsnooker.github.io";
-const title = `${profile.name} (${profile.nameEn}) | Portfolio ${profile.role}`;
+const title = `${profile.nameEn} | Portfolio`;
 const description =
   "นักศึกษาไอที สายพัฒนาซอฟต์แวร์ รวมผลงานเว็บ มือถือ และงานออกแบบ AcneAI ระบบจัดการโปรเจกต์ ระบบห้องสมุด พร้อมเครื่องมือที่ใช้ และประสบการณ์ฝึกงาน";
 
