@@ -113,9 +113,6 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
               </div>
             </div>
 
-            {facts.length > 0 ? (
-              <p className="mt-4 text-[14px] leading-[1.8] text-muted">{facts.join(" · ")}</p>
-            ) : null}
           </div>
 
           <div className="relative overflow-hidden border-y border-border">
@@ -127,6 +124,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
           </div>
 
           <div className="p-6 sm:p-8">
+            {facts.length > 0 ? <p className="mb-3 text-[14px] leading-[1.8] text-muted">{facts.join(" · ")}</p> : null}
             <p className="text-[16px] leading-[1.9] text-foreground/90">{project.summary}</p>
 
             <h4 className="mt-6 text-[12px] font-semibold uppercase tracking-[0.08em] text-muted">สิ่งที่พัฒนา</h4>
