@@ -21,7 +21,7 @@ export const skillGroups: SkillGroup[] = [
   { label: "Frontend", items: ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Next.js", "Tailwind CSS"] },
   {
     label: "Backend & Database",
-    items: ["Node.js", "Express", "Elysia", "FastAPI", "REST API", "SQL", "MySQL", "phpMyAdmin", "MongoDB", "Prisma"],
+    items: ["Node.js", "Express", "Elysia", "FastAPI", "REST API", "SQL", "phpMyAdmin", "MongoDB", "Prisma"],
   },
   { label: "Mobile", items: ["Flutter", "Dart"] },
   { label: "AI", items: ["Python", "YOLO", "Google Colab", "Kaggle"] },
